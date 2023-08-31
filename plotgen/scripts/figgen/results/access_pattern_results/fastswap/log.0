@@ -1,0 +1,37 @@
+container AP0 already exists, trying to delete
+Setting AP0 memory limit to 3% (512M) of max
+cd /home/cfm/AP && echo $$ > /cgroup2/benchmarks/AP0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./ap
+Array sequential Time : 70780884532
+Array strided Time : 66721770240
+Array strided stride across objectTime : 66165835354
+ 
+
+	Command being timed: "./ap"
+	User time (seconds): 53.74
+	System time (seconds): 125.62
+	Percent of CPU this job got: 91%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:16.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 531968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2621485
+	Minor (reclaiming a frame) page faults: 22544468
+	Voluntary context switches: 3187890
+	Involuntary context switches: 12551
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 196.8676872253418 
+
+Major Page Faults,System Time,User Time,Wall Time
+2621485,125.62,53.74,196.81

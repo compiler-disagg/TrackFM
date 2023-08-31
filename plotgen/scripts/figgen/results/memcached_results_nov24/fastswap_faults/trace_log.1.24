@@ -1,0 +1,59 @@
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/proj/rmt-PG0/python_install/python3.7/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/proj/rmt-PG0/python_install/python3.7/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/cfm/lib/workloads.py", line 65, in __exec
+    assert(self.popen.returncode == 0)
+AssertionError
+
+container MEMCACHEDV20 already exists, trying to delete
+Setting MEMCACHEDV20 memory limit to 9% (1024M) of max
+cd /home/cfm/memcachedv2 && echo $$ > /cgroup2/benchmarks/MEMCACHEDV20/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./memcached
+ 
+
+Command terminated by signal 9
+	Command being timed: "./memcached"
+	User time (seconds): 529.63
+	System time (seconds): 3669.60
+	Percent of CPU this job got: 54%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:09:33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1050444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 140688407
+	Minor (reclaiming a frame) page faults: 249212872
+	Voluntary context switches: 250414137
+	Involuntary context switches: 166266
+	Swaps: 0
+	File system inputs: 152
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: -1669707387.9889061 
+
+Traceback (most recent call last):
+  File "benchmark.py", line 62, in <module>
+    main()
+  File "benchmark.py", line 58, in main
+    run_benchmark(args)
+  File "benchmark.py", line 34, in run_benchmark
+    print_output(workload, args)
+  File "benchmark.py", line 12, in print_output
+    usr_bin_time = workload.get_usr_bin_time()
+  File "/home/cfm/lib/workloads.py", line 95, in get_usr_bin_time
+    return parser.parse(self.stderr.decode('utf-8'))
+  File "/home/cfm/lib/utils.py", line 60, in parse
+    'Wall Time': self.get_wall_time(string),
+  File "/home/cfm/lib/utils.py", line 74, in get_wall_time
+    hours, minutes, seconds = regex.search(string).groups()
+AttributeError: 'NoneType' object has no attribute 'groups'

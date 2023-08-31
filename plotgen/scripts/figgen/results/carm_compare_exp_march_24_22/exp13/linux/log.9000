@@ -1,0 +1,32 @@
+CPU 13| <5> cpu: detected 20 cores, 1 nodes
+CPU 13| <5> time: detected 2394 ticks / us
+[  0.000644] CPU 13| <5> loading configuration from '/home/AIFM/aifm/configs/client.config'
+[  0.000691] CPU 13| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.018542] CPU 13| <5> net: started network stack
+[  0.018559] CPU 13| <5> net: using the following configuration:
+[  0.018564] CPU 13| <5>   addr:	18.18.1.2
+[  0.018569] CPU 13| <5>   netmask:	255.255.255.0
+[  0.018573] CPU 13| <5>   gateway:	18.8.1.1
+[  0.018577] CPU 13| <5>   mac:	2A:1E:12:82:8A:96
+[  0.386804] CPU 13| <5> thread: created thread 0
+[  0.386966] CPU 13| <5> spawning 18 kthreads
+[  0.387147] CPU 04| <5> thread: created thread 1
+[  0.387252] CPU 05| <5> thread: created thread 2
+[  0.387263] CPU 07| <5> thread: created thread 3
+[  0.387460] CPU 08| <5> thread: created thread 4
+[  0.387654] CPU 01| <5> thread: created thread 5
+[  0.387784] CPU 02| <5> thread: created thread 6
+[  0.387993] CPU 16| <5> thread: created thread 7
+[  0.388385] CPU 03| <5> thread: created thread 8
+[  0.388608] CPU 19| <5> thread: created thread 9
+[  0.388749] CPU 06| <5> thread: created thread 10
+[  0.389036] CPU 12| <5> thread: created thread 11
+[  0.389180] CPU 13| <5> thread: created thread 12
+[  0.389437] CPU 18| <5> thread: created thread 13
+[  0.389566] CPU 08| <5> thread: created thread 14
+[  0.389633] CPU 10| <5> thread: created thread 15
+[  0.389776] CPU 16| <5> thread: created thread 16
+[  0.389965] CPU 14| <5> thread: created thread 17
+delay = 9000
+19732879
+[ 24.060928] CPU 01| <5> init: shutting down -> SUCCESS

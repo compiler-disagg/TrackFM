@@ -1,0 +1,63 @@
+Setting CSTREAM0 memory limit to 40% (4096M) of max
+cd /home/cfm/cstream && echo $$ > /cgroup2/benchmarks/CSTREAM0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./stream
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 402653184 (elements), Offset = 0 (elements)
+Memory per array = 3072.0 MiB (= 3.0 GiB).
+Total memory required = 9216.0 MiB (= 9.0 GiB).
+Each kernel will be executed 2 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 5057049 microseconds.
+   (= 5057049 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Average Rate MB/s  Avg time     Min time     Max time
+Copy:             814.7     7.907459     7.907459     7.907459
+Scale:            808.6     7.967385     7.967385     7.967385
+Add:              904.6    10.682230    10.682230    10.682230
+Triad:            836.2    11.556156    11.556156    11.556156
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+ 
+
+	Command being timed: "./stream"
+	User time (seconds): 9.13
+	System time (seconds): 69.89
+	Percent of CPU this job got: 77%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4195232
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4028576
+	Minor (reclaiming a frame) page faults: 16785721
+	Voluntary context switches: 4145297
+	Involuntary context switches: 5860
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.53731489181519 
+
+Major Page Faults,System Time,User Time,Wall Time
+4028576,69.89,9.13,102.48

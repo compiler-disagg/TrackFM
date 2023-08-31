@@ -1,0 +1,32 @@
+CPU 08| <5> cpu: detected 20 cores, 1 nodes
+CPU 08| <5> time: detected 2394 ticks / us
+[  0.000443] CPU 08| <5> loading configuration from '/users/btauro/AIFM/aifm/configs/client.config'
+[  0.000469] CPU 08| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.014042] CPU 08| <5> net: started network stack
+[  0.014059] CPU 08| <5> net: using the following configuration:
+[  0.014063] CPU 08| <5>   addr:	18.18.1.2
+[  0.014068] CPU 08| <5>   netmask:	255.255.255.0
+[  0.014072] CPU 08| <5>   gateway:	18.8.1.1
+[  0.014075] CPU 08| <5>   mac:	8E:AF:63:EF:42:0C
+[  0.375946] CPU 09| <5> thread: created thread 0
+[  0.376020] CPU 09| <5> spawning 18 kthreads
+[  0.376105] CPU 01| <5> thread: created thread 1
+[  0.376155] CPU 02| <5> thread: created thread 2
+[  0.376198] CPU 03| <5> thread: created thread 3
+[  0.376302] CPU 11| <5> thread: created thread 4
+[  0.376451] CPU 06| <5> thread: created thread 5
+[  0.376521] CPU 08| <5> thread: created thread 6
+[  0.376651] CPU 19| <5> thread: created thread 7
+[  0.376789] CPU 16| <5> thread: created thread 8
+[  0.376908] CPU 01| <5> thread: created thread 9
+[  0.376998] CPU 17| <5> thread: created thread 10
+[  0.377175] CPU 09| <5> thread: created thread 11
+[  0.377237] CPU 15| <5> thread: created thread 12
+[  0.377324] CPU 13| <5> thread: created thread 13
+[  0.377364] CPU 14| <5> thread: created thread 14
+[  0.377448] CPU 16| <5> thread: created thread 15
+[  0.377574] CPU 11| <5> thread: created thread 16
+[  0.377671] CPU 09| <5> thread: created thread 17
+delay = 600
+1973861
+[  6.262637] CPU 01| <5> init: shutting down -> SUCCESS

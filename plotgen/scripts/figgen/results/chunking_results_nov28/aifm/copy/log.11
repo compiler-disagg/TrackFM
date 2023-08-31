@@ -1,0 +1,22 @@
+CPU 14| <5> cpu: detected 20 cores, 1 nodes
+CPU 14| <5> time: detected 2394 ticks / us
+[  0.000656] CPU 14| <5> loading configuration from '/users/btauro/AIFM/aifm/configs/client_noht.config'
+[  0.000705] CPU 14| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017109] CPU 14| <5> net: started network stack
+[  0.017129] CPU 14| <5> net: using the following configuration:
+[  0.017133] CPU 14| <5>   addr:	18.18.1.2
+[  0.017137] CPU 14| <5>   netmask:	255.255.255.0
+[  0.017141] CPU 14| <5>   gateway:	18.8.1.1
+[  0.017145] CPU 14| <5>   mac:	2A:F7:40:33:DC:B0
+[  0.245454] CPU 14| <5> thread: created thread 0
+[  0.245591] CPU 14| <5> spawning 9 kthreads
+[  0.245796] CPU 06| <5> thread: created thread 2
+[  0.245809] CPU 05| <5> thread: created thread 1
+[  0.245935] CPU 07| <5> thread: created thread 3
+[  0.246220] CPU 01| <5> thread: created thread 4
+[  0.246439] CPU 02| <5> thread: created thread 5
+[  0.246685] CPU 04| <5> thread: created thread 6
+[  0.246831] CPU 08| <5> thread: created thread 7
+[  0.247001] CPU 19| <5> thread: created thread 8
+Copy Size : 6442450944 : Time :5546796
+[ 14.591568] CPU 08| <5> init: shutting down -> SUCCESS

@@ -1,0 +1,4 @@
+Array sequential Time : 4122144
+Array random Time : 204439296
+Array strided Time : 41421057
+Array strided stride across objectTime : 74780709

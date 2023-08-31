@@ -1,0 +1,23 @@
+CPU 08| <5> cpu: detected 20 cores, 1 nodes
+CPU 08| <5> time: detected 2394 ticks / us
+[  0.000651] CPU 08| <5> loading configuration from '/home/AIFM/aifm/configs/client_noht.config'
+[  0.000698] CPU 08| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017122] CPU 08| <5> net: started network stack
+[  0.017139] CPU 08| <5> net: using the following configuration:
+[  0.017144] CPU 08| <5>   addr:	18.18.1.2
+[  0.017148] CPU 08| <5>   netmask:	255.255.255.0
+[  0.017153] CPU 08| <5>   gateway:	18.8.1.1
+[  0.017157] CPU 08| <5>   mac:	42:4B:13:55:9A:7A
+[  0.245221] CPU 08| <5> thread: created thread 0
+[  0.245357] CPU 08| <5> spawning 9 kthreads
+[  0.245507] CPU 09| <5> thread: created thread 1
+[  0.245560] CPU 02| <5> thread: created thread 2
+[  0.245663] CPU 13| <5> thread: created thread 3
+[  0.245820] CPU 14| <5> thread: created thread 4
+[  0.246085] CPU 05| <5> thread: created thread 5
+[  0.246262] CPU 06| <5> thread: created thread 6
+[  0.246434] CPU 17| <5> thread: created thread 7
+[  0.246695] CPU 18| <5> thread: created thread 8
+delay = 1600
+4253047
+[ 21.007902] CPU 06| <5> init: shutting down -> SUCCESS

@@ -1,0 +1,396 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Axes3D	lib/syscall3dfig.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	i
+DataSource	lib/syscall3dfig.py	/^class DataSource:$/;"	c
+Syscall2DFig	lib/syscall3dfig.py	/^class Syscall2DFig:$/;"	c
+Syscall3DFig	dv_speedup_2_experiment_bzip2_mos.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	dv_speedup_apps.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	dv_speedup_experiment_app.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	dv_speedup_iv_forcost_forwards.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	dv_speedup_iv_gain_fcost.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	dv_speedup_iv_gain_forwards.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	example_2D_2.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	example_2D_3.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	example_3D_1.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	example_CDF_2D_1.py	/^from syscall3dfig import Syscall3DFig$/;"	i
+Syscall3DFig	lib/syscall3dfig.py	/^class Syscall3DFig:$/;"	c
+SyscallSpeedup	lib/syscall3dfig.py	/^class SyscallSpeedup:$/;"	c
+__init__	lib/syscall3dfig.py	/^    def  __init__(self, path, xlabel, ylabel, title, $/;"	m	class:Syscall2DFig
+__init__	lib/syscall3dfig.py	/^    def __init__(self, points, vals, ngridpoints,$/;"	m	class:Syscall3DFig
+alpha	dv_speedup_2_experiment_bzip2_mos.py	/^alpha=opacity,$/;"	v
+alpha	dv_speedup_experiment_app.py	/^alpha=opacity,$/;"	v
+app	dv_speedup_2_experiment_bzip2_mos.py	/^app = 0 $/;"	v
+app_ind	dv_speedup_iv_forcost_forwards.py	/^app_ind = 0 $/;"	v
+app_ind	dv_speedup_iv_gain_fcost.py	/^app_ind = 0 $/;"	v
+app_ind	dv_speedup_iv_gain_forwards.py	/^app_ind = 0 $/;"	v
+apps	example_2D_2.py	/^    apps   = ds.getAppName(listOfLines, app) $/;"	v
+apps	example_2D_3.py	/^    apps   = ds.getAppName(listOfLines, app) $/;"	v
+apps	example_CDF_2D_1.py	/^    apps   = ds.getAppName(listOfLines, app) $/;"	v
+bar_width	dv_speedup_2_experiment_bzip2_mos.py	/^bar_width = 0.30$/;"	v
+bar_width	dv_speedup_experiment_app.py	/^bar_width = 0.35$/;"	v
+bc	example_2D_2.py	/^bc    =  20 $/;"	v
+bc	example_2D_3.py	/^bc    =  20 $/;"	v
+bc	example_CDF_2D_1.py	/^bc    =  20 $/;"	v
+bcs	dv_speedup_iv_forcost_forwards.py	/^        bcs = round(j\/100 * len(igs))$/;"	v
+bcs	dv_speedup_iv_gain_fcost.py	/^bcs    = round(bs\/100 * len(igs))$/;"	v
+bcs	dv_speedup_iv_gain_forwards.py	/^        bcs = int(i\/100 * len(igs))$/;"	v
+bcs	example_2D_2.py	/^    bcs    = round(bc\/100 * len(igs))$/;"	v
+bcs	example_2D_3.py	/^    bcs    = round(bc\/100 * len(igs))$/;"	v
+bs	dv_speedup_iv_gain_fcost.py	/^bs    = 20 $/;"	v
+cm	lib/syscall3dfig.py	/^from matplotlib import cm$/;"	i
+color	dv_speedup_2_experiment_bzip2_mos.py	/^color='indianred', $/;"	v
+color	dv_speedup_2_experiment_bzip2_mos.py	/^color='lightblue',$/;"	v
+color	dv_speedup_2_experiment_bzip2_mos.py	/^color='lightgreen',$/;"	v
+color	dv_speedup_2_experiment_bzip2_mos.py	/^color='white',$/;"	v
+color	dv_speedup_experiment_app.py	/^color='indianred',$/;"	v
+color	dv_speedup_experiment_app.py	/^color='lightblue',$/;"	v
+compute_fwd_syscost	lib/syscall3dfig.py	/^    def compute_fwd_syscost(bcs, igs, fs, fq):$/;"	m	class:SyscallSpeedup
+compute_gfwd_syscost	lib/syscall3dfig.py	/^    def compute_gfwd_syscost(igs, fs, fq, syslist):$/;"	m	class:SyscallSpeedup
+cplot	lib/syscall3dfig.py	/^    def cplot (self, x_val, y_val, linestyle): $/;"	m	class:Syscall2DFig
+ds	dv_speedup_2_experiment_bzip2_mos.py	/^ds = ds()$/;"	v
+ds	dv_speedup_2_experiment_bzip2_mos.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+ds	dv_speedup_experiment_app.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+ds	dv_speedup_iv_forcost_forwards.py	/^ds = ds()$/;"	v
+ds	dv_speedup_iv_forcost_forwards.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+ds	dv_speedup_iv_gain_fcost.py	/^ds = ds()$/;"	v
+ds	dv_speedup_iv_gain_fcost.py	/^from syscall3dfig import DataSource as ds $/;"	i
+ds	dv_speedup_iv_gain_forwards.py	/^ds = ds()$/;"	v
+ds	dv_speedup_iv_gain_forwards.py	/^from syscall3dfig import DataSource as ds $/;"	i
+ds	example_2D_2.py	/^ds = ds()$/;"	v
+ds	example_2D_2.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+ds	example_2D_3.py	/^ds = ds()$/;"	v
+ds	example_2D_3.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+ds	example_CDF_2D_1.py	/^ds = ds()$/;"	v
+ds	example_CDF_2D_1.py	/^from syscall3dfig import DataSource     as ds $/;"	i
+dummy_rects4	dv_speedup_2_experiment_bzip2_mos.py	/^dummy_rects4 = plt.bar(index+ bar_width* 6\/10, 0, bar_width\/10,$/;"	v
+edgecolor	dv_speedup_2_experiment_bzip2_mos.py	/^edgecolor='black')$/;"	v
+edgecolor	dv_speedup_experiment_app.py	/^edgecolor='black')$/;"	v
+fig	dv_speedup_iv_forcost_forwards.py	/^fig = Syscall3DFig(points, values, npts, xlim, ylim,$/;"	v
+fig	dv_speedup_iv_gain_fcost.py	/^fig = Syscall3DFig(points, values, npts, ylim, xlim,$/;"	v
+fig	dv_speedup_iv_gain_forwards.py	/^fig = Syscall3DFig(points, values, npts, ylim, xlim,$/;"	v
+fig	example_3D_1.py	/^fig = Syscall3DFig(points, values, npts, xlim, ylim,$/;"	v
+fileHandler	dv_speedup_apps.py	/^fileHandler = open ("scripts\/figgen\/data\/bmk.txt", "r")$/;"	v
+filterSyscalls	lib/syscall3dfig.py	/^    def filterSyscalls(self, igs, delimitter):$/;"	m	class:DataSource
+filterSyscallsfq	lib/syscall3dfig.py	/^    def filterSyscallsfq(self, igs, delimitter):$/;"	m	class:DataSource
+filterSyscallsn	lib/syscall3dfig.py	/^    def filterSyscallsn(self, igs, delimitter):$/;"	m	class:DataSource
+flist	dv_speedup_2_experiment_bzip2_mos.py	/^flist  = ds.read_mc_slist()$/;"	v
+flist	dv_speedup_2_experiment_bzip2_mos.py	/^flist  = ds.read_mos_slist()$/;"	v
+fname	dv_speedup_2_experiment_bzip2_mos.py	/^fname   = sys.argv[2]$/;"	v
+fname	dv_speedup_apps.py	/^fname   = sys.argv[2]$/;"	v
+fname	dv_speedup_experiment_app.py	/^fname   = sys.argv[2]$/;"	v
+fname	dv_speedup_iv_forcost_forwards.py	/^fname   = sys.argv[2]$/;"	v
+fname	dv_speedup_iv_gain_fcost.py	/^fname   = sys.argv[2]$/;"	v
+fname	dv_speedup_iv_gain_forwards.py	/^fname   = sys.argv[2]$/;"	v
+fname	example_2D_1.py	/^fname = sys.argv[2]$/;"	v
+fname	example_2D_2.py	/^fname   = sys.argv[2]$/;"	v
+fname	example_2D_3.py	/^fname   = sys.argv[2]$/;"	v
+fname	example_3D_1.py	/^fname = sys.argv[2]$/;"	v
+fname	example_CDF_2D_1.py	/^fname   = sys.argv[2]$/;"	v
+format_lines	lib/syscall3dfig.py	/^    def format_lines(self, slist):$/;"	m	class:DataSource
+fq	dv_speedup_2_experiment_bzip2_mos.py	/^fq     = ds.getSyscallsfq(listOfLines, ns, app, fws)$/;"	v
+fq	dv_speedup_iv_forcost_forwards.py	/^fq     = ds.getSyscallsfq(listOfLines, ms, app_ind, -1)$/;"	v
+fq	dv_speedup_iv_gain_fcost.py	/^fq     = ds.getSyscallsfq(listOfLines, ms, app_ind, -1)$/;"	v
+fq	dv_speedup_iv_gain_forwards.py	/^fq  = ds.getSyscallsfq(listOfLines, ms, app_ind, -1)$/;"	v
+fq	example_2D_2.py	/^    fq     = ds.getSyscallsfq(listOfLines, ms, app, -1)$/;"	v
+fq	example_2D_3.py	/^    fq     = ds.getSyscallsfq(listOfLines, ms, app, 0)$/;"	v
+fq	example_CDF_2D_1.py	/^    fq     = ds.getSyscallsfq(listOfLines, ms, app, -1)$/;"	v
+fs	dv_speedup_2_experiment_bzip2_mos.py	/^fs     = 16904  $/;"	v
+fs	dv_speedup_2_experiment_bzip2_mos.py	/^fs     = 31925 $/;"	v
+fs	dv_speedup_iv_gain_forwards.py	/^fs    = 10000 $/;"	v
+fs	example_2D_2.py	/^fs    = 10000 $/;"	v
+fs	example_2D_3.py	/^fs    = 50000 $/;"	v
+fs	example_CDF_2D_1.py	/^fs    = 50000 $/;"	v
+fws	dv_speedup_2_experiment_bzip2_mos.py	/^fws = 0 $/;"	v
+gamma	dv_speedup_2_experiment_bzip2_mos.py	/^gamma  = nonsys\/((ttime\/ s4) - sysf - sysnf)$/;"	v
+gamma	dv_speedup_2_experiment_bzip2_mos.py	/^gamma  = nonsys\/((ttime\/s3) - sysf - sysnf)$/;"	v
+gamma	dv_speedup_iv_forcost_forwards.py	/^gamma  = 10 $/;"	v
+getAppName	lib/syscall3dfig.py	/^    def getAppName(self, listOfLines, app):$/;"	m	class:DataSource
+getSyscalls	lib/syscall3dfig.py	/^    def getSyscalls(self, listOfLines, dimension, app, choice):$/;"	m	class:DataSource
+getSyscalls_nm	lib/syscall3dfig.py	/^    def getSyscalls_nm(self, listOfLines, dimension, app, choice):$/;"	m	class:DataSource
+getSyscalls_uf	lib/syscall3dfig.py	/^    def getSyscalls_uf(self, listOfLines, dimension, app, choice):$/;"	m	class:DataSource
+getSyscallsfq	lib/syscall3dfig.py	/^    def getSyscallsfq(self, listOfLines, dimension, app, choice):$/;"	m	class:DataSource
+getTotalTime	lib/syscall3dfig.py	/^    def getTotalTime(self, listOfLines, dimension, app):$/;"	m	class:DataSource
+get_ind_slist_mc	lib/syscall3dfig.py	/^    def get_ind_slist_mc(self, flist, nlist):$/;"	m	class:DataSource
+get_ind_slist_mos	lib/syscall3dfig.py	/^    def get_ind_slist_mos(self, flist, nlist):$/;"	m	class:DataSource
+i	dv_speedup_iv_forcost_forwards.py	/^i = 0$/;"	v
+i	dv_speedup_iv_gain_fcost.py	/^i       = 0$/;"	v
+i	dv_speedup_iv_gain_forwards.py	/^i = 0$/;"	v
+i	example_2D_2.py	/^i = 0$/;"	v
+i	example_2D_3.py	/^i = 0$/;"	v
+i	example_CDF_2D_1.py	/^i = 0$/;"	v
+igs	dv_speedup_2_experiment_bzip2_mos.py	/^igs    = ds.getSyscalls(listOfLines, ns, app, fws)$/;"	v
+igs	dv_speedup_iv_forcost_forwards.py	/^igs = ds.getSyscalls(listOfLines, ms, app_ind, -1)$/;"	v
+igs	dv_speedup_iv_gain_fcost.py	/^igs    = ds.getSyscalls(listOfLines, ms, app_ind, -1)$/;"	v
+igs	dv_speedup_iv_gain_fcost.py	/^igs   = [] $/;"	v
+igs	dv_speedup_iv_gain_forwards.py	/^igs   = [] $/;"	v
+igs	dv_speedup_iv_gain_forwards.py	/^igs = ds.getSyscalls(listOfLines, ms, app_ind, -1)$/;"	v
+igs	example_2D_2.py	/^    igs    = ds.getSyscalls(listOfLines, ms, app, -1)$/;"	v
+igs	example_2D_2.py	/^igs   = []$/;"	v
+igs	example_2D_3.py	/^    igs    = ds.getSyscalls(listOfLines, ms, app, 0)$/;"	v
+igs	example_2D_3.py	/^igs   = []$/;"	v
+igs	example_CDF_2D_1.py	/^igs   = []$/;"	v
+ii	dv_speedup_iv_forcost_forwards.py	/^ii = 0$/;"	v
+ii	dv_speedup_iv_gain_fcost.py	/^ii      = 0$/;"	v
+ii	dv_speedup_iv_gain_forwards.py	/^ii = 0$/;"	v
+ii	example_2D_2.py	/^ii = 0$/;"	v
+ii	example_2D_3.py	/^ii = 0$/;"	v
+ii	example_CDF_2D_1.py	/^ii = 0$/;"	v
+inc	dv_speedup_iv_forcost_forwards.py	/^    inc = inc + 1$/;"	v
+inc	dv_speedup_iv_forcost_forwards.py	/^inc = 1$/;"	v
+inc	dv_speedup_iv_gain_fcost.py	/^    inc = inc + 1$/;"	v
+inc	dv_speedup_iv_gain_fcost.py	/^inc = 1 $/;"	v
+index	dv_speedup_2_experiment_bzip2_mos.py	/^index = np.arange(n_groups)$/;"	v
+index	dv_speedup_experiment_app.py	/^index = np.arange(n_groups)$/;"	v
+interp	lib/syscall3dfig.py	/^import scipy.interpolate as interp$/;"	i
+itertools	dv_speedup_apps.py	/^import itertools$/;"	i
+itertools	lib/syscall3dfig.py	/^import itertools$/;"	i
+label	dv_speedup_2_experiment_bzip2_mos.py	/^label='Actual result\\n\\n',$/;"	v
+label	dv_speedup_2_experiment_bzip2_mos.py	/^label='Naive model result\\n\\n',$/;"	v
+label	dv_speedup_2_experiment_bzip2_mos.py	/^label='Refined model result\\n\\n',$/;"	v
+label	dv_speedup_experiment_app.py	/^label='GPOS',$/;"	v
+label	dv_speedup_experiment_app.py	/^label='Multi-OS',$/;"	v
+lg	dv_speedup_iv_forcost_forwards.py	/^       lg = 0 $/;"	v
+lg	dv_speedup_iv_forcost_forwards.py	/^    lg = (lg) % 10 $/;"	v
+lg	dv_speedup_iv_forcost_forwards.py	/^    lg = lg + 1$/;"	v
+lg	dv_speedup_iv_forcost_forwards.py	/^lg = 0 $/;"	v
+lg	dv_speedup_iv_gain_fcost.py	/^       lg = 1 $/;"	v
+lg	dv_speedup_iv_gain_fcost.py	/^    lg = (lg) % 11 $/;"	v
+lg	dv_speedup_iv_gain_fcost.py	/^    lg = lg + 1 $/;"	v
+lg	dv_speedup_iv_gain_fcost.py	/^lg = 1  $/;"	v
+lg	dv_speedup_iv_gain_fcost.py	/^lg = 1 $/;"	v
+line	example_CDF_2D_1.py	/^line = [':', '<', '-*', '-.', '4']$/;"	v
+linux_time	dv_speedup_2_experiment_bzip2_mos.py	/^linux_time = 647.515 * ns$/;"	v
+listOfLines	dv_speedup_2_experiment_bzip2_mos.py	/^listOfLines = ds.readsInput3()$/;"	v
+listOfLines	dv_speedup_apps.py	/^listOfLines = fileHandler.readlines()$/;"	v
+listOfLines	dv_speedup_iv_forcost_forwards.py	/^listOfLines = ds.readInput()$/;"	v
+listOfLines	dv_speedup_iv_gain_fcost.py	/^listOfLines = ds.readInput()$/;"	v
+listOfLines	dv_speedup_iv_gain_forwards.py	/^listOfLines = ds.readInput()$/;"	v
+listOfLines	example_2D_2.py	/^listOfLines = ds.readInput() $/;"	v
+listOfLines	example_2D_3.py	/^listOfLines = ds.readInput() $/;"	v
+listOfLines	example_CDF_2D_1.py	/^listOfLines = ds.readInput() $/;"	v
+marker	example_CDF_2D_1.py	/^marker = []$/;"	v
+marker	lib/syscall3dfig.py	/^    marker = itertools.cycle(('^', '*', '4', '.', '8', 's', '<', '>', '1', '2', '3', '4', '8', 's', 'p'))$/;"	v	class:Syscall2DFig
+math	dv_speedup_apps.py	/^import math$/;"	i
+math	lib/syscall3dfig.py	/^import math$/;"	i
+matplotlib	dv_speedup_2_experiment_bzip2_mos.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	dv_speedup_apps.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	dv_speedup_experiment_app.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	example_2D_1.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	example_2D_2.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	example_2D_3.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	example_CDF_2D_1.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	lib/syscall3dfig.py	/^import matplotlib.pyplot as plt$/;"	i
+mc_gamma	dv_speedup_2_experiment_bzip2_mos.py	/^mc_gamma   = 1.0989$/;"	v
+mc_time	dv_speedup_2_experiment_bzip2_mos.py	/^mc_time    = 734.217 $/;"	v
+means_1	dv_speedup_2_experiment_bzip2_mos.py	/^means_1 = (sn_mos)$/;"	v
+means_2	dv_speedup_2_experiment_bzip2_mos.py	/^means_2 = (s1)$/;"	v
+means_3	dv_speedup_2_experiment_bzip2_mos.py	/^means_3 = (s3)$/;"	v
+means_frank	dv_speedup_experiment_app.py	/^means_frank = (840.59, 2173.17, 4740, 995.49)$/;"	v
+means_guido	dv_speedup_experiment_app.py	/^means_guido = (841.17, 2174.48, 4743, 995.91)$/;"	v
+mos_gamma	dv_speedup_2_experiment_bzip2_mos.py	/^mos_gamma  = 1.0$/;"	v
+mos_time	dv_speedup_2_experiment_bzip2_mos.py	/^mos_time   = 959.259$/;"	v
+ms	dv_speedup_iv_forcost_forwards.py	/^ms     = 1000000000$/;"	v
+ms	dv_speedup_iv_gain_fcost.py	/^ms    = 1000000000$/;"	v
+ms	dv_speedup_iv_gain_forwards.py	/^ms = 1000000000$/;"	v
+ms	example_2D_2.py	/^ms    = 1000000000 $/;"	v
+ms	example_2D_3.py	/^ms    = 1000000000 $/;"	v
+ms	example_CDF_2D_1.py	/^ms    = 1000000000 $/;"	v
+n_groups	dv_speedup_2_experiment_bzip2_mos.py	/^n_groups = 1 $/;"	v
+n_groups	dv_speedup_experiment_app.py	/^n_groups = 4 $/;"	v
+nm	dv_speedup_2_experiment_bzip2_mos.py	/^nm     = ds.getSyscalls_nm(listOfLines, ns, app, fws)$/;"	v
+nonsys	dv_speedup_2_experiment_bzip2_mos.py	/^nonsys = ttime - sum(igs)$/;"	v
+nonsys	dv_speedup_iv_forcost_forwards.py	/^nonsys = ttime - sum(igs)$/;"	v
+nonsys	dv_speedup_iv_gain_fcost.py	/^nonsys = ttime - sum(igs)$/;"	v
+nonsys	dv_speedup_iv_gain_forwards.py	/^nonsys = ttime - sum(igs)$/;"	v
+nonsys	example_2D_2.py	/^    nonsys = ttime - sum(igs)$/;"	v
+nonsys	example_2D_3.py	/^    nonsys = ttime - sum(igs)$/;"	v
+np	dv_speedup_2_experiment_bzip2_mos.py	/^import numpy as np$/;"	i
+np	dv_speedup_apps.py	/^import numpy as np$/;"	i
+np	dv_speedup_experiment_app.py	/^import numpy as np$/;"	i
+np	dv_speedup_iv_forcost_forwards.py	/^import numpy as np$/;"	i
+np	dv_speedup_iv_gain_fcost.py	/^import numpy as np$/;"	i
+np	dv_speedup_iv_gain_forwards.py	/^import numpy as np$/;"	i
+np	example_2D_1.py	/^import numpy as np$/;"	i
+np	example_2D_2.py	/^import numpy as np$/;"	i
+np	example_2D_3.py	/^import numpy as np$/;"	i
+np	example_3D_1.py	/^import numpy as np$/;"	i
+np	example_CDF_2D_1.py	/^import numpy as np$/;"	i
+np	lib/syscall3dfig.py	/^import numpy as np$/;"	i
+npts	dv_speedup_apps.py	/^npts  = 10$/;"	v
+npts	dv_speedup_iv_forcost_forwards.py	/^npts   = 20 $/;"	v
+npts	dv_speedup_iv_gain_fcost.py	/^npts  = 20 $/;"	v
+npts	dv_speedup_iv_gain_forwards.py	/^npts  = 20 $/;"	v
+npts	example_2D_2.py	/^npts  = 20 $/;"	v
+npts	example_2D_3.py	/^npts  = 10 $/;"	v
+npts	example_3D_1.py	/^npts  = 20$/;"	v
+npts	example_CDF_2D_1.py	/^npts  = 20 $/;"	v
+ns	dv_speedup_2_experiment_bzip2_mos.py	/^ns    = 1000000000$/;"	v
+opacity	dv_speedup_2_experiment_bzip2_mos.py	/^opacity = 0.8$/;"	v
+opacity	dv_speedup_experiment_app.py	/^opacity = 0.8$/;"	v
+path	dv_speedup_2_experiment_bzip2_mos.py	/^path    = sys.argv[1]$/;"	v
+path	dv_speedup_apps.py	/^path    = sys.argv[1]$/;"	v
+path	dv_speedup_experiment_app.py	/^path    = sys.argv[1]$/;"	v
+path	dv_speedup_iv_forcost_forwards.py	/^path    = sys.argv[1]$/;"	v
+path	dv_speedup_iv_gain_fcost.py	/^path    = sys.argv[1]$/;"	v
+path	dv_speedup_iv_gain_forwards.py	/^path    = sys.argv[1]$/;"	v
+path	example_2D_1.py	/^path = sys.argv[1]$/;"	v
+path	example_2D_2.py	/^path    = sys.argv[1]$/;"	v
+path	example_2D_3.py	/^path    = sys.argv[1]$/;"	v
+path	example_3D_1.py	/^path  = sys.argv[1]$/;"	v
+path	example_CDF_2D_1.py	/^path    = sys.argv[1]$/;"	v
+plot	lib/syscall3dfig.py	/^    def plot (self, x_val, y_val, linestyle, ms_color, mkr, ms_sz): $/;"	m	class:Syscall2DFig
+plt	dv_speedup_2_experiment_bzip2_mos.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	dv_speedup_apps.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	dv_speedup_experiment_app.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	example_2D_1.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	example_2D_2.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	example_2D_3.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	example_CDF_2D_1.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	lib/syscall3dfig.py	/^import matplotlib.pyplot as plt$/;"	i
+points	dv_speedup_iv_forcost_forwards.py	/^points = []$/;"	v
+points	dv_speedup_iv_gain_fcost.py	/^points = []$/;"	v
+points	dv_speedup_iv_gain_forwards.py	/^points = []$/;"	v
+points	example_2D_2.py	/^points = []$/;"	v
+points	example_2D_3.py	/^points = []$/;"	v
+points	example_3D_1.py	/^points = []$/;"	v
+points	example_CDF_2D_1.py	/^points = []$/;"	v
+ps	dv_speedup_2_experiment_bzip2_mos.py	/^ps    = ((4.257048 * ns)\/linux_time) * 100$/;"	v
+ps	dv_speedup_apps.py	/^ps       = []$/;"	v
+ps	example_2D_3.py	/^ps = ((0.901705)\/118) * 100 $/;"	v
+pst	dv_speedup_apps.py	/^    pst = float(t2)\/float(t1) * 100$/;"	v
+random	lib/syscall3dfig.py	/^import random$/;"	i
+readInput	lib/syscall3dfig.py	/^    def readInput(self):$/;"	m	class:DataSource
+read_mc_slist	lib/syscall3dfig.py	/^    def read_mc_slist(self):$/;"	m	class:DataSource
+read_mos_slist	lib/syscall3dfig.py	/^    def read_mos_slist(self):$/;"	m	class:DataSource
+readsInput3	lib/syscall3dfig.py	/^    def readsInput3(self):$/;"	m	class:DataSource
+rects1	dv_speedup_2_experiment_bzip2_mos.py	/^rects1 = plt.bar(index, means_1, $/;"	v
+rects1	dv_speedup_experiment_app.py	/^rects1 = plt.bar(index, means_frank, bar_width,$/;"	v
+rects2	dv_speedup_2_experiment_bzip2_mos.py	/^rects2 = plt.bar(index + bar_width * 2\/13, means_2, $/;"	v
+rects2	dv_speedup_experiment_app.py	/^rects2 = plt.bar(index + bar_width, means_guido, bar_width,$/;"	v
+rects3	dv_speedup_2_experiment_bzip2_mos.py	/^rects3 = plt.bar(index+ bar_width* 4\/13, means_3, bar_width\/13,$/;"	v
+s	dv_speedup_apps.py	/^    s = line.split(',')$/;"	v
+s	example_2D_1.py	/^s  = 'RC ping pong'$/;"	v
+s1	dv_speedup_2_experiment_bzip2_mos.py	/^s1 = spd.speedup3(ttime, nonsys, sysf, sysnf, mos_gamma)$/;"	v
+s2	dv_speedup_2_experiment_bzip2_mos.py	/^s2 = spd.speedup3(ttime, nonsys, sysf, sysnf, mc_gamma)$/;"	v
+s2d	dv_speedup_2_experiment_bzip2_mos.py	/^from syscall3dfig import Syscall2DFig as s2d $/;"	i
+s2d	dv_speedup_2_experiment_bzip2_mos.py	/^s2d = s2d("{}\/{}".format(path, fname), '', '', '', 13, 13, 15, 15, 'bold') $/;"	v
+s2d	dv_speedup_apps.py	/^from syscall3dfig import Syscall2DFig as s2d$/;"	i
+s2d	dv_speedup_apps.py	/^s2d = s2d("{}\/{}".format(path, fname), r'$\\gamma$', r'$S_n$', '', 13, 13, 15, 15, 'bold') $/;"	v
+s2d	dv_speedup_experiment_app.py	/^from syscall3dfig import Syscall2DFig as s2d $/;"	i
+s2d	dv_speedup_experiment_app.py	/^s2d = s2d("{}\/{}".format(path, fname), '', '', '', 13, 13, 15, 15, 'bold') $/;"	v
+s2d	example_2D_2.py	/^from syscall3dfig import Syscall2DFig as s2d $/;"	i
+s2d	example_2D_2.py	/^s2d = s2d("{}\/{}".format(path, fname), r'$\\gamma$', r'$S_r$', '', 13, 13, 15, 15, 'bold') $/;"	v
+s2d	example_2D_3.py	/^from syscall3dfig import Syscall2DFig as s2d $/;"	i
+s2d	example_2D_3.py	/^s2d = s2d("{}\/{}".format(path, fname), r'$\\gamma$', 'speedup', '', 13, 13, 15, 15, 'bold') $/;"	v
+s2d	example_CDF_2D_1.py	/^from syscall3dfig import Syscall2DFig as s2d $/;"	i
+s2d	example_CDF_2D_1.py	/^s2d = s2d("{}\/{}".format(path, fname), '#syscall invocation', 'CDF', '', 10, 10, 14, 14, 'bold') $/;"	v
+s3	dv_speedup_2_experiment_bzip2_mos.py	/^s3     = linux_time\/(mos_time * ns)$/;"	v
+s4	dv_speedup_2_experiment_bzip2_mos.py	/^s4     = linux_time\/(mc_time*ns)$/;"	v
+save	lib/syscall3dfig.py	/^    def save(self):$/;"	m	class:Syscall2DFig
+save	lib/syscall3dfig.py	/^    def save(self):$/;"	m	class:Syscall3DFig
+scipy	lib/syscall3dfig.py	/^import scipy.interpolate as interp$/;"	i
+set_legend	lib/syscall3dfig.py	/^    def set_legend(self, lgnd, lgnd_col, lgnd_fnt_sz):$/;"	m	class:Syscall2DFig
+set_limits	lib/syscall3dfig.py	/^    def set_limits(self, xmin, xmax, ymin, ymax):$/;"	m	class:Syscall2DFig
+set_x_lg_scale	lib/syscall3dfig.py	/^    def set_x_lg_scale(self):$/;"	m	class:Syscall2DFig
+set_y_lg_scale	lib/syscall3dfig.py	/^    def set_y_lg_scale(self):$/;"	m	class:Syscall2DFig
+set_y_limit	lib/syscall3dfig.py	/^    def set_y_limit(self, gamma):$/;"	m	class:Syscall2DFig
+slist	dv_speedup_2_experiment_bzip2_mos.py	/^slist  = ds.get_ind_slist_mc(flist, nm)$/;"	v
+slist	dv_speedup_2_experiment_bzip2_mos.py	/^slist  = ds.get_ind_slist_mos(flist, nm)$/;"	v
+sn_mc	dv_speedup_2_experiment_bzip2_mos.py	/^sn_mc  = spd.speedup(ps, mc_gamma)$/;"	v
+sn_mos	dv_speedup_2_experiment_bzip2_mos.py	/^sn_mos = spd.speedup(ps, mos_gamma)$/;"	v
+sortfq	lib/syscall3dfig.py	/^    def sortfq(self, igs, delimitter, position, order):$/;"	m	class:DataSource
+sp	example_3D_1.py	/^from syscall3dfig import SyscallSpeedup as sp$/;"	i
+spd	dv_speedup_2_experiment_bzip2_mos.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	dv_speedup_apps.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	dv_speedup_experiment_app.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	dv_speedup_iv_forcost_forwards.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	dv_speedup_iv_gain_fcost.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	dv_speedup_iv_gain_forwards.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	example_2D_2.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	example_2D_3.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+spd	example_CDF_2D_1.py	/^from syscall3dfig import SyscallSpeedup as spd $/;"	i
+speedup	lib/syscall3dfig.py	/^    def speedup(ps, gamma):$/;"	m	class:SyscallSpeedup
+speedup1	lib/syscall3dfig.py	/^    def speedup1(toi, ps, bs, $/;"	m	class:SyscallSpeedup
+speedup2	lib/syscall3dfig.py	/^    def speedup2(toi, ps, bs, $/;"	m	class:SyscallSpeedup
+speedup3	lib/syscall3dfig.py	/^    def speedup3(ttime, nonsys, sysf, $/;"	m	class:SyscallSpeedup
+strs	dv_speedup_apps.py	/^strs     = []$/;"	v
+strs	example_2D_2.py	/^strs = []$/;"	v
+strs	example_2D_3.py	/^strs = []$/;"	v
+strs	example_CDF_2D_1.py	/^strs = []$/;"	v
+sys	dv_speedup_2_experiment_bzip2_mos.py	/^import sys$/;"	i
+sys	dv_speedup_apps.py	/^import sys$/;"	i
+sys	dv_speedup_experiment_app.py	/^import sys$/;"	i
+sys	dv_speedup_iv_forcost_forwards.py	/^import sys$/;"	i
+sys	dv_speedup_iv_gain_fcost.py	/^import sys$/;"	i
+sys	dv_speedup_iv_gain_forwards.py	/^import sys$/;"	i
+sys	example_2D_1.py	/^import sys$/;"	i
+sys	example_2D_2.py	/^import sys$/;"	i
+sys	example_2D_3.py	/^import sys$/;"	i
+sys	example_3D_1.py	/^import sys$/;"	i
+sys	example_CDF_2D_1.py	/^import sys$/;"	i
+sysf	dv_speedup_2_experiment_bzip2_mos.py	/^sysf   = spd.compute_gfwd_syscost(igs, fs, fq, slist)$/;"	v
+sysf	dv_speedup_iv_forcost_forwards.py	/^        sysf = spd.compute_fwd_syscost(bcs, tmp, pow(10, (i)), fq)$/;"	v
+sysf	dv_speedup_iv_gain_fcost.py	/^        sysf = spd.compute_fwd_syscost(bcs, tmp, pow(10, i), fq)$/;"	v
+sysf	dv_speedup_iv_gain_forwards.py	/^        sysf = spd.compute_fwd_syscost(bcs, tmp, fs, fq)$/;"	v
+sysf	example_2D_2.py	/^    sysf   = spd.compute_fwd_syscost(bcs, igs, fs, fq)$/;"	v
+sysf	example_2D_2.py	/^    sysf = 0$/;"	v
+sysf	example_2D_2.py	/^sysf = 0$/;"	v
+sysf	example_2D_3.py	/^    sysf   = spd.compute_fwd_syscost(bcs, igs, fs, fq)$/;"	v
+sysf	example_2D_3.py	/^    sysf = 0$/;"	v
+sysf	example_2D_3.py	/^sysf = 0$/;"	v
+sysf	example_CDF_2D_1.py	/^sysf = 0$/;"	v
+sysnf	dv_speedup_2_experiment_bzip2_mos.py	/^sysnf  = sum(igs) - sysf$/;"	v
+sysnf	dv_speedup_iv_forcost_forwards.py	/^        sysnf = sum(tmp) - sysf$/;"	v
+sysnf	dv_speedup_iv_gain_fcost.py	/^        sysnf = sum(tmp) - sysf $/;"	v
+sysnf	dv_speedup_iv_gain_forwards.py	/^        sysnf = sum(tmp) - sysf $/;"	v
+sysnf	example_2D_2.py	/^    sysnf  = sum(igs) - sysf $/;"	v
+sysnf	example_2D_3.py	/^    sysnf  = sum(igs) - sysf $/;"	v
+t1	dv_speedup_apps.py	/^    t1 = s[1]$/;"	v
+t2	dv_speedup_apps.py	/^    t2 = s[2]$/;"	v
+tmp	dv_speedup_iv_forcost_forwards.py	/^        tmp = igs[:]$/;"	v
+tmp	dv_speedup_iv_gain_fcost.py	/^        tmp = igs[:]$/;"	v
+tmp	dv_speedup_iv_gain_forwards.py	/^        tmp = igs[:]$/;"	v
+ttime	dv_speedup_2_experiment_bzip2_mos.py	/^ttime  = ds.getTotalTime(listOfLines, ns, app)$/;"	v
+ttime	dv_speedup_iv_forcost_forwards.py	/^ttime = ds.getTotalTime(listOfLines, ms, app_ind)$/;"	v
+ttime	dv_speedup_iv_gain_fcost.py	/^ttime  = ds.getTotalTime(listOfLines, ms, app_ind)  $/;"	v
+ttime	dv_speedup_iv_gain_forwards.py	/^ttime = ds.getTotalTime(listOfLines, ms, app_ind) $/;"	v
+ttime	example_2D_2.py	/^    ttime  = ds.getTotalTime(listOfLines, ms, app)$/;"	v
+ttime	example_2D_3.py	/^    ttime  = ds.getTotalTime(listOfLines, ms, app)$/;"	v
+val	example_2D_3.py	/^val = [1 ,1.8,2.45,2.6,3.18,3.37,3.68,4.07,4.21,4.37] $/;"	v
+values	dv_speedup_apps.py	/^values = []$/;"	v
+values	dv_speedup_iv_forcost_forwards.py	/^values = []$/;"	v
+values	dv_speedup_iv_gain_fcost.py	/^values = []$/;"	v
+values	dv_speedup_iv_gain_forwards.py	/^values = []$/;"	v
+values	example_2D_2.py	/^values = []$/;"	v
+values	example_2D_3.py	/^values = []$/;"	v
+values	example_3D_1.py	/^values = []$/;"	v
+values	example_CDF_2D_1.py	/^values = []$/;"	v
+xlim	dv_speedup_iv_forcost_forwards.py	/^xlim   = 9 $/;"	v
+xlim	dv_speedup_iv_gain_fcost.py	/^xlim  = 10 $/;"	v
+xlim	dv_speedup_iv_gain_forwards.py	/^xlim  = 10 $/;"	v
+xlim	example_3D_1.py	/^xlim  = 100$/;"	v
+xpts	dv_speedup_iv_forcost_forwards.py	/^xpts = []$/;"	v
+xpts	dv_speedup_iv_gain_fcost.py	/^xpts = np.linspace(1, xlim, npts)$/;"	v
+xpts	dv_speedup_iv_gain_forwards.py	/^xpts = np.linspace(1, xlim, npts)$/;"	v
+xpts	example_3D_1.py	/^xpts = np.linspace(0, xlim, npts)$/;"	v
+ylim	dv_speedup_apps.py	/^ylim  = 100$/;"	v
+ylim	dv_speedup_iv_forcost_forwards.py	/^ylim   = 100$/;"	v
+ylim	dv_speedup_iv_gain_fcost.py	/^ylim  = 10 $/;"	v
+ylim	dv_speedup_iv_gain_forwards.py	/^ylim  = 100$/;"	v
+ylim	example_2D_2.py	/^ylim  = 100$/;"	v
+ylim	example_2D_3.py	/^ylim  = 10$/;"	v
+ylim	example_3D_1.py	/^ylim  = 10$/;"	v
+ylim	example_CDF_2D_1.py	/^ylim  = 100$/;"	v
+ypts	dv_speedup_apps.py	/^ypts = np.linspace(1, ylim, npts)$/;"	v
+ypts	dv_speedup_iv_forcost_forwards.py	/^ypts = np.linspace(0, ylim, npts)$/;"	v
+ypts	dv_speedup_iv_gain_fcost.py	/^ypts = []$/;"	v
+ypts	dv_speedup_iv_gain_forwards.py	/^ypts = np.linspace(1, ylim, npts)$/;"	v
+ypts	example_2D_2.py	/^ypts = np.linspace(1, ylim, npts)$/;"	v
+ypts	example_2D_3.py	/^ypts = np.linspace(1, ylim, npts)$/;"	v
+ypts	example_3D_1.py	/^ypts = np.linspace(1, ylim, npts)$/;"	v
+ypts	example_CDF_2D_1.py	/^ypts = np.linspace(0, ylim, npts)$/;"	v
+yvals	example_CDF_2D_1.py	/^    yvals=np.arange(len(fq))\/float(len(fq)-1)$/;"	v

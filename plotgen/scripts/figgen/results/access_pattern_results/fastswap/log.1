@@ -1,0 +1,37 @@
+Setting AP0 memory limit to 6% (1024M) of max
+cd /home/cfm/AP && echo $$ > /cgroup2/benchmarks/AP0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./ap
+Array sequential Time : 97045266
+Array random Time : 42911294166
+Array strided Time : 5219401038
+Array strided stride across objectTime : 69205645203
+ 
+
+	Command being timed: "./ap"
+	User time (seconds): 7.92
+	System time (seconds): 124.96
+	Percent of CPU this job got: 75%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:56.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1055704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4876262
+	Minor (reclaiming a frame) page faults: 15420488
+	Voluntary context switches: 5182753
+	Involuntary context switches: 11801
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 176.2540318965912 
+
+Major Page Faults,System Time,User Time,Wall Time
+4876262,124.96,7.92,176.2

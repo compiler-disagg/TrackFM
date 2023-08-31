@@ -38,6 +38,7 @@ echo Y | sudo apt-get install software-properties-common
 echo Y | sudo apt-get install gcc-9 g++-9 python-pip
 echo Y | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 echo Y | sudo apt-get purge cmake
+echo Y | sudo apt-get install libjpeg-dev zlib1g-dev
 sudo pip install --upgrade pip
 sudo pip install cmake
 sudo pip install wllvm
@@ -95,6 +96,8 @@ export CARM_DIR=/home/TrackFM/
 sudo apt-get install python3-pip
 sudo pip3 install pymemcache
 sudo pip3 install scipy
+sudo pip3 install matplotlib
+
 ```
 ### Compile TrackFM Passes only on compute node
 ```

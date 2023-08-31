@@ -1,0 +1,7 @@
+No turbo boost in current cpu required for shenengo
+Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+mem 64 G
+NIC Connect X4
+harddisk 16g
+# Enable turbo boost
+#echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo

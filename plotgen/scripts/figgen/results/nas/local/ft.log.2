@@ -1,0 +1,86 @@
+
+
+ NAS Parallel Benchmarks 4.1 Serial C++ version - FT Benchmark
+
+ Size                :  512x 512x 512
+ Iterations                  :     20
+
+ T =    1     Checksum =    5.195078707457e+02    5.149019699238e+02
+ T =    2     Checksum =    5.155422171134e+02    5.127578201997e+02
+ T =    3     Checksum =    5.144678022222e+02    5.122251847514e+02
+ T =    4     Checksum =    5.140150594328e+02    5.121090289018e+02
+ T =    5     Checksum =    5.137550426810e+02    5.121143685824e+02
+ T =    6     Checksum =    5.135811056728e+02    5.121496764568e+02
+ T =    7     Checksum =    5.134569343165e+02    5.121870921893e+02
+ T =    8     Checksum =    5.133651975661e+02    5.122193250322e+02
+ T =    9     Checksum =    5.132955192805e+02    5.122454735794e+02
+ T =   10     Checksum =    5.132410471738e+02    5.122663649603e+02
+ T =   11     Checksum =    5.131971141679e+02    5.122830879827e+02
+ T =   12     Checksum =    5.131605205716e+02    5.122965869718e+02
+ T =   13     Checksum =    5.131290734194e+02    5.123075927445e+02
+ T =   14     Checksum =    5.131012720314e+02    5.123166486553e+02
+ T =   15     Checksum =    5.130760908195e+02    5.123241541685e+02
+ T =   16     Checksum =    5.130528295923e+02    5.123304037599e+02
+ T =   17     Checksum =    5.130310107773e+02    5.123356167976e+02
+ T =   18     Checksum =    5.130103090133e+02    5.123399592211e+02
+ T =   19     Checksum =    5.129905029333e+02    5.123435588985e+02
+ T =   20     Checksum =    5.129714421109e+02    5.123465164008e+02
+ Result verification successful
+ class_npb = C
+
+
+ FT Benchmark Completed
+ class_npb       =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                   241.57
+ Mop/s total     =                  1640.86
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      4.1
+ Compiler ver    =                    9.0.0
+ Compile date    =              14 Aug 2023
+
+ Compile options:
+    CC           = wllvm++ 
+    CLINK        = $(CC)
+    C_LIB        = -lm 
+    C_INC        = -I../common 
+    CFLAGS       = -O3 
+    CLINKFLAGS   = -O3 
+    RAND         = randdp
+
+
+----------------------------------------------------------------------
+    NPB-CPP is developed by: 
+        Dalvan Griebler
+        Gabriell Araujo (Sequential Porting)
+        Júnior Löff (Parallel Implementation)
+
+    In case of questions or problems, please send an e-mail to us:
+        dalvan.griebler; gabriell.araujo; junior.loff@edu.pucrs.br
+----------------------------------------------------------------------
+
+	Command being timed: "./nas_ft/ft.C"
+	User time (seconds): 259.35
+	System time (seconds): 1.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:20.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5246656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1310854
+	Voluntary context switches: 1
+	Involuntary context switches: 492
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

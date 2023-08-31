@@ -1,0 +1,19 @@
+setup complete
+[New LWP 2794]
+[New LWP 2795]
+[New LWP 2796]
+[New LWP 2797]
+[New LWP 2798]
+[New LWP 2799]
+[New LWP 2800]
+[New LWP 2801]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fa2a74626d7 in ioctl () at ../sysdeps/unix/syscall-template.S:78
+$1 = 1350665234
+A debugging session is active.
+
+        Inferior 1 [process 2793] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+

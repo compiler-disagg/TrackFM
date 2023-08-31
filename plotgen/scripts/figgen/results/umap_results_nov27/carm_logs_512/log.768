@@ -1,0 +1,26 @@
+CPU 11| <5> cpu: detected 20 cores, 1 nodes
+CPU 11| <5> time: detected 2394 ticks / us
+[  0.000719] CPU 11| <5> loading configuration from '/home/CARM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000771] CPU 11| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.019221] CPU 11| <5> net: started network stack
+[  0.019240] CPU 11| <5> net: using the following configuration:
+[  0.019245] CPU 11| <5>   addr:	18.18.1.2
+[  0.019250] CPU 11| <5>   netmask:	255.255.255.0
+[  0.019255] CPU 11| <5>   gateway:	18.8.1.1
+[  0.019259] CPU 11| <5>   mac:	F6:7B:B9:C0:B1:D0
+[  0.240833] CPU 11| <5> thread: created thread 0
+[  0.240968] CPU 11| <5> spawning 9 kthreads
+[  0.241116] CPU 02| <5> thread: created thread 1
+[  0.241273] CPU 03| <5> thread: created thread 2
+[  0.241329] CPU 04| <5> thread: created thread 3
+[  0.241569] CPU 05| <5> thread: created thread 4
+[  0.241731] CPU 07| <5> thread: created thread 5
+[  0.241874] CPU 09| <5> thread: created thread 6
+[  0.242023] CPU 01| <5> thread: created thread 7
+[  0.242177] CPU 15| <5> thread: created thread 8
+raddr 18.18.1.3:8000
+size of 8
+keys set
+values loaded 
+Time : 17962380
+[207.567984] CPU 02| <5> init: shutting down -> SUCCESS
