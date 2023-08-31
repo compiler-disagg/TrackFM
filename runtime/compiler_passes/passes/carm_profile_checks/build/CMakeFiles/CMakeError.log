@@ -1,0 +1,34 @@
+Determining if the os_signpost_interval_begin exist failed with the following output:
+Change Dir: /home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_267dd/fast && make[1]: Entering directory '/home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_267dd.dir/build.make CMakeFiles/cmTC_267dd.dir/build
+make[2]: Entering directory '/home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o
+/home/llvm-project/build/bin/clang   -fPIC -Werror=date-time -Werror=unguarded-availability-new -w  -MD -MT CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o -c /home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'os/signpost.h' file not found
+#include <os/signpost.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+CMakeFiles/cmTC_267dd.dir/build.make:78: recipe for target 'CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_267dd.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_267dd/fast' failed
+make[1]: *** [cmTC_267dd/fast] Error 2
+make[1]: Leaving directory '/home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp'
+
+
+File /home/TrackFM-test/runtime/compiler_passes/passes/carm_profile_checks/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <os/signpost.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef os_signpost_interval_begin
+  return ((int*)(&os_signpost_interval_begin))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

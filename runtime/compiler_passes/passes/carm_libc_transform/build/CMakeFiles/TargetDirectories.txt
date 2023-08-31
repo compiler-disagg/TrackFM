@@ -1,0 +1,16 @@
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/intrinsics_gen.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/edit_cache.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/rebuild_cache.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/list_install_components.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/install.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/install/local.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/CMakeFiles/install/strip.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/TRACKFMLIBCTRANSFORM.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/install-TRACKFMLIBCTRANSFORM.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/install-TRACKFMLIBCTRANSFORM-stripped.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/edit_cache.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/rebuild_cache.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/list_install_components.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/install.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/install/local.dir
+/home/TrackFM-test/runtime/compiler_passes/passes/carm_libc_transform/build/src/CMakeFiles/install/strip.dir

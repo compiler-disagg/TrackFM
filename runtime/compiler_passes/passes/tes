@@ -1,0 +1,496 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   ../../../C_dataframe/include/dataframe/columnFloat32.h
+	modified:   ../../../C_dataframe/include/dataframe/columnFloat64.h
+	modified:   ../../../C_dataframe/include/dataframe/columnInt16.h
+	modified:   ../../../C_dataframe/include/dataframe/columnInt32.h
+	modified:   ../../../C_dataframe/include/dataframe/columnInt64.h
+	modified:   ../../../C_dataframe/include/dataframe/columnInt8.h
+	modified:   ../../../C_dataframe/include/dataframe/columnString.h
+	modified:   ../../../C_dataframe/include/dataframe/columnUInt16.h
+	modified:   ../../../C_dataframe/include/dataframe/columnUInt32.h
+	modified:   ../../../C_dataframe/include/dataframe/columnUInt64.h
+	modified:   ../../../C_dataframe/include/dataframe/columnUInt8.h
+	modified:   ../../../C_dataframe/run.sh
+	modified:   ../../AIFM (new commits, modified content, untracked content)
+	modified:   carm_checks/compile_commands.json
+	modified:   carm_init/compile_commands.json
+	modified:   carm_transform/compile_commands.json
+	modified:   carm_transform/src/CatPass.cpp
+	modified:   ../../exp/kmeans/carm/.kmeans.o.bc
+	modified:   ../../exp/kmeans/carm/.kmeans_test.o.bc
+	modified:   ../../exp/kmeans/carm/log.128
+	modified:   ../../exp/kmeans/carm/main
+	modified:   ../../exp/kmeans/carm/main.bc
+	modified:   ../../exp/kmeans/carm/main_check.bc
+	modified:   ../../exp/kmeans/carm/main_check_norm.bc
+	modified:   ../../exp/kmeans/carm/main_init.bc
+	modified:   ../../exp/kmeans/carm/main_libctransform.bc
+	modified:   ../../exp/kmeans/carm/main_libctransform_norm.bc
+	modified:   ../../exp/kmeans/carm/main_loopcheck.bc
+	modified:   ../../exp/kmeans/carm/main_loopcheck.ll
+	modified:   ../../exp/kmeans/carm/main_loopcheck_norm.bc
+	modified:   ../../exp/kmeans/carm/main_looptransform.bc
+	deleted:    ../../exp/kmeans/carm/main_looptransform.ll
+	modified:   ../../exp/kmeans/carm/main_looptransform_norm.bc
+	modified:   ../../exp/kmeans/carm/main_norm.bc
+	modified:   ../../exp/kmeans/carm/main_transform.bc
+	modified:   ../../exp/kmeans/carm/main_transform_norm.bc
+	modified:   ../../exp/kmeans/carm/opt.bc
+	modified:   ../../exp/kmeans/carm/test04_centers.txt
+	modified:   ../../exp/kmeans/carm/test04_clusters.txt
+	modified:   ../../exp/nas_cg/carm/run.sh
+	modified:   ../../exp/nas_cg/carm_no_loop_opt/run.sh
+	modified:   ../../exp/nas_ft/carm/run.sh
+	modified:   ../../exp/nas_ft/carm_no_loop_opt/run.sh
+	modified:   ../../exp/nas_is/carm/run.sh
+	modified:   ../../exp/nas_is/carm_no_loop_opt/run.sh
+	modified:   ../../exp/nas_mg/carm/run.sh
+	modified:   ../../exp/nas_mg/carm_no_loop_opt/run.sh
+	modified:   ../../exp/nas_sp/carm/run.sh
+	modified:   ../../exp/nas_sp/carm_no_loop_opt/run.sh
+	modified:   ../../exp/run_nas.sh
+	modified:   ../../inc/carm_runtime.hpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../C_dataframe/.nycc.bc
+	../../../C_dataframe/libdataframe.so.bc
+	../../../C_dataframe/nyc
+	../../../C_dataframe/nyc.bc
+	../../../C_dataframe/nycc
+	../../../C_dataframe/nycc.bc
+	../../../C_dataframe/obj/
+	../../../C_dataframe/src/columnFloat32.c
+	../../../C_dataframe/src/columnFloat64.c
+	../../../C_dataframe/src/columnInt16.c
+	../../../C_dataframe/src/columnInt32.c
+	../../../C_dataframe/src/columnInt64.c
+	../../../C_dataframe/src/columnInt8.c
+	../../../C_dataframe/src/columnString.c
+	../../../C_dataframe/src/columnUInt16.c
+	../../../C_dataframe/src/columnUInt32.c
+	../../../C_dataframe/src/columnUInt64.c
+	../../../C_dataframe/src/columnUInt8.c
+	"../../../nprintf(nullptr, 0, (const char *)format, vlen) + 1;\033O\033OBq"
+	carm_checks/scripts
+	carm_init/scripts
+	carm_libc_transform/build/
+	carm_libc_transform/compile_commands.json
+	carm_libc_transform/scripts
+	carm_loop_checks/build/
+	carm_loop_checks/compile_commands.json
+	carm_loop_checks/scripts
+	carm_loop_transform/build/
+	carm_loop_transform/compile_commands.json
+	carm_loop_transform/scripts
+	carm_profile_checks/CMakeLists.txt
+	carm_profile_checks/build/
+	carm_profile_checks/compile_commands.json
+	carm_profile_checks/scripts
+	carm_transform/scripts
+	tes
+	../../correctness/vector/4/
+	../../correctness/vector/5/
+	../../correctness/vector/6/
+	../../correctness/vector/7/
+	../../exp/exp3/carm/Makefile
+	../../exp/exp3/carm/log.1200
+	../../exp/exp3/carm/main
+	../../exp/exp3/carm/main.bc
+	../../exp/exp3/carm/main_check.bc
+	../../exp/exp3/carm/main_check_norm.bc
+	../../exp/exp3/carm/main_init.bc
+	../../exp/exp3/carm/main_libctransform.bc
+	../../exp/exp3/carm/main_libctransform_norm.bc
+	../../exp/exp3/carm/main_loopcheck.bc
+	../../exp/exp3/carm/main_loopcheck_norm.bc
+	../../exp/exp3/carm/main_looptransform.bc
+	../../exp/exp3/carm/main_looptransform_norm.bc
+	../../exp/exp3/carm/main_norm.bc
+	../../exp/exp3/carm/main_transform.bc
+	../../exp/exp3/carm/main_transform_norm.bc
+	../../exp/exp3/carm/opt.bc
+	../../exp/exp3/carm/symbol_redefine.sh
+	../../exp/exp3/carm/zipf.txt
+	../../exp/fig1c/carm/Makefile
+	../../exp/fig1c/carm/bug
+	../../exp/fig1c/carm/good
+	../../exp/fig1c/carm/log.1
+	../../exp/fig1c/carm/log.1.old
+	../../exp/fig1c/carm/log.2
+	../../exp/fig1c/carm/log.3
+	../../exp/fig1c/carm/log.4
+	../../exp/fig1c/carm/log.6
+	../../exp/fig1c/carm/log.7
+	../../exp/fig1c/carm/log.8
+	../../exp/fig1c/carm/main
+	../../exp/fig1c/carm/main.bc
+	../../exp/fig1c/carm/main_check.bc
+	../../exp/fig1c/carm/main_check_norm.bc
+	../../exp/fig1c/carm/main_init.bc
+	../../exp/fig1c/carm/main_libctransform.bc
+	../../exp/fig1c/carm/main_libctransform_norm.bc
+	../../exp/fig1c/carm/main_loopcheck.bc
+	../../exp/fig1c/carm/main_loopcheck_norm.bc
+	../../exp/fig1c/carm/main_looptransform.bc
+	../../exp/fig1c/carm/main_looptransform_norm.bc
+	../../exp/fig1c/carm/main_norm.bc
+	../../exp/fig1c/carm/main_transform.bc
+	../../exp/fig1c/carm/main_transform_norm.bc
+	../../exp/fig1c/carm/opt.bc
+	../../exp/fig1c/carm/symbol_redefine.sh
+	../../exp/fig1c/carm/tes
+	../../exp/fig8/carm/Makefile
+	../../exp/fig8/carm/main.bc
+	../../exp/fig8/carm/main_check.bc
+	../../exp/fig8/carm/main_check_norm.bc
+	../../exp/fig8/carm/main_init.bc
+	../../exp/fig8/carm/main_libctransform.bc
+	../../exp/fig8/carm/main_libctransform_norm.bc
+	../../exp/fig8/carm/main_loopcheck.bc
+	../../exp/fig8/carm/main_loopcheck.ll
+	../../exp/fig8/carm/main_loopcheck_norm.bc
+	../../exp/fig8/carm/main_looptransform.bc
+	../../exp/fig8/carm/main_looptransform_norm.bc
+	../../exp/fig8/carm/main_norm.bc
+	../../exp/fig8/carm/main_transform.bc
+	../../exp/fig8/carm/main_transform_norm.bc
+	../../exp/fig8/carm/makefile_cexp
+	../../exp/fig8/carm/nyc.bc
+	../../exp/fig8/carm/opt.bc
+	../../exp/gzip/
+	../../exp/kmeans/carm/kill.sh
+	../../exp/kmeans/carm/log.256
+	../../exp/kmeans/carm/points_100.txt
+	../../exp/kmeans/carm_no_loop/.kmeans.o.bc
+	../../exp/kmeans/carm_no_loop/.kmeans_test.o.bc
+	../../exp/kmeans/carm_no_loop/Makefile
+	../../exp/kmeans/carm_no_loop/README
+	../../exp/kmeans/carm_no_loop/kill.sh
+	../../exp/kmeans/carm_no_loop/kmeans
+	../../exp/kmeans/carm_no_loop/log.128
+	../../exp/kmeans/carm_no_loop/log.256
+	../../exp/kmeans/carm_no_loop/main
+	../../exp/kmeans/carm_no_loop/main.bc
+	../../exp/kmeans/carm_no_loop/main_check.bc
+	../../exp/kmeans/carm_no_loop/main_check_norm.bc
+	../../exp/kmeans/carm_no_loop/main_init.bc
+	../../exp/kmeans/carm_no_loop/main_libctransform.bc
+	../../exp/kmeans/carm_no_loop/main_libctransform_norm.bc
+	../../exp/kmeans/carm_no_loop/main_norm.bc
+	../../exp/kmeans/carm_no_loop/main_transform.bc
+	../../exp/kmeans/carm_no_loop/main_transform_norm.bc
+	../../exp/kmeans/carm_no_loop/op
+	../../exp/kmeans/carm_no_loop/opt.bc
+	../../exp/kmeans/carm_no_loop/points_100.txt
+	../../exp/kmeans/carm_no_loop/pq
+	../../exp/kmeans/carm_no_loop/symbol_redefine.sh
+	../../exp/kmeans/carm_no_loop/test04_centers.txt
+	../../exp/kmeans/carm_no_loop/test04_clusters.txt
+	../../exp/kmeans/carm_profile/.kmeans.o.bc
+	../../exp/kmeans/carm_profile/.kmeans_test.o.bc
+	../../exp/kmeans/carm_profile/Makefile
+	../../exp/kmeans/carm_profile/README
+	../../exp/kmeans/carm_profile/default.profraw
+	../../exp/kmeans/carm_profile/kill.sh
+	../../exp/kmeans/carm_profile/kmeans
+	../../exp/kmeans/carm_profile/log.128
+	../../exp/kmeans/carm_profile/log.256
+	../../exp/kmeans/carm_profile/main
+	../../exp/kmeans/carm_profile/main.bc
+	../../exp/kmeans/carm_profile/main_check.bc
+	../../exp/kmeans/carm_profile/main_check_norm.bc
+	../../exp/kmeans/carm_profile/main_init.bc
+	../../exp/kmeans/carm_profile/main_libctransform.bc
+	../../exp/kmeans/carm_profile/main_libctransform_norm.bc
+	../../exp/kmeans/carm_profile/main_loopcheck.bc
+	../../exp/kmeans/carm_profile/main_loopcheck.ll
+	../../exp/kmeans/carm_profile/main_loopcheck_norm.bc
+	../../exp/kmeans/carm_profile/main_looptransform.bc
+	../../exp/kmeans/carm_profile/main_looptransform_norm.bc
+	../../exp/kmeans/carm_profile/main_norm.bc
+	../../exp/kmeans/carm_profile/main_transform.bc
+	../../exp/kmeans/carm_profile/main_transform_norm.bc
+	../../exp/kmeans/carm_profile/op
+	../../exp/kmeans/carm_profile/opt.bc
+	../../exp/kmeans/carm_profile/output_prof
+	../../exp/kmeans/carm_profile/pmain.bc
+	../../exp/kmeans/carm_profile/pmain.ll
+	../../exp/kmeans/carm_profile/pmain_pre_prof
+	../../exp/kmeans/carm_profile/points_100.txt
+	../../exp/kmeans/carm_profile/pq
+	../../exp/kmeans/carm_profile/symbol_redefine.sh
+	../../exp/kmeans/carm_profile/test04_centers.txt
+	../../exp/kmeans/carm_profile/test04_clusters.txt
+	../../exp/kmeans/carm_profile/test_with_metadata.bc
+	../../exp/kmeans/carm_profile/test_with_metadata.ll
+	../../exp/log_nas
+	../../exp/nas_cg/carm/.opt.ll.swp
+	../../exp/nas_cg/carm/Makefile
+	../../exp/nas_cg/carm/cg.C
+	../../exp/nas_cg/carm/cg.D
+	../../exp/nas_cg/carm/cg.D.bc
+	../../exp/nas_cg/carm/cg.E
+	../../exp/nas_cg/carm/kill.sh
+	../../exp/nas_cg/carm/log.128
+	../../exp/nas_cg/carm/log.2
+	../../exp/nas_cg/carm/log.512
+	../../exp/nas_cg/carm/main
+	../../exp/nas_cg/carm/main.bc
+	../../exp/nas_cg/carm/main.ll
+	../../exp/nas_cg/carm/main_check.bc
+	../../exp/nas_cg/carm/main_check_norm.bc
+	../../exp/nas_cg/carm/main_init.bc
+	../../exp/nas_cg/carm/main_libctransform.bc
+	../../exp/nas_cg/carm/main_loopcheck.bc
+	../../exp/nas_cg/carm/main_loopcheck.ll
+	../../exp/nas_cg/carm/main_loopcheck_norm.bc
+	../../exp/nas_cg/carm/main_looptransform.bc
+	../../exp/nas_cg/carm/main_looptransform_norm.bc
+	../../exp/nas_cg/carm/main_norm.bc
+	../../exp/nas_cg/carm/main_transform.bc
+	../../exp/nas_cg/carm/main_transform_norm.bc
+	../../exp/nas_cg/carm/opt.bc
+	../../exp/nas_cg/carm/run_wo_make.sh
+	../../exp/nas_cg/carm/symbol_redefine.sh
+	../../exp/nas_cg/carm_O1/
+	../../exp/nas_cg/carm_no_loop_opt/.opt.ll.swp
+	../../exp/nas_cg/carm_no_loop_opt/Makefile
+	../../exp/nas_cg/carm_no_loop_opt/cg.C
+	../../exp/nas_cg/carm_no_loop_opt/cg.D
+	../../exp/nas_cg/carm_no_loop_opt/cg.D.bc
+	../../exp/nas_cg/carm_no_loop_opt/kill.sh
+	../../exp/nas_cg/carm_no_loop_opt/log.128
+	../../exp/nas_cg/carm_no_loop_opt/log.2
+	../../exp/nas_cg/carm_no_loop_opt/log.512
+	../../exp/nas_cg/carm_no_loop_opt/main
+	../../exp/nas_cg/carm_no_loop_opt/main.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_check.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_check_norm.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_init.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_libctransform.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_norm.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_transform.bc
+	../../exp/nas_cg/carm_no_loop_opt/main_transform_norm.bc
+	../../exp/nas_cg/carm_no_loop_opt/opt.bc
+	../../exp/nas_cg/carm_no_loop_opt/run_wo_make.sh
+	../../exp/nas_cg/carm_no_loop_opt/symbol_redefine.sh
+	../../exp/nas_cg/carm_profile_loops/
+	../../exp/nas_ft/carm/.opt.ll.swp
+	../../exp/nas_ft/carm/Makefile
+	../../exp/nas_ft/carm/O1
+	../../exp/nas_ft/carm/ft.C
+	../../exp/nas_ft/carm/ft.C.bc
+	../../exp/nas_ft/carm/ft.O1_loopir
+	../../exp/nas_ft/carm/ft.log2
+	../../exp/nas_ft/carm/ft.log2_O1
+	../../exp/nas_ft/carm/kill.sh
+	../../exp/nas_ft/carm/log.1
+	../../exp/nas_ft/carm/log.2
+	../../exp/nas_ft/carm/log.512
+	../../exp/nas_ft/carm/main
+	../../exp/nas_ft/carm/main.bc
+	../../exp/nas_ft/carm/main.ll
+	../../exp/nas_ft/carm/main_check.bc
+	../../exp/nas_ft/carm/main_check_norm.bc
+	../../exp/nas_ft/carm/main_init.bc
+	../../exp/nas_ft/carm/main_libctransform.bc
+	../../exp/nas_ft/carm/main_loopcheck.bc
+	../../exp/nas_ft/carm/main_loopcheck.ll
+	../../exp/nas_ft/carm/main_loopcheck_norm.bc
+	../../exp/nas_ft/carm/main_looptransform.bc
+	../../exp/nas_ft/carm/main_looptransform_norm.bc
+	../../exp/nas_ft/carm/main_norm.bc
+	../../exp/nas_ft/carm/main_transform.bc
+	../../exp/nas_ft/carm/main_transform_norm.bc
+	../../exp/nas_ft/carm/opt.bc
+	../../exp/nas_ft/carm/run_wo_make.sh
+	../../exp/nas_ft/carm/symbol_redefine.sh
+	../../exp/nas_ft/carm/tes
+	../../exp/nas_ft/carm_O1/
+	../../exp/nas_ft/carm_no_loop_opt/.opt.ll.swp
+	../../exp/nas_ft/carm_no_loop_opt/Makefile
+	../../exp/nas_ft/carm_no_loop_opt/ft.C
+	../../exp/nas_ft/carm_no_loop_opt/ft.C.bc
+	../../exp/nas_ft/carm_no_loop_opt/kill.sh
+	../../exp/nas_ft/carm_no_loop_opt/log.1
+	../../exp/nas_ft/carm_no_loop_opt/log.2
+	../../exp/nas_ft/carm_no_loop_opt/main
+	../../exp/nas_ft/carm_no_loop_opt/main.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_check.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_check_norm.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_init.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_libctransform.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_norm.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_transform.bc
+	../../exp/nas_ft/carm_no_loop_opt/main_transform_norm.bc
+	../../exp/nas_ft/carm_no_loop_opt/opt.bc
+	../../exp/nas_ft/carm_no_loop_opt/run_wo_make.sh
+	../../exp/nas_ft/carm_no_loop_opt/symbol_redefine.sh
+	../../exp/nas_ft/carm_profile_loops/
+	../../exp/nas_is/carm/.opt.ll.swp
+	../../exp/nas_is/carm/Makefile
+	../../exp/nas_is/carm/is.C
+	../../exp/nas_is/carm/is.D
+	../../exp/nas_is/carm/is.D.bc
+	../../exp/nas_is/carm/kill.sh
+	../../exp/nas_is/carm/log.1
+	../../exp/nas_is/carm/log.128
+	../../exp/nas_is/carm/log.6
+	../../exp/nas_is/carm/log.9
+	../../exp/nas_is/carm/main
+	../../exp/nas_is/carm/main.bc
+	../../exp/nas_is/carm/main.ll
+	../../exp/nas_is/carm/main_check.bc
+	../../exp/nas_is/carm/main_check_norm.bc
+	../../exp/nas_is/carm/main_init.bc
+	../../exp/nas_is/carm/main_libctransform.bc
+	../../exp/nas_is/carm/main_loopcheck.bc
+	../../exp/nas_is/carm/main_loopcheck.ll
+	../../exp/nas_is/carm/main_loopcheck_norm.bc
+	../../exp/nas_is/carm/main_looptransform.bc
+	../../exp/nas_is/carm/main_looptransform_norm.bc
+	../../exp/nas_is/carm/main_norm.bc
+	../../exp/nas_is/carm/main_transform.bc
+	../../exp/nas_is/carm/main_transform_norm.bc
+	../../exp/nas_is/carm/opt.bc
+	../../exp/nas_is/carm/run_wo_make.sh
+	../../exp/nas_is/carm/symbol_redefine.sh
+	../../exp/nas_is/carm_O1/
+	../../exp/nas_is/carm_no_loop_opt/.opt.ll.swp
+	../../exp/nas_is/carm_no_loop_opt/Makefile
+	../../exp/nas_is/carm_no_loop_opt/is.C
+	../../exp/nas_is/carm_no_loop_opt/is.D
+	../../exp/nas_is/carm_no_loop_opt/is.D.bc
+	../../exp/nas_is/carm_no_loop_opt/kill.sh
+	../../exp/nas_is/carm_no_loop_opt/log.1
+	../../exp/nas_is/carm_no_loop_opt/log.128
+	../../exp/nas_is/carm_no_loop_opt/log.6
+	../../exp/nas_is/carm_no_loop_opt/log.9
+	../../exp/nas_is/carm_no_loop_opt/main
+	../../exp/nas_is/carm_no_loop_opt/main.bc
+	../../exp/nas_is/carm_no_loop_opt/main_check.bc
+	../../exp/nas_is/carm_no_loop_opt/main_check_norm.bc
+	../../exp/nas_is/carm_no_loop_opt/main_init.bc
+	../../exp/nas_is/carm_no_loop_opt/main_libctransform.bc
+	../../exp/nas_is/carm_no_loop_opt/main_norm.bc
+	../../exp/nas_is/carm_no_loop_opt/main_transform.bc
+	../../exp/nas_is/carm_no_loop_opt/main_transform_norm.bc
+	../../exp/nas_is/carm_no_loop_opt/opt.bc
+	../../exp/nas_is/carm_no_loop_opt/run_wo_make.sh
+	../../exp/nas_is/carm_no_loop_opt/symbol_redefine.sh
+	../../exp/nas_is/carm_profile_loops/
+	../../exp/nas_mg/carm/.opt.ll.swp
+	../../exp/nas_mg/carm/Makefile
+	../../exp/nas_mg/carm/kill.sh
+	../../exp/nas_mg/carm/log.1
+	../../exp/nas_mg/carm/log.512
+	../../exp/nas_mg/carm/log.7
+	../../exp/nas_mg/carm/main
+	../../exp/nas_mg/carm/main.bc
+	../../exp/nas_mg/carm/main.ll
+	../../exp/nas_mg/carm/main_check.bc
+	../../exp/nas_mg/carm/main_check_norm.bc
+	../../exp/nas_mg/carm/main_init.bc
+	../../exp/nas_mg/carm/main_libctransform.bc
+	../../exp/nas_mg/carm/main_loopcheck.bc
+	../../exp/nas_mg/carm/main_loopcheck.ll
+	../../exp/nas_mg/carm/main_loopcheck_norm.bc
+	../../exp/nas_mg/carm/main_looptransform.bc
+	../../exp/nas_mg/carm/main_looptransform_norm.bc
+	../../exp/nas_mg/carm/main_norm.bc
+	../../exp/nas_mg/carm/main_transform.bc
+	../../exp/nas_mg/carm/main_transform_norm.bc
+	../../exp/nas_mg/carm/mg.C
+	../../exp/nas_mg/carm/mg.D
+	../../exp/nas_mg/carm/mg.D.bc
+	../../exp/nas_mg/carm/opt.bc
+	../../exp/nas_mg/carm/run_wo_make.sh
+	../../exp/nas_mg/carm/symbol_redefine.sh
+	../../exp/nas_mg/carm_O1/
+	../../exp/nas_mg/carm_no_loop_opt/.opt.ll.swp
+	../../exp/nas_mg/carm_no_loop_opt/Makefile
+	../../exp/nas_mg/carm_no_loop_opt/kill.sh
+	../../exp/nas_mg/carm_no_loop_opt/log.1
+	../../exp/nas_mg/carm_no_loop_opt/log.512
+	../../exp/nas_mg/carm_no_loop_opt/log.7
+	../../exp/nas_mg/carm_no_loop_opt/main
+	../../exp/nas_mg/carm_no_loop_opt/main.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_check.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_check_norm.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_init.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_libctransform.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_norm.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_transform.bc
+	../../exp/nas_mg/carm_no_loop_opt/main_transform_norm.bc
+	../../exp/nas_mg/carm_no_loop_opt/mg.C
+	../../exp/nas_mg/carm_no_loop_opt/mg.D
+	../../exp/nas_mg/carm_no_loop_opt/mg.D.bc
+	../../exp/nas_mg/carm_no_loop_opt/opt.bc
+	../../exp/nas_mg/carm_no_loop_opt/run_wo_make.sh
+	../../exp/nas_mg/carm_no_loop_opt/symbol_redefine.sh
+	../../exp/nas_mg/carm_profile_loops/
+	../../exp/nas_sp/carm/.opt.ll.swp
+	../../exp/nas_sp/carm/Makefile
+	../../exp/nas_sp/carm/kill.sh
+	../../exp/nas_sp/carm/log.1
+	../../exp/nas_sp/carm/log.128
+	../../exp/nas_sp/carm/log.3
+	../../exp/nas_sp/carm/main
+	../../exp/nas_sp/carm/main.bc
+	../../exp/nas_sp/carm/main.ll
+	../../exp/nas_sp/carm/main_check.bc
+	../../exp/nas_sp/carm/main_check_norm.bc
+	../../exp/nas_sp/carm/main_init.bc
+	../../exp/nas_sp/carm/main_libctransform.bc
+	../../exp/nas_sp/carm/main_loopcheck.bc
+	../../exp/nas_sp/carm/main_loopcheck.ll
+	../../exp/nas_sp/carm/main_loopcheck_norm.bc
+	../../exp/nas_sp/carm/main_looptransform.bc
+	../../exp/nas_sp/carm/main_looptransform_norm.bc
+	../../exp/nas_sp/carm/main_norm.bc
+	../../exp/nas_sp/carm/main_transform.bc
+	../../exp/nas_sp/carm/main_transform_norm.bc
+	../../exp/nas_sp/carm/opt.bc
+	../../exp/nas_sp/carm/opt.ll
+	../../exp/nas_sp/carm/run_wo_make.sh
+	../../exp/nas_sp/carm/sp.C
+	../../exp/nas_sp/carm/sp.D
+	../../exp/nas_sp/carm/sp.D.bc
+	../../exp/nas_sp/carm/symbol_redefine.sh
+	../../exp/nas_sp/carm_O1/
+	../../exp/nas_sp/carm_no_loop_opt/.opt.ll.swp
+	../../exp/nas_sp/carm_no_loop_opt/Makefile
+	../../exp/nas_sp/carm_no_loop_opt/kill.sh
+	../../exp/nas_sp/carm_no_loop_opt/log.1
+	../../exp/nas_sp/carm_no_loop_opt/log.128
+	../../exp/nas_sp/carm_no_loop_opt/log.3
+	../../exp/nas_sp/carm_no_loop_opt/main
+	../../exp/nas_sp/carm_no_loop_opt/main.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_check.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_check_norm.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_init.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_libctransform.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_norm.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_transform.bc
+	../../exp/nas_sp/carm_no_loop_opt/main_transform_norm.bc
+	../../exp/nas_sp/carm_no_loop_opt/opt.bc
+	../../exp/nas_sp/carm_no_loop_opt/run_wo_make.sh
+	../../exp/nas_sp/carm_no_loop_opt/sp.C
+	../../exp/nas_sp/carm_no_loop_opt/sp.D
+	../../exp/nas_sp/carm_no_loop_opt/sp.D.bc
+	../../exp/nas_sp/carm_no_loop_opt/symbol_redefine.sh
+	../../exp/nas_sp/carm_profile_loops/
+	../../exp/tes
+	../../src/.carm_loops.cpp.swp
+	../../../tes
+
+no changes added to commit (use "git add" and/or "git commit -a")

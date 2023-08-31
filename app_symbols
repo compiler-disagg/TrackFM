@@ -1,0 +1,289 @@
+ carm_IO_getc
+ carm_Unwind_Resume
+ carm_Z18carm_remote_mallocm
+ carm_Z10carm_debugm
+ carm_Z10carm_derefPvmm
+ carm_Z10carm_freadPvmmS_
+ carm_Z11carm_fwritePvmmS_
+ carm_Z11carm_memcmpPvS_m
+ carm_Z11carm_memcpyPaS_m
+ carm_Z11carm_strcmpPvS_
+ carm_Z11carm_strcpyPvS_
+ carm_Z11carm_strlenPv
+ carm_Z12carm_strncpyPvS_m
+ carm_Z17init_carm_runtimePPc
+ carm_ZSt19piecewise_construct
+ carm__ctype_b_loc
+ carm__cxa_atexit
+ carm__dso_handle
+ carm__errno_location
+ carmasin
+ carmcarmcache
+ carmceilf
+ carmcos
+ carmexit
+ carmfclose
+ carmfflush
+ carmfopen
+ carmfputs
+ carmfseek
+ carmfseeko
+ carmftell
+ carmftello
+ carmgettimeofday
+ carmisspace
+ carmlocaltime_r
+ carmlog
+ carmmktime
+ carmpow
+ carmprintf
+ carmpthread_create
+ carmpthread_setspecific
+ carmrewind 
+ carmsetenv
+ carmsetvbuf
+ carmsin
+ carmsnprintf
+ carmsprintf
+ carmsqrt
+ carmsscanf
+ carmstderr
+ carmstrcpy
+ carmstrerror
+ carmstrncpy
+ carmtzset
+ carmunsetenv
+ carmvsprintf
+carm_Z10carm_fopenPvS_
+carm_Z11carm_fclosePv
+carm_Z11carm_memsetPvim
+carm_Z11carm_sscanfPvS_z
+carm_Z12carm_sprintfPvS_z
+carm_Z13carm_snprintfPvmS_z
+carm_Z13carm_vfprintfPvS_P13__va_list_tag
+carm_Z13carm_vsprintfPvS_P13__va_list_tag
+carm_Z14carm_vsnprintfPvmS_P13__va_list_tag
+carmrand
+carmsrand
+carmstdin
+carmtime
+carm_Z9carm_freePv
+carmmcount
+carm_Z23carm_add_prefetch_tracem
+carm_Z15carm_deref_readm
+carm_Z16carm_deref_writem
+carm_Z7releasev
+carm_Z7acquirev
+carm_Z29carm_deref_write_not_temporalm
+carm_Z28carm_deref_read_not_temporalm
+carmcarm_cache_not_mut
+carmcarm_cache_mut
+carm_Z15carm_deref_readmm
+carm_Z16carm_deref_writemm
+carm_Unwind_RaiseException
+carmislower
+carmpthread_once
+carm__assert_fail
+carm_Unwind_GetLanguageSpecificData
+carm_Unwind_GetIP
+carmposix_memalign
+carm_Unwind_GetRegionStart
+carmisdigit
+carmisxdigit
+carm_Unwind_SetGR
+carm_Unwind_SetIP
+carm_Unwind_DeleteException
+carmpathconf
+carmpthread_equal
+carm__cxa_thread_atexit_impl
+carm_Z24get_deref_mut_cache_addrv
+carm_Z20get_deref_cache_addrv
+carmcarm_cache_not_mut
+carmcarm_cache_mut
+carmstrcmp
+carmmemmove
+carmfread
+carmmemcpy
+carmmemset
+carmstrlen
+carm_Z7do_workPv
+carm_Z17init_carm_runtimePv
+carmabort
+carm_Z21invalidate_loop_indexv
+carm_Z17carm_get_obj_sizem
+carm_Z21carm_deref_loop_writem
+carm_Z21carm_deref_loop_readm
+carmputs
+carmfabs
+carm_Z29carm_deref_write_check_boundsm
+carm_Z28carm_deref_read_check_boundsm
+carmcarm_obj_state
+carm_Z15carm_deref_readm
+carm_Z16carm_deref_writem
+carmcarm_obj_data_addr
+carmcarm_obj_index
+carmcarm_obj_mut_data_addr
+carmcarm_obj_mut_index
+carm_Z17carm_local_mallocm
+carm_Z21carm_deref_loop_writev
+carm_Z20carm_deref_loop_readm
+carm_Z14carm_loop_initmm
+carmclock_gettime
+carmatof
+carmgetline
+carmatoi
+carmstrtok
+carmstrdup     
+carm_Z12carm_reallocPvm
+carm_Z11carm_callocmm
+carm_Z11carm_strdupPc
+carm_Z21invalidate_loop_indexm
+carmstdout
+carmmalloc
+carmputchar
+carmstrtod
+carmstrtol
+carmstrtok_r
+carmsetbuf
+carmsetsockopt
+carmsigfillset
+carmstrchr
+carmopen
+carmgetsockname
+carmgetprotobynumber
+carmif_nametoindex
+carmgetrandom
+carmsocket
+carmepoll_create
+carmconnect
+carmepoll_create1
+carmsendmsg
+carmsetrlimit
+carmdaemon
+carmfreeifaddrs
+carm__lxstat
+carmgetenv
+carmstrrchr
+carmreadv
+carmstrncmp
+carmfprintf
+carmwritev
+carmstrpbrk
+carmbcmp
+carmsigemptyset
+carmaccept4
+carmgetopt
+carmoptarg
+carmlseek
+carmpipe
+carmgai_strerror
+carmgetsockopt
+carmeventfd
+carmselect
+carmsigaction
+carmioctl
+carmfputc
+carmstrtoull
+carmepoll_wait
+carmgetrusage
+carmshutdown
+carmgetegid
+carmgetpeername
+carm_Z11carm_memchrPvim
+carmstrtoll
+carmsetgid
+carmwrite
+carmgetnameinfo
+carmfcntl
+carmtimerfd_settime
+carmunlink
+carmread
+carmsignal
+carmbind
+carmgeteuid
+carmperror
+carmtimerfd_create
+carmnanosleep
+carmstrtoul
+carmclose
+carmgetifaddrs
+carmgetpwnam
+carmrecvfrom
+carmmunmap
+carmsysconf
+carmgmtime_r
+carmsendfile
+carmsocketpair
+carmgetgid
+carmmallinfo
+carmstrspn
+carmmmap
+carmgetservbyname
+carmfreeaddrinfo
+carmpoll
+carmsetuid
+carmmlockall
+carmlisten
+carmsendto
+carmpipe2
+carmgetrlimit
+carmgetuid
+carmgetaddrinfo
+carmumask
+carmstrsep
+carm__fxstat
+carmgetpid
+carmaccept
+carmgethostname
+carmepoll_ctl
+carmevent_del
+carmevent_init
+carmevent_add
+carmevent_base_loop
+carmevent_base_set
+carmevent_set
+carmpthread_join
+carmkill
+carmstrstr
+carmpthread_mutex_init
+carmstrcat
+carmfork
+carmusleep
+carmpthread_mutex_trylock
+carmpthread_mutex_destroy
+carminet_ntop
+carmpthread_mutex_unlock
+carmfgets
+carmdup2
+carmrename
+carmgetsubopt
+carmpthread_attr_init
+carmraise
+carmsigignore
+carmpthread_key_create
+carmsetsid
+carmpthread_mutex_lock
+carmevent_get_version
+carmpthread_cond_signal
+carmpthread_getspecific
+carmdup
+carmchdir
+carm_exit
+carmpthread_cond_init
+carmaccess
+carmstrsignal
+carmpthread_cond_wait
+carm_Z9carm_readiPvl
+carm_Z11carm_strtolPcPS_i
+carm_Z12carm_strtoulPcPS_i
+carmqsort
+carmround
+carmfmax
+carmlocaltime
+carmfmin
+carmstrftime
+carm_Z17init_carm_runtimev
+carm_Z12carm_fprintfPvS_z
+carm_Z7do_workPv
+carm_Z8get_argsv
+carm_Z13get_arg_countv
