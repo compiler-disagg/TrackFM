@@ -1,0 +1,7 @@
+  local address:  LID 0x0000, QPN 0x000112, PSN 0x000000, GID fe80::9af2:b3ff:feca:8cf0
+  remote address: LID 0x0000, QPN 0x000142, PSN 0x9b3125, GID fe80::9edc:71ff:fe4a:5c00
+  local address:  LID 0x0000, QPN 0x000113, PSN 0x204a16, GID fe80::9af2:b3ff:feca:8cf0
+  remote address: LID 0x0000, QPN 0x000140, PSN 0x664af2, GID fe80::9edc:71ff:fe4a:5c00
+usage: [cfg_file]
+delay = 600
+21650473

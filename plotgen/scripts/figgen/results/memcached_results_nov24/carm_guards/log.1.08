@@ -1,0 +1,19 @@
+setup complete
+ a : 1.08 : 5012.419077339
+[New LWP 12825]
+[New LWP 12826]
+[New LWP 12827]
+[New LWP 12828]
+[New LWP 12829]
+[New LWP 12830]
+[New LWP 12831]
+[New LWP 12832]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f59542ea6d7 in ioctl () at ../sysdeps/unix/syscall-template.S:78
+$1 = 1362547404
+A debugging session is active.
+
+	Inferior 1 [process 12824] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

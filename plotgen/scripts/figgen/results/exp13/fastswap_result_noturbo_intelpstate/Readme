@@ -1,0 +1,32 @@
+Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+
+mem 64 gb
+disk 100GB
+swap 42 GB
+
+MLNX_OFED_LINUX-4.3-1.0.1.0-ubuntu18.04-x86_64.tgz
+
+queue size should be same
+
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1224.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1212.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+cpu MHz		: 1200.000
+
+
