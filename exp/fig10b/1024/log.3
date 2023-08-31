@@ -1,23 +1,23 @@
-CPU 19| <5> cpu: detected 20 cores, 1 nodes
-CPU 19| <5> time: detected 2394 ticks / us
-[  0.000702] CPU 19| <5> loading configuration from '/home/TrackFM-test/runtime/AIFM/aifm/configs/client_noht.config'
-[  0.000752] CPU 19| <3> < 1 guaranteed kthreads is not recommended for networked apps
-[  0.016930] CPU 19| <5> net: started network stack
-[  0.016948] CPU 19| <5> net: using the following configuration:
-[  0.016953] CPU 19| <5>   addr:	18.18.1.2
-[  0.016959] CPU 19| <5>   netmask:	255.255.255.0
-[  0.016964] CPU 19| <5>   gateway:	18.8.1.1
-[  0.016969] CPU 19| <5>   mac:	BA:F2:A3:31:A8:0B
-[  0.247965] CPU 01| <5> thread: created thread 0
-[  0.248105] CPU 01| <5> spawning 9 kthreads
-[  0.248255] CPU 02| <5> thread: created thread 1
-[  0.248366] CPU 03| <5> thread: created thread 2
-[  0.248457] CPU 06| <5> thread: created thread 3
-[  0.248609] CPU 08| <5> thread: created thread 4
-[  0.248829] CPU 09| <5> thread: created thread 5
-[  0.248977] CPU 11| <5> thread: created thread 6
-[  0.249192] CPU 17| <5> thread: created thread 7
-[  0.249449] CPU 01| <5> thread: created thread 8
+CPU 17| <5> cpu: detected 20 cores, 1 nodes
+CPU 17| <5> time: detected 2394 ticks / us
+[  0.000715] CPU 17| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000766] CPU 17| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.016927] CPU 17| <5> net: started network stack
+[  0.016944] CPU 17| <5> net: using the following configuration:
+[  0.016949] CPU 17| <5>   addr:	18.18.1.2
+[  0.016954] CPU 17| <5>   netmask:	255.255.255.0
+[  0.016959] CPU 17| <5>   gateway:	18.8.1.1
+[  0.016964] CPU 17| <5>   mac:	22:E3:21:55:13:AD
+[  0.247309] CPU 17| <5> thread: created thread 0
+[  0.247434] CPU 17| <5> spawning 9 kthreads
+[  0.247581] CPU 18| <5> thread: created thread 1
+[  0.247649] CPU 01| <5> thread: created thread 2
+[  0.247744] CPU 12| <5> thread: created thread 3
+[  0.247982] CPU 08| <5> thread: created thread 4
+[  0.248173] CPU 05| <5> thread: created thread 5
+[  0.248321] CPU 13| <5> thread: created thread 6
+[  0.248569] CPU 16| <5> thread: created thread 7
+[  0.248729] CPU 17| <5> thread: created thread 8
 rp addr 18.18.1.3:8000
 raddr 18.18.1.3:8000
 init_objects OBJ SIZE 1024
@@ -35,8 +35,8 @@ Each kernel will be executed 2 times.
  will be used to compute the reported bandwidth.
 -------------------------------------------------------------
 Your clock granularity/precision appears to be 1 microseconds.
-Each test below will take on the order of 5024505 microseconds.
-   (= 5024505 clock ticks)
+Each test below will take on the order of 5045375 microseconds.
+   (= 5045375 clock ticks)
 Increase the size of the arrays if this shows that
 you are not getting at least 20 clock ticks per test.
 -------------------------------------------------------------
@@ -45,11 +45,16 @@ For best results, please be sure you know the
 precision of your system timer.
 -------------------------------------------------------------
 Function    Average Rate MB/s  Avg time     Min time     Max time
-Copy:            1146.0     5.621524     5.621524     5.621524
-Scale:           1022.2     6.302436     6.302436     6.302436
-Add:             1109.5     8.710047     8.710047     8.710047
-Triad:           1204.5     8.022725     8.022725     8.022725
+Copy:            1142.9     5.636883     5.636883     5.636883
+Scale:           1020.3     6.314471     6.314471     6.314471
+Add:             1111.0     8.698184     8.698184     8.698184
+Triad:           1204.9     8.020612     8.020612     8.020612
 -------------------------------------------------------------
 Solution Validates: avg error less than 1.000000e-13 on all three arrays
 -------------------------------------------------------------
-[ 82.960591] CPU 02| <5> init: shutting down -> SUCCESS
+[ 82.939786] CPU 07| <5> init: shutting down -> SUCCESS
+double free or corruption (fasttop)
+double free or corruption (fasttop)
+double free or corruption (fasttop)
+double free or corruption (fasttop)
+Aborted

@@ -1,23 +1,23 @@
-CPU 19| <5> cpu: detected 20 cores, 1 nodes
-CPU 19| <5> time: detected 2394 ticks / us
-[  0.000702] CPU 19| <5> loading configuration from '/home/TrackFM-test/runtime/AIFM/aifm/configs/client_noht.config'
-[  0.000754] CPU 19| <3> < 1 guaranteed kthreads is not recommended for networked apps
-[  0.017410] CPU 19| <5> net: started network stack
-[  0.017428] CPU 19| <5> net: using the following configuration:
-[  0.017433] CPU 19| <5>   addr:	18.18.1.2
-[  0.017438] CPU 19| <5>   netmask:	255.255.255.0
-[  0.017442] CPU 19| <5>   gateway:	18.8.1.1
-[  0.017446] CPU 19| <5>   mac:	62:81:DA:76:83:9D
-[  0.244163] CPU 19| <5> thread: created thread 0
-[  0.244300] CPU 19| <5> spawning 9 kthreads
-[  0.244458] CPU 01| <5> thread: created thread 1
-[  0.244601] CPU 02| <5> thread: created thread 2
-[  0.244639] CPU 04| <5> thread: created thread 3
-[  0.244907] CPU 15| <5> thread: created thread 4
-[  0.244991] CPU 14| <5> thread: created thread 5
-[  0.245053] CPU 08| <5> thread: created thread 6
-[  0.245320] CPU 09| <5> thread: created thread 7
-[  0.245407] CPU 18| <5> thread: created thread 8
+CPU 11| <5> cpu: detected 20 cores, 1 nodes
+CPU 11| <5> time: detected 2394 ticks / us
+[  0.000732] CPU 11| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000786] CPU 11| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017074] CPU 11| <5> net: started network stack
+[  0.017092] CPU 11| <5> net: using the following configuration:
+[  0.017097] CPU 11| <5>   addr:	18.18.1.2
+[  0.017102] CPU 11| <5>   netmask:	255.255.255.0
+[  0.017107] CPU 11| <5>   gateway:	18.8.1.1
+[  0.017111] CPU 11| <5>   mac:	CE:70:3E:7C:3F:8C
+[  0.249879] CPU 11| <5> thread: created thread 0
+[  0.250018] CPU 11| <5> spawning 9 kthreads
+[  0.250174] CPU 02| <5> thread: created thread 1
+[  0.250286] CPU 03| <5> thread: created thread 2
+[  0.250367] CPU 05| <5> thread: created thread 3
+[  0.250531] CPU 06| <5> thread: created thread 4
+[  0.250692] CPU 18| <5> thread: created thread 5
+[  0.250872] CPU 19| <5> thread: created thread 6
+[  0.251158] CPU 11| <5> thread: created thread 7
+[  0.251359] CPU 16| <5> thread: created thread 8
 rp addr 18.18.1.3:8000
 raddr 18.18.1.3:8000
 init_objects OBJ SIZE 1024
@@ -35,8 +35,8 @@ Each kernel will be executed 2 times.
  will be used to compute the reported bandwidth.
 -------------------------------------------------------------
 Your clock granularity/precision appears to be 1 microseconds.
-Each test below will take on the order of 5035885 microseconds.
-   (= 5035885 clock ticks)
+Each test below will take on the order of 5005000 microseconds.
+   (= 5005000 clock ticks)
 Increase the size of the arrays if this shows that
 you are not getting at least 20 clock ticks per test.
 -------------------------------------------------------------
@@ -45,11 +45,13 @@ For best results, please be sure you know the
 precision of your system timer.
 -------------------------------------------------------------
 Function    Average Rate MB/s  Avg time     Min time     Max time
-Copy:            1083.4     5.946594     5.946594     5.946594
-Scale:           1015.8     6.342360     6.342360     6.342360
-Add:             1139.1     8.483301     8.483301     8.483301
-Triad:           1192.5     8.103739     8.103739     8.103739
+Copy:            1100.1     5.856143     5.856143     5.856143
+Scale:           1026.3     6.277137     6.277137     6.277137
+Add:             1148.3     8.415997     8.415997     8.415997
+Triad:           1209.2     7.992072     7.992072     7.992072
 -------------------------------------------------------------
 Solution Validates: avg error less than 1.000000e-13 on all three arrays
 -------------------------------------------------------------
-[ 83.753263] CPU 04| <5> init: shutting down -> SUCCESS
+[ 82.075693] CPU 03| <5> init: shutting down -> SUCCESS
+double free or corruption (fasttop)
+Aborted
