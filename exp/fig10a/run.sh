@@ -34,7 +34,7 @@ mv *.o libc++_$obj_size"_obj_size/"
 
 cd /home/TrackFM/exp/fig10a
 
-cache_sizes=( 128 256 384 512 768 1024 1536 2048, 4096)
+cache_sizes=( 128 256 384 512 768 1024 1536 2048 4096)
 #python3 test_memc.py
 rm log.*
 sudo pkill -9 main

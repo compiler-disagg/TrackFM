@@ -38,12 +38,12 @@ main_lib:
 	#noelle-enable main_norm.bc main_e.bc -noelle-disable-inliner -noelle-disable-scev-simplification -noelle-disable-whilifier -noelle-disable-loop-distribution 
 	noelle-load -load ~/CAT/lib/TRACKFMCHECKS.so -CAT main_norm.bc -o main_check.bc 
 	noelle-norm main_check.bc -o main_check_norm.bc 
-	#noelle-load -load ~/CAT/lib/TRACKFMLOOPCHECKS.so -CAT main_check_norm.bc -o main_loopcheck.bc 
-	#noelle-norm main_loopcheck.bc -o main_loopcheck_norm.bc 
-	#noelle-load -load ~/CAT/lib/TRACKFMLOOPTRANSFORM.so -CAT main_loopcheck_norm.bc -o main_looptransform.bc 
-	#noelle-norm main_looptransform.bc -o main_looptransform_norm.bc
-	noelle-load -load ~/CAT/lib/TRACKFMTRANSFORM.so -CAT main_check_norm.bc -o main_transform.bc 
-	#noelle-load -load ~/CAT/lib/TRACKFMTRANSFORM.so -CAT main_looptransform_norm.bc -o main_transform.bc 
+	noelle-load -load ~/CAT/lib/TRACKFMLOOPCHECKS.so -CAT main_check_norm.bc -o main_loopcheck.bc 
+	noelle-norm main_loopcheck.bc -o main_loopcheck_norm.bc 
+	noelle-load -load ~/CAT/lib/TRACKFMLOOPTRANSFORM.so -CAT main_loopcheck_norm.bc -o main_looptransform.bc 
+	noelle-norm main_looptransform.bc -o main_looptransform_norm.bc
+	#noelle-load -load ~/CAT/lib/TRACKFMTRANSFORM.so -CAT main_check_norm.bc -o main_transform.bc 
+	noelle-load -load ~/CAT/lib/TRACKFMTRANSFORM.so -CAT main_looptransform_norm.bc -o main_transform.bc 
 	noelle-norm main_transform.bc -o main_transform_norm.bc 
 	noelle-load -load ~/CAT/lib/TRACKFMLIBCTRANSFORM.so -CAT main_transform_norm.bc -o main_libctransform.bc 
 	noelle-norm main_libctransform.bc -o main_libctransform_norm.bc 
