@@ -25,6 +25,14 @@ cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
+cd /home/TrackFM/exp/compile_bitcodes
+
+rm *.o
+
+./libc++_transform.sh
+
+mv *.o libc++_$obj_size"_obj_size/" 
+
 cd /home/TrackFM/exp/fig10a
 
 cache_sizes=( 128 256 384 512 768 1024 1536 2048 4096)
@@ -32,7 +40,7 @@ rm log.*
 sudo pkill -9 main
 for cache_size in "${cache_sizes[@]}"
 do
-    kill_local_iokerneld
+		kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     mem=$((cache_size*1024*1024))
