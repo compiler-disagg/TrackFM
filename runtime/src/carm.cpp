@@ -16,6 +16,8 @@
 
 #define DEFAULT_PREFETCHER 0
 
+uint64_t remote_fetches = 0;
+uint64_t local_fetches = 0;
 using namespace far_memory;
 uint64_t prev_obj_index[MAX_LOOPS + 1];
 
@@ -130,6 +132,16 @@ static inline uint64_t carmDeref_read_not_temporal(uint64_t obj_index) {
 /*
  */
 static inline void carm_deref(uint64_t index) {
+
+#ifdef TRACKFM_TRACE
+        auto metadata = carm_obj_state[index].obj_state; 	
+	auto exceptions = kPresentClear;
+	if (exceptions & metadata)
+		remote_fetches++;
+	else
+		local_fetches++;
+#endif
+
 	if (very_likely(in_scope))
 		release();
 	in_scope = true;
@@ -143,6 +155,7 @@ static inline void carm_deref_not_temporal(uint64_t index) {
 }
 uint64_t carm_deref_read(uint64_t obj_index) {
   	//std::cout<<"\ncarm deref read "<<obj_index<<"\n";  
+
 	carm_deref(obj_index);
 	uint64_t deref_read = (uint64_t)carmDeref_read(obj_index);
   	//printf("deref read %p\n", deref_read);  
@@ -185,10 +198,18 @@ void update_cache_object(GenericFarMemPtr * metaptr) {
 		carm_obj_state[old_index].obj_state = (uint64_t)metaptr->meta().to_uint64_t();
 }
 
+
+void carm_trace() {
+
+	std::cout<<"Remote fetches "<<remote_fetches<<"\n";
+	std::cout<<"Local fetches "<<local_fetches<<"\n";
+
+}
+
 void carm_debug(uint64_t buf) {
-	printf("debug %p\n", buf);
 	//exit(0);
 	if (carm_rt) {
+
 
 #if 0
 	uint64_t addr1 = carm_cache.cache_addr ^ CARM_PTR;

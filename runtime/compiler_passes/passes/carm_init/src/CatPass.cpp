@@ -48,6 +48,8 @@
 #include <algorithm>
 
 #include "noelle/core/Noelle.hpp"
+#include "carm_object_config.hpp"
+
 
 using namespace llvm::noelle ;
 
@@ -61,6 +63,7 @@ namespace {
   static std::string CARM_GET_ARGS             = "_Z8get_argsv";
   static std::string CARM_GET_ARGC             = "_Z13get_arg_countv";
   static std::string CARM_WORK             = "_Z7do_workPv";
+  static std::string CARM_TRACE =	"_Z10carm_tracev";
   struct CAT : public ModulePass {
     static char ID;
     std::unordered_map<Function *, std::set<Instruction *>> allocas;
@@ -254,10 +257,27 @@ namespace {
         errs()<<"No insertion point found\n";
         abort(); // Serious
       }
-      IRBuilder<> builder(InsertionPoint);
       //args.push_back(F.arg_begin());
 
       Value * carm_check_call = create_function(CARM_INIT, VoidType, InsertionPoint);
+
+
+
+#ifdef TRACKFM_TRACE
+      errs()<<"TrackFM trace enabled \n";
+
+
+      for (auto &BB:F) {
+	      for (auto &I:BB) {
+
+		      if (isa<ReturnInst>(&I)) {
+			      carm_check_call = create_function(CARM_TRACE, VoidType,  static_cast<Instruction *>(&I));
+		      }
+	      }
+      }
+
+
+#endif
 
       return true;
     }
