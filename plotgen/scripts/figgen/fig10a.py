@@ -37,19 +37,19 @@ cm2k = []
 cm1k = []
 cm512 = []
 cm256 = []
-nam = "scripts/figgen/results/fig10/log.4096/log."
+nam = "scripts/figgen/results/fig10/TrackFM/4096/log."
 for i in list1: 
     readFile(nam, i, cm4k)
-nam = "scripts/figgen/results/fig10/log.2048/log."
+nam = "scripts/figgen/results/fig10/TrackFM/2048/log."
 for i in list1: 
     readFile(nam, i, cm2k)
-nam = "scripts/figgen/results/fig10/log.1024/log."
+nam = "scripts/figgen/results/fig10/TrackFM/1024/log."
 for i in list1: 
     readFile(nam, i, cm1k)
-nam = "scripts/figgen/results/fig10/log.512/log."
+nam = "scripts/figgen/results/fig10/TrackFM/512/log."
 for i in list1: 
     readFile(nam, i, cm512)
-nam = "scripts/figgen/results/fig10/log.256/log."
+nam = "scripts/figgen/results/fig10/TrackFM/256/log."
 for i in list1: 
     readFile(nam, i, cm256)
 j=0
@@ -66,8 +66,6 @@ x=[]
 for i in list1:
     x.append(i/9)
 
-#cm2d.plot(x, cm16k, '-', 'white', '+', 10)
-#cm2d.plot(x, cm8k, '--', 'white', '|', 10)
 cm2d.plot(x, cm4k, '-', 'white', 'o', 10)
 cm2d.plot(x, cm2k, '--', 'white', '*', 10)
 cm2d.plot(x, cm1k, '-.', 'white', '<', 10)
@@ -75,6 +73,5 @@ cm2d.plot(x, cm512, '-', 'white', 's', 10)
 cm2d.plot(x, cm256, '-', 'white', '|', 10)
 
 cm2d.set_legend(['4KB', '2KB', '1KB', '512B', '256B'], 2, 18)
-#cm2d.set_y_limit(0, 920)
 
 cm2d.save()
