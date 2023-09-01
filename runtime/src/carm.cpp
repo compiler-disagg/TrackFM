@@ -200,10 +200,8 @@ void update_cache_object(GenericFarMemPtr * metaptr) {
 
 
 void carm_trace() {
-
-	std::cout<<"Remote fetches "<<remote_fetches<<"\n";
-	std::cout<<"Local fetches "<<local_fetches<<"\n";
-
+	std::cout<<"Remote fetches :"<<remote_fetches<<"\n";
+	std::cout<<"Local fetches  :"<<local_fetches<<"\n";
 }
 
 void carm_debug(uint64_t buf) {
