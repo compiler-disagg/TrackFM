@@ -14,7 +14,7 @@ obj_sizes=( 64 )
 for obj_size in "${obj_sizes[@]}"
 do
 
-tobj=$((($amem/$obj_size) * 3))
+tobj=$((($amem/$obj_size) * 5))
 sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -24,9 +24,10 @@ cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
-cd /home/TrackFM/exp/fig13a
+figpath="/home/TrackFM/exp/fig13a"
+cd $figpath
 
-cache_sizes=( 128 256 384 512 768 1024 1536 2048 4096)
+cache_sizes=( 128 256 384 512 768 1024 1536 2048)
 rm log.*
 sudo pkill -9 main
 for cache_size in "${cache_sizes[@]}"
@@ -44,5 +45,7 @@ do
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
 done
-		mv log.* $obj_size/
+		mv log.* ../../plotgen/scripts/figgen/results/fig13a/TrackFM/
+		cd ../../plotgen
+		python3 scripts/figgen/fig13a.py $figpath fig13a
 done
