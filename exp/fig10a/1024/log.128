@@ -1,27 +1,26 @@
-CPU 16| <5> cpu: detected 20 cores, 1 nodes
-CPU 16| <5> time: detected 2394 ticks / us
-[  0.000710] CPU 16| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
-[  0.000762] CPU 16| <3> < 1 guaranteed kthreads is not recommended for networked apps
-[  0.016992] CPU 16| <5> net: started network stack
-[  0.017010] CPU 16| <5> net: using the following configuration:
-[  0.017015] CPU 16| <5>   addr:	18.18.1.2
-[  0.017021] CPU 16| <5>   netmask:	255.255.255.0
-[  0.017026] CPU 16| <5>   gateway:	18.8.1.1
-[  0.017031] CPU 16| <5>   mac:	E2:21:A2:B7:02:F0
-[  0.246087] CPU 16| <5> thread: created thread 0
-[  0.246225] CPU 16| <5> spawning 9 kthreads
-[  0.246401] CPU 09| <5> thread: created thread 1
-[  0.246446] CPU 11| <5> thread: created thread 2
-[  0.246547] CPU 18| <5> thread: created thread 3
-[  0.246788] CPU 12| <5> thread: created thread 4
-[  0.246897] CPU 14| <5> thread: created thread 5
-[  0.247061] CPU 09| <5> thread: created thread 6
-[  0.247272] CPU 18| <5> thread: created thread 7
-[  0.247516] CPU 07| <5> thread: created thread 8
+CPU 15| <5> cpu: detected 20 cores, 1 nodes
+CPU 15| <5> time: detected 2394 ticks / us
+[  0.000731] CPU 15| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000782] CPU 15| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017842] CPU 15| <5> net: started network stack
+[  0.017860] CPU 15| <5> net: using the following configuration:
+[  0.017865] CPU 15| <5>   addr:	18.18.1.2
+[  0.017869] CPU 15| <5>   netmask:	255.255.255.0
+[  0.017874] CPU 15| <5>   gateway:	18.8.1.1
+[  0.017878] CPU 15| <5>   mac:	D2:74:C4:92:35:34
+[  0.244984] CPU 15| <5> thread: created thread 0
+[  0.245111] CPU 15| <5> spawning 9 kthreads
+[  0.245260] CPU 06| <5> thread: created thread 1
+[  0.245338] CPU 19| <5> thread: created thread 2
+[  0.245499] CPU 01| <5> thread: created thread 3
+[  0.245678] CPU 02| <5> thread: created thread 4
+[  0.245891] CPU 04| <5> thread: created thread 5
+[  0.245930] CPU 08| <5> thread: created thread 6
+[  0.246003] CPU 11| <5> thread: created thread 7
+[  0.246205] CPU 12| <5> thread: created thread 8
 rp addr 18.18.1.3:8000
 raddr 18.18.1.3:8000
+init_objects OBJ SIZE 1024
 size of 8
-keys set
-values loaded 
-633284313
-[804.572627] CPU 02| <5> init: shutting down -> SUCCESS
+main: malloc.c:2942: tcache_get: Assertion `tcache->entries[tc_idx] > 0' failed.
+Aborted
