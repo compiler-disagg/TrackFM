@@ -60,5 +60,5 @@ int main(int argc, char ** argv) {
 
   auto time_US =
       chrono::duration_cast<chrono::microseconds>(end_ts - start_ts).count();
-  std::cout << time_US << std::endl;
+  std::cout <<"Time :"<< time_US << std::endl;
 }
