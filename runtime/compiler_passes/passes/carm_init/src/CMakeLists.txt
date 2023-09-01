@@ -19,7 +19,7 @@ include(AddLLVM)
 
 message(STATUS "LLVM_DIR IS ${LLVM_CMAKE_DIR}.")
 
-include_directories(${LLVM_INCLUDE_DIRS} $ENV{NOELLE_DIR}/install/include $ENV{NOELLE_DIR}/install/include/svf)
+include_directories(${LLVM_INCLUDE_DIRS} $ENV{NOELLE_DIR}/install/include $ENV{NOELLE_DIR}/install/include/svf $ENV{CARM_DIR}/runtime/inc/)
 
 # Declare the LLVM pass to compile
 add_llvm_library(${CATPassName} MODULE ${CATPassSrc})
