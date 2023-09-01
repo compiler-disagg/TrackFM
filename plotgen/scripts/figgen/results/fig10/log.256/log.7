@@ -1,0 +1,57 @@
+CPU 01| <5> cpu: detected 20 cores, 1 nodes
+CPU 01| <5> time: detected 2394 ticks / us
+[  0.000712] CPU 01| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000764] CPU 01| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017435] CPU 01| <5> net: started network stack
+[  0.017452] CPU 01| <5> net: using the following configuration:
+[  0.017457] CPU 01| <5>   addr:	18.18.1.2
+[  0.017461] CPU 01| <5>   netmask:	255.255.255.0
+[  0.017466] CPU 01| <5>   gateway:	18.8.1.1
+[  0.017470] CPU 01| <5>   mac:	CA:23:C9:F3:FF:E8
+[  0.246452] CPU 01| <5> thread: created thread 0
+[  0.246585] CPU 01| <5> spawning 9 kthreads
+[  0.246749] CPU 12| <5> thread: created thread 1
+[  0.246871] CPU 13| <5> thread: created thread 2
+[  0.247009] CPU 04| <5> thread: created thread 3
+[  0.247088] CPU 06| <5> thread: created thread 4
+[  0.247304] CPU 18| <5> thread: created thread 5
+[  0.247480] CPU 16| <5> thread: created thread 6
+[  0.247578] CPU 11| <5> thread: created thread 7
+[  0.247742] CPU 03| <5> thread: created thread 8
+rp addr 18.18.1.3:8000
+raddr 18.18.1.3:8000
+init_objects OBJ SIZE 256
+size of 8
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 402653184 (elements), Offset = 0 (elements)
+Memory per array = 3072.0 MiB (= 3.0 GiB).
+Total memory required = 9216.0 MiB (= 9.0 GiB).
+Each kernel will be executed 2 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 9319485 microseconds.
+   (= 9319485 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Average Rate MB/s  Avg time     Min time     Max time
+Copy:             300.1    21.468704    21.468704    21.468704
+Scale:            286.3    22.501008    22.501008    22.501008
+Add:              249.7    38.693836    38.693836    38.693836
+Triad:            281.1    34.375336    34.375336    34.375336
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+[317.820979] CPU 09| <5> init: shutting down -> SUCCESS
+double free or corruption (fasttop)
+Aborted

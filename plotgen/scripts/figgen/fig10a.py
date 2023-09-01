@@ -35,29 +35,21 @@ cm = []   #64
 cm4k = []
 cm2k = []
 cm1k = []
-cm8k = []
 cm512 = []
 cm256 = []
-cm16k = []
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.16384/log."
-for i in list1: 
-    readFile(nam, i, cm16k)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.8192/log."
-for i in list1: 
-    readFile(nam, i, cm8k)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.4096/log."
+nam = "scripts/figgen/results/fig10/log.4096/log."
 for i in list1: 
     readFile(nam, i, cm4k)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.2048/log."
+nam = "scripts/figgen/results/fig10/log.2048/log."
 for i in list1: 
     readFile(nam, i, cm2k)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.1024/log."
+nam = "scripts/figgen/results/fig10/log.1024/log."
 for i in list1: 
     readFile(nam, i, cm1k)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.512/log."
+nam = "scripts/figgen/results/fig10/log.512/log."
 for i in list1: 
     readFile(nam, i, cm512)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.256/log."
+nam = "scripts/figgen/results/fig10/log.256/log."
 for i in list1: 
     readFile(nam, i, cm256)
 j=0
@@ -67,8 +59,6 @@ for i in list1:
     cm1k[j] = float((cm1k[j]))
     cm2k[j] = float((cm2k[j]))
     cm4k[j] = float((cm4k[j]))
-    cm8k[j] = float((cm8k[j]))
-    cm16k[j] = float((cm16k[j]))
     j = j + 1
 
 

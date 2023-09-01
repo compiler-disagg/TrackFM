@@ -30,19 +30,19 @@ cm2d = cm2d("{}/{}".format(path, fname),
 list1 = [1, 3, 5,  7,  9]
 cm = []   
 i = 2
-#nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.16384/log."
+#nam = "scripts/figgen/results/fig10/log.16384/log."
 #readFile(nam, i, cm)
-#nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.8192/log."
+#nam = "scripts/figgen/results/fig10/log.8192/log."
 #readFile(nam, i, cm)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.4096/log."
+nam = "scripts/figgen/results/fig10/log.4096/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.2048/log."
+nam = "scripts/figgen/results/fig10/log.2048/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.1024/log."
+nam = "scripts/figgen/results/fig10/log.1024/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.512/log."
+nam = "scripts/figgen/results/fig10/log.512/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/stream_results_oct22/stream_obj_study/log.256/log."
+nam = "scripts/figgen/results/fig10/log.256/log."
 readFile(nam, i, cm)
 
 j=0

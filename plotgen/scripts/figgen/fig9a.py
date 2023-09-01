@@ -37,31 +37,25 @@ cm64 = []
 c_umap_local   = 369222 
 for i in list1: 
     ln.append(float(c_umap_local))
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs/log."
-for i in list1: 
-    readFile(nam, i, cm)
-nam = "scripts/figgen/results/umap_results_nov27/fastswap_logs/log."
-for i in list1: 
-    readFile(nam, i, fs)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_4K/log."
+nam = "scripts/figgen/results/fig9/carm_logs_4K/log."
 for i in list1: 
     readFile(nam, i, cm4k)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_1K/log."
+nam = "scripts/figgen/results/fig9/carm_logs_1K/log."
 for i in list1: 
     readFile(nam, i, cm1k)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_2K/log."
+nam = "scripts/figgen/results/fig9/carm_logs_2K/log."
 for i in list1: 
     readFile(nam, i, cm2k)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_256/log."
+nam = "scripts/figgen/results/fig9/carm_logs_256/log."
 for i in list1: 
     readFile(nam, i, cm256)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_512/log."
+nam = "scripts/figgen/results/fig9/carm_logs_512/log."
 for i in list1: 
     readFile(nam, i, cm512)
-#nam = "scripts/figgen/results/umap_results_nov27/carm_logs_128/log."
+#nam = "scripts/figgen/results/fig9/carm_logs_128/log."
 #for i in list1: 
 #    readFile(nam, i, cm128)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs/log."
+nam = "scripts/figgen/results/fig9/carm_logs/log."
 for i in list1: 
     readFile(nam, i, cm64)
 j=0
@@ -74,8 +68,6 @@ for i in list1:
     cm1k[j] = float(((ops/cm1k[j]) * micro) /m)
     cm4k[j] = float(((ops/cm4k[j]) * micro)/m)
     cm2k[j] = float(((ops/cm2k[j]) * micro)/m)
-    #cm128[j] = float(((ops/cm2k[j]) * micro)/m)
-    #cm64[j] = float(((ops/cm64[j]) * micro)/m)
     j = j + 1
 
 print(cm512)

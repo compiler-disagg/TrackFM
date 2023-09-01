@@ -24,20 +24,20 @@ cm2d = cm2d("{}/{}".format(path, fname),
 
 list1 = [4096, 2048, 1024, 512, 256]
 cm = []   #64
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_4K/log.512"
+nam = "scripts/figgen/results/fig9/carm_logs_4K/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_2K/log.512"
+nam = "scripts/figgen/results/fig9/carm_logs_2K/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_1K/log.512"
+nam = "scripts/figgen/results/fig9/carm_logs_1K/log.512"
 readFile(nam,  cm)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_512/log.512"
+nam = "scripts/figgen/results/fig9/carm_logs_512/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_256/log.512"
+nam = "scripts/figgen/results/fig9/carm_logs_256/log.512"
 readFile(nam,  cm)
-#nam = "scripts/figgen/results/umap_results_nov27/carm_logs_128/log."
+#nam = "scripts/figgen/results/fig9/carm_logs_128/log."
 #for i in list1: 
 #    readFile(nam, i, cm128)
-#nam = "scripts/figgen/results/umap_results_nov27/carm_logs/log."
+#nam = "scripts/figgen/results/fig9/carm_logs/log."
 #for i in list1: 
 #    readFile(nam, i, cm64)
 j=0
