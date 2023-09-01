@@ -36,24 +36,12 @@ cm512 = []
 c_umap_local   = 369222 
 for i in list1: 
     ln.append(float(c_umap_local))
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs/log."
+nam = "scripts/figgen/results/fig13a/TrackFM/log."
 for i in list1: 
     readFile(nam, i, cm)
-nam = "scripts/figgen/results/umap_results_nov27/fastswap_logs/log."
+nam = "scripts/figgen/results/fig13a/fastswap/log."
 for i in list1: 
     readFile(nam, i, fs)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_4K/log."
-for i in list1: 
-    readFile(nam, i, cm4k)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_1K/log."
-for i in list1: 
-    readFile(nam, i, cm1k)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_256/log."
-for i in list1: 
-    readFile(nam, i, cm256)
-nam = "scripts/figgen/results/umap_results_nov27/carm_logs_512/log."
-for i in list1: 
-    readFile(nam, i, cm512)
 j=0
 ops=50000000
 micro=1000000

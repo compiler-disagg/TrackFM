@@ -32,13 +32,10 @@ cm_4096 = []
 cm_64 = []
 fs = []
 
-nam = "scripts/figgen/results/umap_results_nov27/carm_fetches/4K/log."
-for i in list1: 
-    readFile(nam, i, cm_4096)
-nam = "scripts/figgen/results/umap_results_nov27/carm_fetches/64K/log."
+nam = "scripts/figgen/results/fig13b/TrackFM/log."
 for i in list1: 
     readFile(nam, i, cm_64)
-nam = "scripts/figgen/results/umap_results_nov27/fastswap_logs/log."
+nam = "scripts/figgen/results/fig13b/fastswap/log."
 for i in list1: 
     readFile(nam, i, fs)
 

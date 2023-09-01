@@ -1,0 +1,37 @@
+container UMAP0 already exists, trying to delete
+Setting UMAP0 memory limit to 6% (128M) of max
+cd /home/cfm/UMAP && echo $$ > /cgroup2/benchmarks/UMAP0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./umap
+keys set
+values loaded 
+Time : 565430732
+ 
+
+	Command being timed: "./umap"
+	User time (seconds): 86.63
+	System time (seconds): 272.77
+	Percent of CPU this job got: 57%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:22.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 141264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 34964848
+	Minor (reclaiming a frame) page faults: 37174048
+	Voluntary context switches: 34948090
+	Involuntary context switches: 1832
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 622.5728311538696 
+
+Major Page Faults,System Time,User Time,Wall Time
+34964848,272.77,86.63,622.52

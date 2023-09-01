@@ -1,0 +1,36 @@
+Setting UMAP0 memory limit to 100% (2048M) of max
+cd /home/cfm/UMAP && echo $$ > /cgroup2/benchmarks/UMAP0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./umap
+keys set
+values loaded 
+Time : 7892058
+ 
+
+	Command being timed: "./umap"
+	User time (seconds): 53.74
+	System time (seconds): 1.68
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:57.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2099876
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 163201
+	Minor (reclaiming a frame) page faults: 829168
+	Voluntary context switches: 163148
+	Involuntary context switches: 148
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 57.08567929267883 
+
+Major Page Faults,System Time,User Time,Wall Time
+163201,1.68,53.74,57.03
