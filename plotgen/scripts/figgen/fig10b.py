@@ -30,19 +30,15 @@ cm2d = cm2d("{}/{}".format(path, fname),
 list1 = [1, 3, 5,  7,  9]
 cm = []   
 i = 2
-#nam = "scripts/figgen/results/fig10/log.16384/log."
-#readFile(nam, i, cm)
-#nam = "scripts/figgen/results/fig10/log.8192/log."
-#readFile(nam, i, cm)
-nam = "scripts/figgen/results/fig10/log.4096/log."
+nam = "scripts/figgen/results/fig10/TrackFM/4096/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/fig10/log.2048/log."
+nam = "scripts/figgen/results/fig10/TrackFM/2048/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/fig10/log.1024/log."
+nam = "scripts/figgen/results/fig10/TrackFM/1024/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/fig10/log.512/log."
+nam = "scripts/figgen/results/fig10/TrackFM/512/log."
 readFile(nam, i, cm)
-nam = "scripts/figgen/results/fig10/log.256/log."
+nam = "scripts/figgen/results/fig10/TrackFM/256/log."
 readFile(nam, i, cm)
 
 j=0
@@ -59,9 +55,7 @@ cm2d.barplot(x, cm, 0.4)
 xlabs = ['4KB', '2KB', '1KB', '512B', '256B']
 plt.tight_layout()
 plt.xticks(x, xlabs)
-#cm2d.set_y_limit(0, 920)
 
 cm2d.save()
-#cm2d.set_y_limit(0, 850)
 
 cm2d.save()

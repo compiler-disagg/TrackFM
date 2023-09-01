@@ -8,21 +8,22 @@ amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
 
-obj_sizes=( 256 512 1024 2048 4096)
+obj_sizes=( 4096 1024 2048 1024 512 256)
 
 for obj_size in "${obj_sizes[@]}"
 do
 
-tobj=$((($amem/$obj_size) * 2))
+tobj=$((($amem/$obj_size) * 3))
 sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
-cd /home/TrackFM/runtime/compiler_passes/passes/ 
+cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
-cd /home/TrackFM/exp/fig10b
+figpath="/home/TrackFM/exp/fig10"
+cd $figpath
 
 cache_sizes=( 1 2 3 4 5 6 7 8 9)
 rm log.*
@@ -41,5 +42,7 @@ do
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
 done
-    mv log.* $obj_size/
+    mv log.* ../../plotgen/scripts/figgen/results/fig10/TrackFM/$obj_size/
 done
+cd ../../plotgen
+python3 $figpath fig10
