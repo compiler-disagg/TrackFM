@@ -1,27 +1,28 @@
-CPU 07| <5> cpu: detected 20 cores, 1 nodes
-CPU 07| <5> time: detected 2394 ticks / us
-[  0.000711] CPU 07| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
-[  0.000762] CPU 07| <3> < 1 guaranteed kthreads is not recommended for networked apps
-[  0.017777] CPU 07| <5> net: started network stack
-[  0.017795] CPU 07| <5> net: using the following configuration:
-[  0.017799] CPU 07| <5>   addr:	18.18.1.2
-[  0.017804] CPU 07| <5>   netmask:	255.255.255.0
-[  0.017809] CPU 07| <5>   gateway:	18.8.1.1
-[  0.017813] CPU 07| <5>   mac:	B2:67:E4:F6:49:20
-[  0.245539] CPU 07| <5> thread: created thread 0
-[  0.245681] CPU 07| <5> spawning 9 kthreads
-[  0.245837] CPU 08| <5> thread: created thread 1
-[  0.245944] CPU 19| <5> thread: created thread 2
-[  0.246023] CPU 11| <5> thread: created thread 3
-[  0.246246] CPU 18| <5> thread: created thread 4
-[  0.246470] CPU 05| <5> thread: created thread 5
-[  0.246606] CPU 06| <5> thread: created thread 6
-[  0.246799] CPU 14| <5> thread: created thread 7
-[  0.247004] CPU 17| <5> thread: created thread 8
+CPU 04| <5> cpu: detected 20 cores, 1 nodes
+CPU 04| <5> time: detected 2394 ticks / us
+[  0.000705] CPU 04| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000756] CPU 04| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.019102] CPU 04| <5> net: started network stack
+[  0.019120] CPU 04| <5> net: using the following configuration:
+[  0.019126] CPU 04| <5>   addr:	18.18.1.2
+[  0.019130] CPU 04| <5>   netmask:	255.255.255.0
+[  0.019135] CPU 04| <5>   gateway:	18.8.1.1
+[  0.019139] CPU 04| <5>   mac:	7E:65:E1:1F:45:B6
+[  0.245092] CPU 04| <5> thread: created thread 0
+[  0.245228] CPU 04| <5> spawning 9 kthreads
+[  0.245390] CPU 05| <5> thread: created thread 1
+[  0.245469] CPU 06| <5> thread: created thread 2
+[  0.245607] CPU 09| <5> thread: created thread 3
+[  0.245879] CPU 03| <5> thread: created thread 4
+[  0.246068] CPU 12| <5> thread: created thread 5
+[  0.246239] CPU 14| <5> thread: created thread 6
+[  0.246403] CPU 18| <5> thread: created thread 7
+[  0.246666] CPU 19| <5> thread: created thread 8
 rp addr 18.18.1.3:8000
 raddr 18.18.1.3:8000
+init_objects OBJ SIZE 1024
 size of 8
 keys set
 values loaded 
-355231712
-[518.868875] CPU 06| <5> init: shutting down -> SUCCESS
+358265341
+[521.985202] CPU 02| <5> init: shutting down -> SUCCESS
