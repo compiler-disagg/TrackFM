@@ -24,15 +24,15 @@ cm2d = cm2d("{}/{}".format(path, fname),
 
 list1 = [4096, 2048, 1024, 512, 256]
 cm = []   #64
-nam = "scripts/figgen/results/fig9/carm_logs_4K/log.512"
+nam = "scripts/figgen/results/fig9/TrackFM/4096/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/fig9/carm_logs_2K/log.512"
+nam = "scripts/figgen/results/fig9/TrackFM/2048/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/fig9/carm_logs_1K/log.512"
+nam = "scripts/figgen/results/fig9/TrackFM/1024/log.512"
 readFile(nam,  cm)
-nam = "scripts/figgen/results/fig9/carm_logs_512/log.512"
+nam = "scripts/figgen/results/fig9/TrackFM/512/log.512"
 readFile(nam, cm)
-nam = "scripts/figgen/results/fig9/carm_logs_256/log.512"
+nam = "scripts/figgen/results/fig9/TrackFM/256/log.512"
 readFile(nam,  cm)
 #nam = "scripts/figgen/results/fig9/carm_logs_128/log."
 #for i in list1: 

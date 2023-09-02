@@ -24,44 +24,36 @@ cm2d = cm2d("{}/{}".format(path, fname),
 
 list1 = [128, 256, 384, 512, 768, 1024, 1536, 2048]
 ln = []
-am = []
-fs = []
-cm = []   #64
 cm4k = []
 cm1k = []
 cm2k = []
 cm256 = []
 cm512 = []
 cm128 = []
-cm64 = []
 c_umap_local   = 369222 
 for i in list1: 
     ln.append(float(c_umap_local))
-nam = "scripts/figgen/results/fig9/carm_logs_4K/log."
+nam = "scripts/figgen/results/fig9/TrackFM/4096/log."
 for i in list1: 
     readFile(nam, i, cm4k)
-nam = "scripts/figgen/results/fig9/carm_logs_1K/log."
+nam = "scripts/figgen/results/fig9/TrackFM/1024/log."
 for i in list1: 
     readFile(nam, i, cm1k)
-nam = "scripts/figgen/results/fig9/carm_logs_2K/log."
+nam = "scripts/figgen/results/fig9/TrackFM/2048/log."
 for i in list1: 
     readFile(nam, i, cm2k)
-nam = "scripts/figgen/results/fig9/carm_logs_256/log."
+nam = "scripts/figgen/results/fig9/TrackFM/256/log."
 for i in list1: 
     readFile(nam, i, cm256)
-nam = "scripts/figgen/results/fig9/carm_logs_512/log."
+nam = "scripts/figgen/results/fig9/TrackFM/512/log."
 for i in list1: 
     readFile(nam, i, cm512)
-#nam = "scripts/figgen/results/fig9/carm_logs_128/log."
-#for i in list1: 
-#    readFile(nam, i, cm128)
-nam = "scripts/figgen/results/fig9/carm_logs/log."
-for i in list1: 
-    readFile(nam, i, cm64)
+
 j=0
 ops=50000000
 micro=1000000
 m = 1000000
+print(cm256)
 for i in list1:
     cm256[j] = float(((ops/cm256[j]) * micro) /m)
     cm512[j] = float(((ops/cm512[j])* micro) /m)
@@ -72,7 +64,6 @@ for i in list1:
 
 print(cm512)
 #print(cm256)
-print(cm64)
 
 x=[]
 for i in list1:
@@ -84,9 +75,6 @@ cm2d.plot(x, cm2k, '--', 'white', '*', 10)
 cm2d.plot(x, cm1k, '-.', 'white', '<', 10)
 cm2d.plot(x, cm512, '-', 'white', 's', 10)
 cm2d.plot(x, cm256, '-', 'white', '|', 10)
-#cm2d.plot(x, cm128, '-', 'white', '>', 10)
-#cm2d.plot(x, cm64, '-', 'white', '|', 10)
-#cm2d.plot(x, fs, '-.', 'white', '>', 10)
 
 cm2d.set_legend(['4KB', '2KB', '1KB', '512B', '256B'], 1, 17)
 #cm2d.set_y_limit(0, 8)
