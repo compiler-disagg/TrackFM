@@ -15,7 +15,7 @@ obj_sizes=( 64 128 256 512 1024 2048 4096)
 for obj_size in "${obj_sizes[@]}"
 do
 
-tobj=$((($amem/$obj_size) * 3))
+tobj=$((($amem/$obj_size) * 5))
 sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -50,4 +50,5 @@ done
 			
 done
 cd ../../plotgen
-python3 $figpath fig9
+python3 scripts/figgen/fig9a.py $figpath fig9a
+python3 scripts/figgen/fig9b.py $figpath fig9b
