@@ -61,7 +61,9 @@ static inline void carm_add_prefetch_trace(uint64_t obj_index, bool nt, uint64_t
 	}
 }
 void carm_static_prefetch(uint64_t start, uint64_t step, uint64_t num, uint64_t loop_id) {
+#if LOOP_PREFETCH
   carm_rt->carm_ds_array->prefetcher_[loop_id]->static_prefetch(start, step, num);
+#endif
 }
 
 static inline GenericUniquePtr * allocate_object(uint64_t obj_index) {
@@ -98,7 +100,9 @@ static inline uint64_t carmDeref_write_sp(uint64_t obj_index, uint64_t pf_id) {
     obj = allocate_object(obj_index);
 	uint64_t metadata = obj->__deref_mut<false>();
 	carm_obj_state[obj_index].obj_state = metadata;
+#if LOOP_PREFETCH
 	carm_add_prefetch_trace(obj_index, false, pf_id);
+#endif
 	return metadata >> kObjectDataAddrBitPos;
 }
 
@@ -108,7 +112,9 @@ static inline uint64_t carmDeref_read_sp(uint64_t obj_index, uint64_t pf_id) {
     obj = allocate_object(obj_index);
 	uint64_t metadata = obj->__deref<false>();
 	carm_obj_state[obj_index].obj_state = metadata;
+#if LOOP_PREFETCH
   carm_add_prefetch_trace(obj_index, false, pf_id); 
+#endif
 	return metadata >> kObjectDataAddrBitPos;
 }
 static inline uint64_t carmDeref_write_not_temporal(uint64_t obj_index) {
