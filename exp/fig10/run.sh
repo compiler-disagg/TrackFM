@@ -45,4 +45,5 @@ done
     mv log.* ../../plotgen/scripts/figgen/results/fig10/TrackFM/$obj_size/
 done
 cd ../../plotgen
-python3 $figpath fig10
+python3 scripts/figgen/fig10a.py $figpath fig10a
+python3 scripts/figgen/fig10b.py $figpath fig10b
