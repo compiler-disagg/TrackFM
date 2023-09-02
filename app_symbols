@@ -287,3 +287,4 @@ carm_Z12carm_fprintfPvS_z
 carm_Z7do_workPv
 carm_Z8get_argsv
 carm_Z13get_arg_countv
+carm_Z10carm_tracev
