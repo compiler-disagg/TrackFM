@@ -31,9 +31,9 @@ cd $figpath
 
 cache_sizes=( 128 256 384 512 768 1024 1536 2048)
 rm log.*
-sudo pkill -9 main
 for cache_size in "${cache_sizes[@]}"
 do
+    sudo pkill -9 main
     kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
