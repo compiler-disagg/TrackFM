@@ -35,7 +35,7 @@ do
     kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
-    sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+    sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
     make clean
@@ -49,7 +49,7 @@ do
     kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
-    sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+    sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     make clean
     cp  ../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
@@ -68,7 +68,7 @@ do
     kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
-    sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+    sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
     make clean
@@ -82,7 +82,7 @@ do
     kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
-    sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+    sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     make clean
     cp  ../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .

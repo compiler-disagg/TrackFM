@@ -44,6 +44,12 @@ for i, elm in enumerate(list1):
     for j in range(2):
         speedups[j].append(float(results[j]['without'][i]/results[j]['with'][i]))
 
+print(results[0]['with'])
+print(results[0]['without'])
+print(results[1]['with'])
+print(results[1]['without'])
+print(speedups)
+
 fig, axs = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(7,4))
 
 for i, ax in enumerate(axs):
