@@ -1,0 +1,4 @@
+* DataFrame
+** Add ability to check and if all rows are convertible, then convert column types
+   For example string to int32 or double to string
+
