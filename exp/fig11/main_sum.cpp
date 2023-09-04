@@ -65,9 +65,9 @@ int main(int argc, char ** argv) {
   uint64_t * arr2 = (uint64_t *)malloc(kWorkingSetSize);
   uint64_t * arr3 = (uint64_t *)malloc(kWorkingSetSize);
 
-  prepare_data(arr3, 3);
-  prepare_data(arr2, 2);
   prepare_data(arr1, 1);
+  prepare_data(arr2, 2);
+  prepare_data(arr3, 3);
 
   do_sum(arr1);
 
