@@ -23,7 +23,7 @@ cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
-figpath="/home/TrackFM/exp/fig11"
+figpath="/home/TrackFM/exp/fig12"
 cd $figpath
 
 cache_sizes=( 1 2 3 4 5 6 7 8 9 10 11 12)
@@ -90,4 +90,4 @@ done
 done
 kill_local_iokerneld
 cd ../../plotgen
-python3 scripts/figgen/fig11.py $figpath fig11
+python3 scripts/figgen/fig12.py $figpath fig12
