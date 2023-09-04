@@ -97,7 +97,7 @@ sudo apt-get install python3-pip
 sudo pip3 install pymemcache
 sudo pip3 install scipy
 sudo pip3 install matplotlib
-
+sudo pip3 install jinja2
 ```
 ### Compile TrackFM Passes only on compute node
 ```
