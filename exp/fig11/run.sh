@@ -6,6 +6,7 @@ source ../../runtime/AIFM/aifm/shared.sh
 app_tmem=16384
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
+sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 3;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
 
 obj_sizes=( 4096 )
@@ -29,10 +30,9 @@ cache_sizes=( 1 2 3 4 5 6 7 8 9 10 11 12)
 rm log.*
 
 cp main_sum.cpp main.cpp
+sudo pkill -9 main
 for cache_size in "${cache_sizes[@]}"
 do
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -45,8 +45,6 @@ do
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -64,8 +62,6 @@ done
 cp main_copy.cpp main.cpp
 for cache_size in "${cache_sizes[@]}"
 do
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -78,8 +74,6 @@ do
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -94,5 +88,6 @@ done
     mv log.* ../../plotgen/scripts/figgen/results/fig11/TrackFM/copy_chunk_prefetch/
     mv log_no_prefetch.* ../../plotgen/scripts/figgen/results/fig11/TrackFM/copy_chunk/
 done
+kill_local_iokerneld
 cd ../../plotgen
 python3 scripts/figgen/fig11.py $figpath fig11

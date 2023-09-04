@@ -7,6 +7,7 @@ def readFile(fname, i, ls, col_hdr):
     f = open(lin, "r")
     flag = 0
     for x in f:
+        print(x)
         if (x.count(col_hdr) > 0):
             lp = x.split(":")
             ls.append(float(lp[3]))
@@ -37,17 +38,18 @@ for j, m in enumerate(logs):
     results[j]['with']    = []
     results[j]['without'] = []
     for i in list1:
+        print(i)
         readFile(m['with'],    i, results[j]['with'],    names[j])
         readFile(m['without'], i, results[j]['without'], names[j])
-
-for i, elm in enumerate(list1):
-    for j in range(2):
-        speedups[j].append(float(results[j]['without'][i]/results[j]['with'][i]))
 
 print(results[0]['with'])
 print(results[0]['without'])
 print(results[1]['with'])
 print(results[1]['without'])
+for i, elm in enumerate(list1):
+    for j in range(2):
+        speedups[j].append(float(results[j]['without'][i]/results[j]['with'][i]))
+
 print(speedups)
 
 fig, axs = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(7,4))
@@ -65,7 +67,7 @@ for i, ax in enumerate(axs):
     ax.grid(axis='both', zorder=0, alpha=0.5)
     ax.tick_params(axis='both', which='major', labelsize=18)
     ax.tick_params(axis='both', which='minor', labelsize=18)
-    ax.set_ylim(3.0, 5)
+    ax.set_ylim(min(speedups[0]), max(speedups[0]))
     if i == 1:
         ax.set_xlabel('local mem [% of 12GB]', fontsize=20)
     if i == 1:
