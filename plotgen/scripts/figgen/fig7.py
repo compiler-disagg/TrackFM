@@ -25,12 +25,12 @@ results = [defaultdict(dict) for i in range(2)]
 names   = ['Sum', 'Copy']
 
 # sum
-logs[0]['with']    = "scripts/figgen/results/fig7/sum_chunk/log."
-logs[0]['without'] = "scripts/figgen/results/fig7/sum_no_chunk/log_no_chunk."
+logs[0]['with']    = "scripts/figgen/results/fig7/TrackFM/sum_chunk/log."
+logs[0]['without'] = "scripts/figgen/results/fig7/TrackFM/sum_no_chunk/log_no_chunk."
 
 # copy
-logs[1]['with']    = "scripts/figgen/results/fig7/copy_chunk/log."
-logs[1]['without'] = "scripts/figgen/results/fig7/copy_no_chunk/log_no_chunk."
+logs[1]['with']    = "scripts/figgen/results/fig7/TrackFM/copy_chunk/log."
+logs[1]['without'] = "scripts/figgen/results/fig7/TrackFM/copy_no_chunk/log_no_chunk."
 
 
 speedups = [[], [], []]
