@@ -35,7 +35,6 @@ main_lib:
 	#opt -O1 -inline -inline-threshold=10000 main.bc -o mainin.bc
 	noelle-load -load ~/CAT/lib/TRACKFMINIT.so  -CAT main.bc -o main_init.bc
 	noelle-norm main_init.bc -o main_norm.bc 
-	#noelle-enable main_norm.bc main_e.bc -noelle-disable-inliner -noelle-disable-scev-simplification -noelle-disable-whilifier -noelle-disable-loop-distribution 
 	noelle-load -load ~/CAT/lib/TRACKFMCHECKS.so -CAT main_norm.bc -o main_check.bc 
 	noelle-norm main_check.bc -o main_check_norm.bc 
 	noelle-load -load ~/CAT/lib/TRACKFMTRANSFORM.so -CAT main_check_norm.bc -o main_transform.bc 
@@ -44,7 +43,6 @@ main_lib:
 	noelle-norm main_libctransform.bc -o main_libctransform_norm.bc 
 	$(CARM_LLVM)/opt -O3 -disable-simplify-libcalls main_libctransform_norm.bc -o opt.bc
 	$(CARM_LLVM)/llc $(CARM_LDX_FLAGS) opt.bc -o maint.o
-	#noelle-enable mainn.bc mainno.bc -noelle-disable-inliner -noelle-disable-scev-simplification -noelle-disable-whilifier -noelle-disable-loop-distribution 
 
 main:  $(librt_libs) $(RUNTIME_DEPS)  $(lib_obj) main_lib
 	objcopy --prefix-symbols=carm maint.o

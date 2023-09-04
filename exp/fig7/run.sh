@@ -29,7 +29,8 @@ cd $figpath
 cache_sizes=( 1 2 3 4 5 6 7 8 9 10 11 12)
 rm log.*
 
-sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+sed "s/#define PREFETCH.*/#define PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 cp main_sum.cpp main.cpp
 sudo pkill -9 main
@@ -37,9 +38,9 @@ for cache_size in "${cache_sizes[@]}"
 do
     rerun_local_iokerneld_noht
     rerun_mem_server
-    cp make_loop_chunk Makefile
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
+    cp make_loop_chunk Makefile
     make clean
     cp /home/TrackFM/symbol_redefine.sh .
     cp  ../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
@@ -93,3 +94,5 @@ done
 kill_local_iokerneld
 cd ../../plotgen
 python3 scripts/figgen/fig7.py $figpath fig7
+sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+sed "s/#define PREFETCH.*/#define PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
