@@ -58,8 +58,8 @@ do
     sudo ldconfig
     run_program_noht ./main 1>log_no_chunk.$cache_size 2>&1    
 done
-    mv log.* ../../plotgen/scripts/figgen/results/fig11/TrackFM/sum_chunk/
-    mv log_no_chunk.* ../../plotgen/scripts/figgen/results/fig11/TrackFM/sum_no_chunk/
+    mv log.* ../../plotgen/scripts/figgen/results/fig7/TrackFM/sum_chunk/
+    mv log_no_chunk.* ../../plotgen/scripts/figgen/results/fig7/TrackFM/sum_no_chunk/
 ##copy
 cp main_copy.cpp main.cpp
 for cache_size in "${cache_sizes[@]}"
