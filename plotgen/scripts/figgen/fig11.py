@@ -67,7 +67,7 @@ for i, ax in enumerate(axs):
     ax.grid(axis='both', zorder=0, alpha=0.5)
     ax.tick_params(axis='both', which='major', labelsize=18)
     ax.tick_params(axis='both', which='minor', labelsize=18)
-    ax.set_ylim(min(speedups[0]), max(speedups[0]))
+    ax.set_ylim(0, max(speedups[0]))
     if i == 1:
         ax.set_xlabel('local mem [% of 12GB]', fontsize=20)
     if i == 1:
