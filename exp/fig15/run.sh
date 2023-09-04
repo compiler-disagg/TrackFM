@@ -31,16 +31,16 @@ cd $figpath
 
 cp /home/TrackFM/apps/C_dataframe/nyc.bc main.bc
 
-sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 
-noelle-norm main.bc -o pmain.bc
-llvm-dis pmain.bc
-noelle-prof-coverage pmain.bc pmain_pre_prof -lm 
-./pmain_pre_prof
-llvm-profdata merge default.profraw -output=output_prof
-noelle-meta-prof-embed output_prof pmain.bc -o test_with_metadata.bc
-noelle-meta-pdg-embed test_with_metadata.bc -o nyc
+#noelle-norm main.bc -o pmain.bc
+#llvm-dis pmain.bc
+#noelle-prof-coverage pmain.bc pmain_pre_prof -lm 
+#./pmain_pre_prof
+#llvm-profdata merge default.profraw -output=output_prof
+#noelle-meta-prof-embed output_prof pmain.bc -o test_with_metadata.bc
+#noelle-meta-pdg-embed test_with_metadata.bc -o nyc
 
 
 cache_sizes=( 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31)
