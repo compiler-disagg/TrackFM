@@ -11,7 +11,11 @@ def readFile (fname, i, ls):
     for x in f:
         if (x.count("Remote") > 0):
             lp = x.split(":")
-            ls.append(float(lp[1]))
+            remote = float(lp[1])
+        elif (x.count("Local") > 0):
+            lp = x.split(":")
+            local = float(lp[1])
+            ls.append(float(local + remote))
         elif (x.count("Major (requiring I/O)") > 0):
             lp = x.split(":")
             major = float(lp[1])
