@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #define  OBJ_SIZE  4096
-#define TOTAL_OBJECTS 12582912
+#define TOTAL_OBJECTS 41943040
 #define  OBJ_SIZE_MASK  (OBJ_SIZE - 1)
 #define  OBJ_SIZE_LOG  log2(OBJ_SIZE)
 #define  CARM_PTR  (1ULL<<60)
@@ -22,6 +22,7 @@
 #define LOOP_OBJ_MASK  ((1ULL<<50) - 1)
 //#define TRACKFM_TRACE 1
 #define LOOP_PREFETCH 1
+#define PREFETCH 1
 constexpr static uint32_t kObjectDataAddrPos = 2;
 constexpr static uint32_t kObjectDataAddrSize = 6;
 constexpr static uint32_t kDirtyClear = 0x400U;
