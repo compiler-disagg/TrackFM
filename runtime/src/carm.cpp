@@ -80,7 +80,9 @@ static inline uint64_t carmDeref_read(uint64_t obj_index) {
     obj = allocate_object(obj_index);
 	uint64_t metadata  = (uint64_t)obj->__deref<false>();
 	carm_obj_state[obj_index].obj_state = metadata;
+#if PREFETCH
 	carm_add_prefetch_trace(obj_index, false, DEFAULT_PREFETCHER);
+#endif
 	return metadata >> kObjectDataAddrBitPos;
 }
 
@@ -90,7 +92,9 @@ static inline uint64_t carmDeref_write(uint64_t obj_index) {
     obj = allocate_object(obj_index);
 	uint64_t metadata = obj->__deref_mut<false>();
 	carm_obj_state[obj_index].obj_state = metadata;
+#if PREFETCH
 	carm_add_prefetch_trace(obj_index, false, DEFAULT_PREFETCHER);
+#endif
 	return metadata >> kObjectDataAddrBitPos;
 }
 
