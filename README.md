@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # TrackFM
 
 ## Environment
@@ -76,6 +78,7 @@ make -j8
 LLVM_HOME=/home/llvm-project/build
 export PATH=$LLVM_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$LLVM_HOME/lib:$LD_LIBRARY_PATH
+sudo ln -sf /home/llvm-project/build/bin/llvm-objcopy /usr/bin/objcopy
 ```
 
 ### Install noelle 9.8.0
