@@ -41,6 +41,7 @@ echo Y | sudo apt-get install gcc-9 g++-9 python-pip
 echo Y | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 echo Y | sudo apt-get purge cmake
 echo Y | sudo apt-get install libjpeg-dev zlib1g-dev
+echo Y | sudo apt-get install libevent-dev
 sudo pip install --upgrade pip
 sudo pip install cmake
 sudo pip install wllvm
