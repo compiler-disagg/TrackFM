@@ -3,14 +3,14 @@
 source ../../runtime/AIFM/aifm/shared.sh
 
 cache_sizes=( 1 )
-#rm log.*
+rm log*
 
 obj_size=128
 
-app_tmem=16384
+app_tmem=20480
 amem=$((app_tmem*1024*1024))
 
-sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 8;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
+sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 4;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
@@ -29,6 +29,7 @@ cd /home/TrackFM/apps/memcached-1.2.7/
 figpath="/home/TrackFM/exp/fig16a"
 cd $figpath
 sudo pkill -9 main
+kill_local_iokerneld
 for cache_size in "${cache_sizes[@]}"
 do
     make clean
@@ -38,7 +39,6 @@ do
     cp ../../apps/memcached-1.2.7/memcached.bc main.bc
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    #sed "s/constexpr uint64_t obj_cache_size.*/constexpr uint64_t obj_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
     make -j20
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
