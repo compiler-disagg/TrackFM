@@ -2,8 +2,23 @@
 
 # TrackFM
 
+TrackFM transparently compiles application code 
+to run on memory disaggregated severs. TrackFM 
+leverages AIFM runtime to manage remote memory.
+TrackFM uses compiler analysis, runtime optimizations
+ and is within 10-20% of 
+state-of-the-art disaggregated solutions. 
+
 ## Environment
 ### CloudLab
+
+We run all our experiments in Cloudlab.
+
+Our experimental profile is located in the root directory.
+
+To run TrackFM on Cloudlab, you can instantiate our cloudlab.profile.
+
+Note that inorder to use cloudlab you need to create an account.
 
 We run all experiments in /home, make sure you have the right privileges in /home 
 ```
