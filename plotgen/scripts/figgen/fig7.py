@@ -1,4 +1,5 @@
 import sys
+import math
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
@@ -45,6 +46,8 @@ for i, elm in enumerate(list1):
     for j in range(2):
         speedups[j].append(float(results[j]['without'][i]/results[j]['with'][i]))
 
+print(speedups)
+
 fig, axs = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(7,4))
 
 for i, ax in enumerate(axs):
@@ -60,7 +63,7 @@ for i, ax in enumerate(axs):
     ax.grid(axis='both', zorder=0, alpha=0.5)
     ax.tick_params(axis='both', which='major', labelsize=18)
     ax.tick_params(axis='both', which='minor', labelsize=18)
-    ax.set_ylim(1.5, 2)
+    ax.set_ylim(1.1, 1.9)
     if i == 1:
         ax.set_xlabel('local mem [% of 12GB]', fontsize=20)
     if i == 1:
