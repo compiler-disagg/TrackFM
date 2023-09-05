@@ -9,10 +9,8 @@ import numpy as np
 import sys
 
 
-#DATA_SIZE = 100000000
-#GET_OPS   = 100000000
-DATA_SIZE = 1000000
-GET_OPS   = 1000000
+DATA_SIZE = 100000000
+GET_OPS   = 100000000
 
 key_suffix = ""
 value_suffix = ""
