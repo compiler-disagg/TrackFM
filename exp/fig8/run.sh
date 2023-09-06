@@ -3,10 +3,11 @@
 source ../../runtime/AIFM/aifm/shared.sh
 
 
-app_tmem=4096
+app_tmem=16384
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
+sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 3;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
 obj_sizes=( 4096 )
 
@@ -18,9 +19,9 @@ sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/run
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
-#cd /home/TrackFM/runtime/compiler_passes/passes/
-#make clean
-#make -j
+cd /home/TrackFM/runtime/compiler_passes/passes/
+make clean
+make -j
 
 
 figpath="/home/TrackFM/exp/fig8"
@@ -39,13 +40,13 @@ noelle-meta-prof-embed output_prof pmain.bc -o test_with_metadata.bc
 noelle-meta-pdg-embed test_with_metadata.bc -o kmeans
 
 
-cache_sizes=( 128 256 384 512 640 768 896 1024 )
+cache_sizes=( 256 384 512 640 768 896 1024 )
 rm log.*
 cp make_chunk_prof Makefile
+sudo pkill -9 main
+kill_local_iokerneld
 for cache_size in "${cache_sizes[@]}"
 do
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sleep 5
@@ -64,8 +65,6 @@ done
 cp make_no_chunk Makefile
 for cache_size in "${cache_sizes[@]}"
 do
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sleep 5
@@ -83,8 +82,6 @@ done
 cp make_chunk Makefile
 for cache_size in "${cache_sizes[@]}"
 do
-    sudo pkill -9 main
-    kill_local_iokerneld
     rerun_local_iokerneld_noht
     rerun_mem_server
     sleep 5

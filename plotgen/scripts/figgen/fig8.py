@@ -20,7 +20,7 @@ xlabel  = "local mem [% of 1GB]"
 plt.figure(figsize=(5.5,5))
 cm2d = cm2d("{}/{}".format(path, fname), xlabel, 'speedup', 'Kmeans', 16, 16, 18, 18, 'bold') 
 
-list1 = [128, 256,  384,  512,  640, 768,  896,  1024]
+list1 = [256, 384,  512,  640, 768,  896,  1024]
 cm1 = []
 cm2 = []
 cm3 = []

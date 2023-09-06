@@ -1,0 +1,74 @@
+CPU 02| <5> cpu: detected 20 cores, 1 nodes
+CPU 02| <5> time: detected 2394 ticks / us
+[  0.000719] CPU 02| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000770] CPU 02| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.018144] CPU 02| <5> net: started network stack
+[  0.018161] CPU 02| <5> net: using the following configuration:
+[  0.018166] CPU 02| <5>   addr:	18.18.1.2
+[  0.018171] CPU 02| <5>   netmask:	255.255.255.0
+[  0.018176] CPU 02| <5>   gateway:	18.8.1.1
+[  0.018180] CPU 02| <5>   mac:	7E:C6:E4:3F:DB:48
+[  0.244520] CPU 02| <5> thread: created thread 0
+[  0.244661] CPU 02| <5> spawning 9 kthreads
+[  0.244829] CPU 05| <5> thread: created thread 1
+[  0.244936] CPU 16| <5> thread: created thread 2
+[  0.245029] CPU 07| <5> thread: created thread 3
+[  0.245152] CPU 02| <5> thread: created thread 4
+[  0.245487] CPU 15| <5> thread: created thread 5
+[  0.245609] CPU 06| <5> thread: created thread 6
+[  0.245631] CPU 14| <5> thread: created thread 7
+[  0.245787] CPU 14| <5> thread: created thread 8
+rp addr 18.18.1.3:8000
+raddr 18.18.1.3:8000
+init_objects OBJ SIZE 4096
+size of 8
+05 September 2023 03:40:02 PM
+
+KMEANS_TEST
+  C version
+  Test the KMEANS library.
+
+TEST04
+  Test the KMEANS_02 algorithm.
+  (Applied Statistics Algorithm #136)
+
+  Data points will be read from "points_100.txt"
+
+  Point spatial dimension = 2
+  Number of points = 30375000
+
+  Number of iterations allowed is 20
+
+KMEANS_02 - Warning!
+  Maximum number of iterations reached
+  without convergence.
+
+Kmeans Time taken : 170286142.000000 
+  Number of iterations taken is 20
+
+  Clustering statistics:
+
+    Number of clusters is 5
+    Number of points is   30375000
+    Total energy is       1.05661e+06
+
+    Cluster   Population        Energy          Variance
+    -------  -----------  -----------------  --------------
+                  #          value         
+
+        0  4252500   14        103865    9     0.0244244
+        1  8201250   27        224272   21     0.0273461
+        2  6986250   23        347508   32     0.0497417
+        3  4860000   16        174536   16     0.0359129
+        4  6075000   20        206429   19     0.0339801
+
+  Total  30375000  100   1.05661e+06  100     0.0347855
+
+  Cluster centers written to "test04_centers.txt"
+  Cluster assignments written to "test04_clusters.txt"
+
+KMEANS_TEST
+  Normal end of execution.
+
+05 September 2023 03:43:14 PM
+[193.177500] CPU 07| <5> init: shutting down -> SUCCESS
