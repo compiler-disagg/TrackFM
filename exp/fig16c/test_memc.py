@@ -16,7 +16,7 @@ GET_OPS   = 100000000
 key_suffix = ""
 value_suffix = ""
 second=1000000000
-micro_delay=10
+micro_delay=30
 delay=float(micro_delay/second)
 f = open('log.'+str(sys.argv[1]), 'w')
 
