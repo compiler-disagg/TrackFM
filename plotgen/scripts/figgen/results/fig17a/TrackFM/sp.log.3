@@ -1,0 +1,106 @@
+CPU 01| <5> cpu: detected 20 cores, 1 nodes
+CPU 01| <5> time: detected 2394 ticks / us
+[  0.000712] CPU 01| <5> loading configuration from '/home/CARM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000764] CPU 01| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.017465] CPU 01| <5> net: started network stack
+[  0.017483] CPU 01| <5> net: using the following configuration:
+[  0.017488] CPU 01| <5>   addr:	18.18.1.2
+[  0.017493] CPU 01| <5>   netmask:	255.255.255.0
+[  0.017498] CPU 01| <5>   gateway:	18.8.1.1
+[  0.017502] CPU 01| <5>   mac:	26:61:CC:04:94:AE
+[  0.248306] CPU 01| <5> thread: created thread 0
+[  0.248446] CPU 01| <5> spawning 9 kthreads
+[  0.248601] CPU 02| <5> thread: created thread 1
+[  0.248682] CPU 05| <5> thread: created thread 2
+[  0.248777] CPU 14| <5> thread: created thread 3
+[  0.249071] CPU 17| <5> thread: created thread 4
+[  0.249236] CPU 18| <5> thread: created thread 5
+[  0.249336] CPU 11| <5> thread: created thread 6
+[  0.249448] CPU 19| <5> thread: created thread 7
+[  0.249777] CPU 04| <5> thread: created thread 8
+raddr 18.18.1.3:8000
+size of 8
+carm_fopen  No input file inputsp.data. Using compiled defaults
+carm_fopen 
+
+ NAS Parallel Benchmarks 4.1 Serial C++ version - SP Benchmark
+
+ Size:  408x 408x 408
+ Iterations:  500    dt:   0.000300
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Time step  420
+ Time step  440
+ Time step  460
+ Time step  480
+ Time step  500
+ Verification being performed for class D
+ accuracy setting for epsilon =  1.0000000000000E-08
+ Comparison of RMS-norms of residual
+           1 1.0446962168864E+04 1.0446962168870E+04 5.3053324239268E-13
+           2 3.2044277625781E+03 3.2044277625780E+03 2.0577267070452E-14
+           3 4.6486807330268E+03 4.6486807330320E+03 1.1083332630123E-12
+           4 4.2389232836904E+03 4.2389232836970E+03 1.5613382224340E-12
+           5 7.5884120361348E+03 7.5884120361360E+03 1.5592888227101E-13
+ Comparison of RMS-norms of solution error
+           1 5.0894714236688E+00 5.0894714236690E+00 4.3453712202180E-14
+           2 5.3235148558939E-01 5.3235148558940E-01 2.2732031930024E-14
+           3 1.1870510089701E+00 1.1870510089710E+00 7.6487057647633E-13
+           4 1.0837349519382E+00 1.0837349519380E+00 1.7374527290064E-13
+           5 1.1641083385681E+01 1.1641083385680E+01 1.2588986299230E-13
+ Verification Successful
+
+
+ SP Benchmark Completed
+ class_npb       =                        D
+ Size            =            408x 408x 408
+ Iterations      =                      500
+ Time in seconds =                 61882.29
+ Mop/s total     =                   477.29
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      4.1
+ Compiler ver    =                    9.0.0
+ Compile date    =              18 Aug 2023
+
+ Compile options:
+    CC           = wllvm++ 
+    CLINK        = $(CC)
+    C_LIB        = -lm 
+    C_INC        = -I../common 
+    CFLAGS       = -O1 -fPIC -fno-builtin -fno-builtin -fno-ve...
+    CLINKFLAGS   = -O1 -fPIC -mcmodel=medium -fno-builtin -fno...
+    RAND         = (none)
+
+
+----------------------------------------------------------------------
+    NPB-CPP is developed by: 
+        Dalvan Griebler
+        Gabriell Araujo (Sequential Porting)
+        Júnior Löff (Parallel Implementation)
+
+    In case of questions or problems, please send an e-mail to us:
+        dalvan.griebler; gabriell.araujo; junior.loff@edu.pucrs.br
+----------------------------------------------------------------------
+
+[62264.630260] CPU 01| <5> init: shutting down -> SUCCESS

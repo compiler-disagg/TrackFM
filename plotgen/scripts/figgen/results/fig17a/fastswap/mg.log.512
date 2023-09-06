@@ -1,0 +1,84 @@
+Setting MG0 memory limit to 17% (512M) of max
+cd /home/cfm/nas_mg && echo $$ > /cgroup2/benchmarks/MG0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./mg.C
+ No input file. Using compiled defaults
+
+
+ NAS Parallel Benchmarks 4.1 Serial C++ version - MG Benchmark
+
+ Size: 512x512x512 (class_npb C)
+ Iterations:  20
+ Initialization time:          57.699 seconds
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+ Benchmark completed
+ VERIFICATION SUCCESSFUL
+ L2 Norm is  5.7067322857052e-07
+ Error is    6.1010903532113e-12
+
+
+ MG Benchmark Completed
+ class_npb       =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                   460.61
+ Mop/s total     =                   338.01
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      4.1
+ Compiler ver    =                    9.0.0
+ Compile date    =              09 Aug 2023
+
+ Compile options:
+    CC           = wllvm++ 
+    CLINK        = $(CC)
+    C_LIB        = -lm 
+    C_INC        = -I../common 
+    CFLAGS       = -O3 
+    CLINKFLAGS   = -O3 
+    RAND         = randdp
+
+
+----------------------------------------------------------------------
+    NPB-CPP is developed by: 
+        Dalvan Griebler
+        Gabriell Araujo (Sequential Porting)
+        Júnior Löff (Parallel Implementation)
+
+    In case of questions or problems, please send an e-mail to us:
+        dalvan.griebler; gabriell.araujo; junior.loff@edu.pucrs.br
+----------------------------------------------------------------------
+
+ 
+
+	Command being timed: "./mg.C"
+	User time (seconds): 94.98
+	System time (seconds): 329.95
+	Percent of CPU this job got: 81%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:38.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 533524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 15191890
+	Minor (reclaiming a frame) page faults: 95060818
+	Voluntary context switches: 15723301
+	Involuntary context switches: 30663
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 518.4543387889862 
+
+Major Page Faults,System Time,User Time,Wall Time
+15191890,329.95,94.98,518.4

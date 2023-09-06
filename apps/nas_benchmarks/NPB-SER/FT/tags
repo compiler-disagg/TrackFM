@@ -1,0 +1,79 @@
+${PROGRAM}	Makefile	/^${PROGRAM}: config ${OBJS}$/
+A	ft.cpp	115
+ALPHA	ft.cpp	117
+BENCHMARK	Makefile	/^BENCHMARK=ft$/
+BENCHMARKU	Makefile	/^BENCHMARKU=FT$/
+COMPILERVERSION	npbparams.hpp	20
+COMPILETIME	npbparams.hpp	18
+CONVERTDOUBLE	npbparams.hpp	17
+CS1	npbparams.hpp	21
+CS2	npbparams.hpp	22
+CS3	npbparams.hpp	23
+CS4	npbparams.hpp	24
+CS5	npbparams.hpp	25
+CS6	npbparams.hpp	26
+CS7	npbparams.hpp	27
+DEFAULT_BEHAVIOR	npbparams.hpp	16
+FFTBLOCK	ft.cpp	112
+FFTBLOCKPAD	ft.cpp	113
+FFTBLOCKPAD_DEFAULT	ft.cpp	111
+FFTBLOCK_DEFAULT	ft.cpp	110
+MAXDIM	npbparams.hpp	10
+Mft.cpp	ft.cpp	/^int main(int argc, char **argv){$/
+NITER_DEFAULT	npbparams.hpp	11
+NPBVERSION	npbparams.hpp	19
+NTOTAL	npbparams.hpp	14
+NTOTALP	npbparams.hpp	15
+NX	npbparams.hpp	7
+NXP	npbparams.hpp	12
+NY	npbparams.hpp	8
+NYP	npbparams.hpp	13
+NZ	npbparams.hpp	9
+OBJS	Makefile	/^OBJS = ft.o ${COMMON}\/c_${RAND}.o ${COMMON}\/c_prin/
+PI	ft.cpp	116
+SEED	ft.cpp	114
+SHELL	Makefile	/^SHELL=\/bin\/sh$/
+T_CHECKSUM	ft.cpp	122
+T_EVOLVE	ft.cpp	121
+T_FFT	ft.cpp	120
+T_FFTX	ft.cpp	123
+T_FFTY	ft.cpp	124
+T_FFTZ	ft.cpp	125
+T_MAX	ft.cpp	126
+T_SETUP	ft.cpp	119
+T_TOTAL	ft.cpp	118
+cffts1	ft.cpp	/^static void cffts1(int is,$/
+cffts2	ft.cpp	/^static void cffts2(int is,$/
+cffts3	ft.cpp	/^static void cffts3(int is,$/
+cfftz	ft.cpp	/^static void cfftz(int is,$/
+checksum	ft.cpp	/^static void checksum(int i,$/
+clean	Makefile	/^clean:$/
+compute_indexmap	ft.cpp	/^static void compute_indexmap(void* pointer_twiddle/
+compute_initial_conditions	ft.cpp	/^static void compute_initial_conditions(void* point/
+debug	ft.cpp	146
+dims	ft.cpp	135
+dims	ft.cpp	142
+do_work	ft.cpp	/^void do_work(void *arg){$/
+evolve	ft.cpp	/^static void evolve(void* pointer_u0,$/
+fft	ft.cpp	/^static void fft(int dir,$/
+fft_init	ft.cpp	/^static void fft_init(int n){$/
+fftz2	ft.cpp	/^static void fftz2(int is,$/
+ft.o	Makefile	/^ft.o:             ft.cpp npbparams.hpp$/
+ilog2	ft.cpp	/^static int ilog2(int n){$/
+init_ui	ft.cpp	/^static void init_ui(void* pointer_u0,$/
+ipow46	ft.cpp	/^static void ipow46(double a,$/
+niter	ft.cpp	144
+print_timers	ft.cpp	/^static void print_timers(){$/
+setup	ft.cpp	/^static void setup(){$/
+sums	ft.cpp	130
+sums	ft.cpp	137
+timers_enabled	ft.cpp	145
+twiddle	ft.cpp	131
+twiddle	ft.cpp	138
+u	ft.cpp	132
+u	ft.cpp	139
+u0	ft.cpp	133
+u0	ft.cpp	140
+u1	ft.cpp	134
+u1	ft.cpp	141
+verify	ft.cpp	/^static void verify(int d1,$/
