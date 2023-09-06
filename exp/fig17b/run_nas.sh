@@ -31,3 +31,8 @@ cd $TrackFM_PATH/nas_sp/
 cp $NAS_PATH/bin/sp.D . 
 echo "SP profile"
 ./run.sh
+cd ..
+mv $TrackFM_PATH/nas_ft/log.2 ../../plotgen/scripts/figgen/results/fig17b/TrackFM/ft.log.2
+mv $TrackFM_PATH/nas_sp/log.3 ../../plotgen/scripts/figgen/results/fig17b/TrackFM/sp.log.3
+cd ../../plotgen
+python3 scripts/figgen/fig17b.py $figpath fig17b
