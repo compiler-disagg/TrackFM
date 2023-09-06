@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#rm log.*
+rm log*
 figpath="/home/TrackFM/exp/fig16a"
 sudo pkill -9 main
-./run.sh & 
+./init_server.sh & 
 sleep 1200
 echo "memclient"
 python3 test_memc.py &>>log
