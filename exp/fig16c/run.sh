@@ -17,6 +17,6 @@ do
 	echo $wco
 	sudo gdb --batch --command=debug.gdb -p $wco &>>log.$a
 done
-mv log.$a ../../plotgen/scripts/figgen/results/fig16c/TrackFM/
+mv log.* ../../plotgen/scripts/figgen/results/fig16b/TrackFM/
 cd ../../plotgen
 python3 scripts/figgen/fig16c.py $figpath fig16c
