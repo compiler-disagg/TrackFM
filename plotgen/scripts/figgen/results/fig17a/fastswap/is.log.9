@@ -1,0 +1,86 @@
+Setting IS0 memory limit to 26% (9216M) of max
+cd /home/cfm/nas_is && echo $$ > /cgroup2/benchmarks/IS0/cgroup.procs && OMP_NUM_THREADS=1 exec taskset -c 1 /usr/bin/time -v ./is.D
+
+
+ NAS Parallel Benchmarks 4.1 Serial C++ version - IS Benchmark
+
+ Size:  2147483648  (class D)
+ Iterations:   10
+
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+
+
+ IS Benchmark Completed
+ class_npb       =                        D
+ Size            =               2147483648
+ Iterations      =                       10
+ Time in seconds =                  1398.74
+ Mop/s total     =                    15.35
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                      4.1
+ Compiler ver    =                    9.0.0
+ Compile date    =              14 Aug 2023
+
+ Compile options:
+    CC           = wllvm++ 
+    CLINK        = $(CC)
+    C_LIB        = -lm 
+    C_INC        = -I../common 
+    CFLAGS       = -O3 
+    CLINKFLAGS   = -O3 
+    RAND         = randdp
+
+
+----------------------------------------------------------------------
+    NPB-CPP is developed by: 
+        Dalvan Griebler
+        Gabriell Araujo (Sequential Porting)
+        Júnior Löff (Parallel Implementation)
+
+    In case of questions or problems, please send an e-mail to us:
+        dalvan.griebler; gabriell.araujo; junior.loff@edu.pucrs.br
+----------------------------------------------------------------------
+
+ 
+
+	Command being timed: "./is.D"
+	User time (seconds): 702.98
+	System time (seconds): 949.31
+	Percent of CPU this job got: 86%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 31:57.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9421024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 38468510
+	Minor (reclaiming a frame) page faults: 166584516
+	Voluntary context switches: 39933970
+	Involuntary context switches: 28129
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 1917.2276539802551 
+
+Major Page Faults,System Time,User Time,Wall Time
+38468510,949.31,702.98,1917.17
