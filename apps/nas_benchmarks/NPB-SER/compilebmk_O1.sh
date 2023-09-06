@@ -1,5 +1,5 @@
 export LLVM_COMPILER=clang
-cp make_no_opt config/make.def
+cp make_opt config/make.def
 make clean
 make cg CLASS=D
 make ft CLASS=C
