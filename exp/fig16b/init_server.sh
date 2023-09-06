@@ -20,9 +20,9 @@ sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/run
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
-#cd /home/TrackFM/runtime/compiler_passes/passes/ 
-#make clean
-#make -j
+cd /home/TrackFM/runtime/compiler_passes/passes/ 
+make clean
+make -j
 
 cd /home/TrackFM/apps/memcached-1.2.7/
 ./compile.sh
