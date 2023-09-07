@@ -7,11 +7,11 @@ cache_sizes=( 64 )
 #rm log.*
 sudo pkill -9 main
 figpath=/home/TrackFM/exp/fig6
-obj_size=32768
+obj_size=4096
 app_tmem=16384
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 3;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
+sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 8;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 tobj=$((($amem/$obj_size) * 5))
 sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
@@ -34,7 +34,7 @@ do
     sudo ldconfig
     rerun_local_iokerneld_noht
     rerun_mem_server
-    run_program_noht ./main 1>log.$cache_size 2>&1    
+    run_program_noht ./main 1>log.$obj_size 2>&1    
     mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/chunk/
     cp make_no_chunk Makefile
     make clean
@@ -43,7 +43,7 @@ do
     sudo ldconfig
     rerun_local_iokerneld_noht
     rerun_mem_server
-    run_program_noht ./main 1>log.$cache_size 2>&1    
+    run_program_noht ./main 1>log.$obj_size 2>&1    
     mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/no_chunk/
 done
 kill_local_iokerneld
