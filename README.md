@@ -117,6 +117,9 @@ sudo pip3 install pymemcache
 sudo pip3 install scipy
 sudo pip3 install matplotlib
 sudo pip3 install jinja2
+sudo pip3 install psutil
+sudo pip3 install grpcio 
+sudo pip3 install grpcio-tools 
 ```
 ### Compile TrackFM Passes only on compute node
 ```
