@@ -1,4 +1,6 @@
 TrackFM_PATH=/home/TrackFM/exp/fig17b
+NAS_PATH=/home/TrackFM/apps/nas_benchmarks/NPB-SER
+figpath=/home/TrackFM/exp/fig17b
 
 app_tmem=34816
 amem=$((app_tmem*1024*1024)) 
@@ -20,7 +22,6 @@ cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
-NAS_PATH=/home/TrackFM/apps/nas_benchmarks/NPB-SER
 cd $NAS_PATH
 ./compilebmk_O1.sh
 
