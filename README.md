@@ -156,6 +156,9 @@ export CARM_DIR=/home/TrackFM/
 
 ## Python toolchain
 
+TODO: IIRC standard practice with `pip` is to create `requirements.txt` then have them run
+`pip install -r requirements.txt`
+
 ```bash
 sudo apt-get install python3-pip
 sudo pip3 install pymemcache
