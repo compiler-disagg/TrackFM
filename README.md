@@ -153,20 +153,9 @@ export CARM_DIR=/home/TrackFM/
 
 ## Python toolchain
 
-TODO: IIRC standard practice with `pip` is to create `requirements.txt` then have them run
-`pip install -r requirements.txt`
-
 ```bash
 sudo apt-get install python3-pip
-sudo pip3 install pymemcache
-sudo pip3 install scipy
-sudo pip3 install matplotlib
-sudo pip3 install jinja2
-sudo pip3 install psutil
-sudo pip3 install grpcio 
-sudo pip3 install grpcio-tools 
-sudo pip3 install cmake
-sudo pip3 install wllvm
+pip3 install -r requirements.txt
 ```
 
 ### Compile TrackFM Passes only on compute node
