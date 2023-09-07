@@ -35,7 +35,7 @@ do
     rerun_local_iokerneld_noht
     rerun_mem_server
     run_program_noht ./main 1>log.$cache_size 2>&1    
-    mv log.$obj_size ../../scripts/figgen/results/fig6/chunk/
+    mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/chunk/
     cp make_no_chunk Makefile
     make clean
     make -j
@@ -44,7 +44,7 @@ do
     rerun_local_iokerneld_noht
     rerun_mem_server
     run_program_noht ./main 1>log.$cache_size 2>&1    
-    mv log.$obj_size ../../scripts/figgen/results/fig6/no_chunk/
+    mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/no_chunk/
 done
 kill_local_iokerneld
 sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
