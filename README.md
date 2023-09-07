@@ -86,9 +86,6 @@ echo Y | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 echo Y | sudo apt-get purge cmake
 echo Y | sudo apt-get install libjpeg-dev zlib1g-dev
 echo Y | sudo apt-get install libevent-dev
-sudo pip install --upgrade pip
-sudo pip install cmake
-sudo pip install wllvm
 ```
 TODO: why do these pip packages need to be sudo? why not `pip install -U ...`?
 TODO: why aren't the `pip` invocations in the [python toolchain](#python-toolchain) section below?
@@ -168,6 +165,8 @@ sudo pip3 install jinja2
 sudo pip3 install psutil
 sudo pip3 install grpcio 
 sudo pip3 install grpcio-tools 
+sudo pip3 install cmake
+sudo pip3 install wllvm
 ```
 
 ### Compile TrackFM Passes only on compute node
