@@ -1,6 +1,6 @@
 #!/bin/bash
 
-username=`echo $USERNAME`
+user=`echo $USERNAME`
 ip=`echo $IP`
 
 mem_array=( 1 2 3 4 5 6 7 8 9 10 11 12 13)
@@ -19,7 +19,7 @@ do
 	make BACKEND=RDMA
 	sudo insmod fastswap_rdma.ko sport=3000 sip="192.168.6.2 " cip="192.168.6.1" nq=60
 	sudo insmod fastswap.ko
-	fmem=$(python -c "from math import ceil; print(float(($local_mem/$total_mem)))")
+	fmem=$(python -c "from math import ceil; print(float((float($local_mem)/$total_mem)))")
 	cd /home/cfm/
         ./setup/init_bench_cgroups.sh
 	python3 benchmark.py SUM $fmem --cpus 1 1>log.$local_mem 2>&1
