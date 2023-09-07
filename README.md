@@ -11,7 +11,7 @@ state-of-the-art disaggregated solutions that require manual programmer effort.
 
 - [TrackFM](#trackfm)
   * [Paper](#paper)
-  * [Experimental Environment](#experimental-environmnet)
+  * [Experimental Environment](#experimental-environment)
   * [Build Instructions](#build-instructions)
   * [Testing](#testing)
   * [Reproducing Paper Results](#reproducing-paper-results)
