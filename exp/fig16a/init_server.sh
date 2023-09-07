@@ -3,7 +3,6 @@
 source ../../runtime/AIFM/aifm/shared.sh
 
 cache_sizes=( 1 )
-rm log*
 
 obj_size=128
 
