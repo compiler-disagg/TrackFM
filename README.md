@@ -174,8 +174,10 @@ TODO: give them a map of the codebase so they can grok it quickly
 
 ## Acknowledgements
 <img align="left" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" height=100/>
-<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" height=100/>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Seal_of_the_United_States_Department_of_Energy.svg/768px-Seal_of_the_United_States_Department_of_Energy.svg.png" height=100/>
+<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" height=75/>
+<br><br><br><br><br>
+
 
 TrackFM was made possible with support from the United States [National Science
 Foundation](https://nsf.gov) (NSF) via grants CCF-2028958, CNS-1763612,
