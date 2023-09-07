@@ -39,6 +39,8 @@ We will run all experiments in `/home`, so make sure you have sufficient privile
 sudo chmod 777 /home
 ```
 
+TODO: describe the profile in case they want to do it manually. Namely, is it ubuntu? what version?
+
 ## Build Instructions
 
 ### Toolchain Setup
@@ -53,10 +55,14 @@ sudo reboot
 
 ### Set bash as the default shell.
 
+TODO: why do we need to do this?
+
 ```bash
 chsh -s /bin/bash
 ```
 ### Install Mellanox OFED.
+
+TODO: why isn't this a script?
 
 ```bash
 wget "http://content.mellanox.com/ofed/MLNX_OFED-4.6-1.0.1.1/MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64.tgz"
@@ -68,6 +74,7 @@ sudo /etc/init.d/openibd restart
 
 ### Install Libraries and Tools
 
+TODO: why isn't this one apt-get invocation? Why not use `apt-get install -y`?
 ```bash
 sudo apt-get update
 echo Y | sudo apt-get --fix-broken install
@@ -83,6 +90,8 @@ sudo pip install --upgrade pip
 sudo pip install cmake
 sudo pip install wllvm
 ```
+TODO: why do these pip packages need to be sudo? why not `pip install -U ...`?
+TODO: why aren't the `pip` invocations in the [python toolchain](#python-toolchain) section below?
 
 ### Building TrackFM
 
@@ -93,6 +102,7 @@ cd /home/TrackFM/runtime
 
 ### Setup Shenango
 
+TODO: why isn't this in the trackfm build script?
 ```bash
 sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
@@ -107,6 +117,7 @@ add compute node public key to memory server
 
 ### Install LLVM v9.0.0
 
+TODO: script (install-dependencies.sh?)
 ```bash
 git clone https://github.com/llvm/llvm-project.git
 cd llvm-project/ 
@@ -127,6 +138,7 @@ sudo ln -sf /home/llvm-project/build/bin/llvm-objcopy /usr/bin/objcopy
 
 ### Install NOELLE v9.8.0
 
+TODO: script (install-dependencies.sh?)
 ```bash
 git clone https://github.com/arcana-lab/noelle.git
 cd noelle
