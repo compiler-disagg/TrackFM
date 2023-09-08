@@ -5,9 +5,9 @@ ip=$IP
 
 mem_array=( 2048 )
 rm log.*
-scr="screen -dmS fs; screen -S fs-X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
-ter="screen -S fs-X stuff './kill.sh; exit; \n'"
-ts="screen -XS fsquit \n'"
+scr="screen -dmS fs ; screen -S fs -X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
+ter="screen -S fs -X stuff './kill.sh; exit; \n'"
+ts="screen -XS fs quit \n'"
 total_mem=6144
 cd /home/cfm/protocol/
 source gen_protocol.sh

@@ -3,9 +3,9 @@ user=$USERNAME
 ip=$IP
 mem_array=( 2 )
 rm log.*
-scr="screen -dmS ft; screen -S ft-X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
-ter="screen -S ft-X stuff './kill.sh; exit; \n'"
-ts="screen -XS ftquit \n'"
+scr="screen -dmS ft ; screen -S ft -X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
+ter="screen -S ft -X stuff './kill.sh; exit; \n'"
+ts="screen -XS ft quit \n'"
 total_mem=8
 cd /home/cfm/protocol/
 source gen_protocol.sh
