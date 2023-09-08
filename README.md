@@ -43,12 +43,14 @@ https://github.com/compiler-disagg/trackfm-cloudlab.
 ### Launching the Experimental Environment
 
 **SSH Key Configuration**
+
 You'll first want to make sure you have a public key set up so that you can log
 in to the experiment node(s). On the top right of the CloudLab Dashboard, click
 the button with your username, and select "Manage SSH Keys." You can then upload
 a key of your choice. 
 
 **Launching Instances**
+
 Once you've set up the CloudLab profile, you should be able to launch the
 necessary instances by going to "Experiments -> Start Experiment," then "Change
 Profile" and select the one that you created
@@ -81,6 +83,7 @@ sudo chmod 777 /home
 ### Build Prerequisites
 
 **Dev Packages**
+
 We first need to install relevant packages packages for TrackFM, AIFM, Shenango, and
 our example applications. We'll first need to upgrade the Linux kernel version, which
 will necessitate a reboot:
