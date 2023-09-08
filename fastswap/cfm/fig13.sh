@@ -1,6 +1,6 @@
 #!/bin/bash
 
-username=`echo $USERNAME`
+user=`echo $USERNAME`
 ip=`echo $IP`
 
 mem_array=( 128 256 384 512 768 1024 1536 2048 )
@@ -21,7 +21,7 @@ do
 	sudo insmod fastswap_rdma.ko sport=3000 sip="192.168.6.2 " cip="192.168.6.1" nq=60
 	sudo insmod fastswap.ko
 
-	fmem=$(python -c "from math import ceil; print(float(($local_mem/$total_mem)))")
+	fmem=$(python -c "from math import ceil; print(float((float($local_mem)/$total_mem)))")
 	
 	cd /home/cfm/
         ./setup/init_bench_cgroups.sh
