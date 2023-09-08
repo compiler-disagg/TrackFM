@@ -15,7 +15,7 @@ def readFile(fname, i, ls, col_hdr):
 path  = sys.argv[1]
 fname = sys.argv[2]
 
-list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 x_vals = []
 for i in list1:
     x_vals.append(i/max(list1))
@@ -46,6 +46,7 @@ for i, elm in enumerate(list1):
         speedups[j].append(float(results[j]['without'][i]/results[j]['with'][i]))
 
 fig, axs = plt.subplots(nrows=2, ncols=1, sharex=True, figsize=(7,4))
+
 
 for i, ax in enumerate(axs):
     pc = ax.plot(x_vals, 

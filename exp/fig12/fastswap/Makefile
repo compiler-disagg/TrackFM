@@ -20,4 +20,4 @@ main_lib:
 
 .PHONY: clean
 clean:
-	rm -f *.bc *.ll *.so *.o $(dep) main
+	rm -f *.bc *.ll *.so *.o main
