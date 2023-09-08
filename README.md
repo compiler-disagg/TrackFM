@@ -80,6 +80,9 @@ to set up permissive access to this directory:
 sudo chmod 777 /home
 ```
 
+Note that unless otherwise explicitly stated, it is assumed that you will run these
+setup instructions on both nodes in CloudLab (the _compute node_ and the _memory server_).
+
 ### Build Prerequisites
 
 We can first set up the TrackFM repo:
@@ -146,16 +149,19 @@ sudo /etc/init.d/openibd restart
 Note that when you run `./mlnxofedinstall` above, you may see a message like `Failed to install libibverbs-dev DEB'. This is okay, and it should still work. 
 
 **Python Toolchain**
+
 We require several Python modules for AIFM, for plot generation, and for our benchmarks:
 
 ```bash
 cd /home/trackfm
-pip3 install -r requirements.txt
-pip install cmake
+sudo pip3 install -r requirements.txt
+sudo pip install --upgrade pip
+sudo pip install cmake
 ```
 TODO: I'd use specific version numbers in `requirements.txt`
 
-** Compiler Toolchain **
+**Compiler Toolchain**
+
 TrackFM relies on the [NOELLE compiler toolchain](https://github.com/arcana-lab/noelle), which
 we need to install. **Note that you only need to install this on the compute node (the node
 where you launch applications), not the memory server node**. This will take a couple of hours,
