@@ -1,13 +1,12 @@
 #!/bin/bash
 
-source ../../runtime/AIFM/aifm/shared.sh
+source ../../../runtime/AIFM/aifm/shared.sh
 
 
 app_tmem=30720
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
-sed "s/\/\/#define TRACKFM_TRACE.*/#define TRACKFM_TRACE 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i 
 
 obj_sizes=( 4096 )
 
@@ -27,7 +26,7 @@ cd /home/TrackFM/apps/C_dataframe/
 ./run.sh
 
 
-figpath="/home/TrackFM/exp/fig14b"
+figpath="/home/TrackFM/exp/fig14a/TrackFM"
 cd $figpath
 
 cp /home/TrackFM/apps/C_dataframe/nyc.bc main.bc
@@ -73,7 +72,7 @@ do
 	    run_program_noht ./main 1>log.$cache_size 2>&1    
     fi
 done
-    mv log.* ../../plotgen/scripts/figgen/results/fig14b/TrackFM/
+    mv log.* ../../../plotgen/scripts/figgen/results/fig14a/TrackFM/
 done
-cd ../../plotgen
-python3 scripts/figgen/fig14b.py $figpath fig14b
+cd ../../../plotgen
+python3 scripts/figgen/fig14a.py $figpath fig14a
