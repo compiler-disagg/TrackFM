@@ -74,19 +74,14 @@ sudo /etc/init.d/openibd restart
 
 ### Install Libraries and Tools
 
-TODO: why isn't this one apt-get invocation? Why not use `apt-get install -y`?
 ```bash
 sudo apt-get update
-echo Y | sudo apt-get --fix-broken install
-echo Y | sudo apt-get install libnuma-dev libmnl-dev libnl-3-dev libnl-route-3-dev
-echo Y | sudo apt-get install libcrypto++-dev libcrypto++-doc libcrypto++-utils
-echo Y | sudo apt-get install software-properties-common
-echo Y | sudo apt-get install gcc-9 g++-9 python-pip
-echo Y | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-echo Y | sudo apt-get purge cmake
-echo Y | sudo apt-get install libjpeg-dev zlib1g-dev
-echo Y | sudo apt-get install libevent-dev
+sudo apt-get -y --fix-broken install
+sudo apt-get install -y libnuma-dev libmnl-dev libnl-3-dev libnl-route-3-dev libcrypto++-dev libcrypto++-doc libcrypto++-utils software-properties-common gcc-9 g++-9 python-pip python3-pip libjpeg-dev zlib1g-dev libevent-dev
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get -y purge cmake
 ```
+
 TODO: why do these pip packages need to be sudo? why not `pip install -U ...`?
 TODO: why aren't the `pip` invocations in the [python toolchain](#python-toolchain) section below?
 
@@ -99,7 +94,8 @@ cd /home/TrackFM/runtime
 
 ### Setup Shenango
 
-TODO: why isn't this in the trackfm build script?
+Each time node reboots, this script  has to run 
+before you use TrackFM.
 ```bash
 sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
