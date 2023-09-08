@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Tauro"
+    given-names: "Brian"
+  - family-names: "Suchy"
+    given-names: "Brian"
+  - family-names: "Campanoni"
+    given-names: "Simone"
+  - family-names: "Dinda"
+    given-names: "Peter"
+  - family-names: "Hale"
+    given-names: "Kyle"
+doi: ""
+title: "TrackFM Compiler"
+version: 1.0.0
+repository-code: "https://github.com/compiler-disagg/trackfm"
+license: MIT
+message: "If you use this software, please cite both the article from preferred-citation and the software itself."
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Tauro"
+    given-names: "Brian"
+  - family-names: "Suchy"
+    given-names: "Brian"
+  - family-names: "Campanoni"
+    given-names: "Simone"
+  - family-names: "Dinda"
+    given-names: "Peter"
+  - family-names: "Hale"
+    given-names: "Kyle"
+  title: "TrackFM: Far-out Compiler Support for a Far Memory World"
+  doi: ""
+  publisher: "Association for Computing Machinery"
+  conference:
+    name: "ASPLOS '24"
+    location: "San Diego, CA, USA"
+  collection-title: "Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems"
+  year: 2024
+  month: 4
+  start: 
+  end: 

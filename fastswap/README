@@ -1,2 +1,3 @@
 MLNX_OFED_LINUX-5.1-0.6.6.0-ubuntu18.04-x86_64.tgz
 sudo ./mlnxofedinstall --force
+source /home/TrackFM/runtime/compiler_passes/passes/set_paths
