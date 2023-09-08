@@ -3,6 +3,8 @@ NAS_PATH=/home/TrackFM/apps/nas_benchmarks/NPB-SER
 figpath=/home/TrackFM/exp/fig17b/fastswap
 CFM_PATH=/home/cfm
 
+source /home/TrackFM/runtime/compiler_passes/passes/set_paths
+
 app_tmem=34816
 amem=$((app_tmem*1024*1024)) 
 
