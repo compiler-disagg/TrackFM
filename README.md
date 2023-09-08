@@ -33,6 +33,8 @@ Our CloudLab profile is located in the root directory of this repo (`cloudlab.pr
 To run TrackFM on CloudLab, you can instantiate this profile.
 You'll first need to create a CloudLab account if you don't have one already.
 
+TODO: how do they instantiate the profile in CloudLab?
+
 We will run all experiments in `/home`, so make sure you have sufficient privileges in that directory:
 
 ```bash
@@ -52,6 +54,8 @@ sudo apt-get update
 echo Y | sudo apt-get install linux-headers-5.0.0-20 linux-headers-5.0.0-20-generic linux-hwe-edge-tools-5.0.0-20 linux-image-5.0.0-20-generic linux-modules-5.0.0-20-generic linux-tools-5.0.0-20-generic
 sudo reboot
 ```
+
+TODO: why is this separate from [libraries and tools](#install-libraries-and-tools)?
 
 ### Set bash as the default shell.
 
@@ -96,6 +100,7 @@ cd /home/TrackFM/runtime
 
 Each time node reboots, this script  has to run 
 before you use TrackFM.
+TODO: why?
 ```bash
 sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
@@ -118,6 +123,8 @@ add compute node public key to memory server
 pip3 install -r requirements.txt
 ```
 
+TODO: I'd use specific version numbers in `requirements.txt`
+
 ### Compile TrackFM Passes only on compute node
 
 ```bash
@@ -127,7 +134,8 @@ make -j
 ```
 
 ## Testing
-TODO: how do they know they did the above correct?
+TODO: how do they know they did the above correct? Add/use a simple benchmark or test, with a `Makefile` target that
+they can run to test that their TrackFM installation is working
 
 ## Reproducing Paper Results
 Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one has to invoke the ```run.sh``` located in the respective fig directory. For example to 
@@ -149,6 +157,8 @@ cd TrackFM
 cd  fastswap
 ./run.sh
 ```
+
+TODO: use `tree` command to make above prettier
 
 ## Using TrackFM
 TODO: how do they get a new app running with TrackFM? What are the caveats?
