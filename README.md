@@ -82,9 +82,16 @@ sudo chmod 777 /home
 
 ### Build Prerequisites
 
+We can first set up the TrackFM repo:
+
+```bash
+cd /home
+git clone https://github.com/compiler-disagg/trackfm
+```
+
 **Dev Packages**
 
-We first need to install relevant packages packages for TrackFM, AIFM, Shenango, and
+We need to install relevant packages packages for TrackFM, AIFM, Shenango, and
 our example applications. We'll first need to upgrade the Linux kernel version, which
 will necessitate a reboot:
 
@@ -105,6 +112,7 @@ We can then install the necessary packages:
 ```bash
 sudo apt-get update
 sudo apt-get -y --fix-broken install
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get install -y libnuma-dev \
                         libmnl-dev \
                         libnl-3-dev \
@@ -120,11 +128,10 @@ sudo apt-get install -y libnuma-dev \
                         libjpeg-dev \
                         zlib1g-dev \
                         libevent-dev
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get -y purge cmake
 ```
 
-***Mellanox OFED***
+**Mellanox OFED Stack**
 
 Shenango and AIFM require support for the Mellanox InfiniBand cards. This needs to be set up manually:
 
@@ -138,14 +145,31 @@ sudo /etc/init.d/openibd restart
 
 Note that when you run `./mlnxofedinstall` above, you may see a message like `Failed to install libibverbs-dev DEB'. This is okay, and it should still work. 
 
+**Python Toolchain**
+We require several Python modules for AIFM, for plot generation, and for our benchmarks:
 
-TODO: why do we need to do this?
+```bash
+cd /home/trackfm
+pip3 install -r requirements.txt
+pip install cmake
+```
+TODO: I'd use specific version numbers in `requirements.txt`
+
+** Compiler Toolchain **
+TrackFM relies on the [NOELLE compiler toolchain](https://github.com/arcana-lab/noelle), which
+we need to install. **Note that you only need to install this on the compute node (the node
+where you launch applications), not the memory server node**. This will take a couple of hours,
+so sit back and enjoy a coffee. 
+
+```bash
+./install-dependencies.sh
+```
+
+### Building TrackFM, AIFM, and Shenango
 
 ```bash
 chsh -s /bin/bash
 ```
-
-### Building TrackFM, AIFM, and Shenango
 
 ```bash
 cd /home/TrackFM/runtime
@@ -166,20 +190,6 @@ update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh
 
 ## Make sure compute node can ssh to memory server without password
 add compute node public key to memory server
-
-## Compiler Toolchain only required on compute node
-
-```
-./install-dependencies.sh
-```
-
-## Python toolchain
-
-```bash
-pip3 install -r requirements.txt
-```
-
-TODO: I'd use specific version numbers in `requirements.txt`
 
 ### Compile TrackFM Passes only on compute node
 
