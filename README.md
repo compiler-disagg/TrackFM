@@ -130,7 +130,25 @@ make -j
 TODO: how do they know they did the above correct?
 
 ## Reproducing Paper Results
-TODO: How do they run the experiments and regenerate the plots in the paper?
+Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one has to invoke the ```run.sh``` located in the respective fig directory. For example to 
+reproduce fig 14a in the paper the following steps need 
+to be followed. 
+```
+exp
+   fig14a
+         TrackFM
+                run.sh
+         Fastswap
+                run.sh
+
+cd  exp/fig14a
+//reproduce TrackFM datapoints and generates plots
+cd TrackFM
+./run.sh
+//reproduce Fastswap datapoints and generates plots
+cd  fastswap
+./run.sh
+```
 
 ## Using TrackFM
 TODO: how do they get a new app running with TrackFM? What are the caveats?
