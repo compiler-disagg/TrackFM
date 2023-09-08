@@ -3,12 +3,12 @@
 user=$USERNAME
 ip=$IP
 
-mem_array=( 2048 )
+mem_array=( 2 )
 rm log.*
 scr="screen -dmS fs ; screen -S fs -X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
 ter="screen -S fs -X stuff './kill.sh; exit; \n'"
 ts="screen -XS fs quit \n'"
-total_mem=6144
+total_mem=6
 cd /home/cfm/protocol/
 source gen_protocol.sh
 for local_mem in "${mem_array[@]}"
