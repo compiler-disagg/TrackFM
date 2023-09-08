@@ -25,73 +25,125 @@ state-of-the-art disaggregated solutions that require manual programmer effort.
 Brian R. Tauro, Brian Suchy, Simone Campanoni, Peter Dinda, Kyle C. Hale<br>
 The 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS '24; to appear).
 
-## Experimental Environment
+## Setting Up the Experimental Environment
+
 ### CloudLab
 
-TODO: cloudlab github repo
+All experiments in our paper were run on the
+[CloudLab](https://www.cloudlab.us/) platform. Our CloudLab profile, which
+describes a two-node Ubuntu 18.04 setup, is in
+a separate repo. You'll first need to create a CloudLab account if you don't
+have one already. Once you have an account, to instantiate our profile from
+your CloudLab dashboard, at the top of the page there should be button for
+"Experiments." Click on that and choose "Create Experiment Profile." Provide
+a name of your choosing for the profile, and for the "Source code" option,
+click the button that says "Git Repo." Provide this URL:
+https://github.com/compiler-disagg/trackfm-cloudlab. 
 
-All experiments in our paper were run on [CloudLab](https://www.cloudlab.us/).
-Our CloudLab profile is located in the root directory of this repo (`cloudlab.profile`).
-To run TrackFM on CloudLab, you can instantiate this profile.
-You'll first need to create a CloudLab account if you don't have one already.
+### Launching the Experimental Environment
 
-TODO: how do they instantiate the profile in CloudLab?
+*** SSH Key Configuration***
+You'll first want to make sure you have a public key set up so that you can log
+in to the experiment node(s). On the top right of the CloudLab Dashboard, click
+the button with your username, and select "Manage SSH Keys." You can then upload
+a key of your choice. 
 
-We will run all experiments in `/home`, so make sure you have sufficient privileges in that directory:
+*** Launching Instances***
+Once you've set up the CloudLab profile, you should be able to launch the
+necessary instances by going to "Experiments -> Start Experiment," then "Change
+Profile" and select the one that you created
+[above](#setting-up-the-experimental-environment) then choose "Select Profile,"
+then hit "Next". You should not need to change any options on the
+"Parameterize" tab, so hit "Next" again. On the "Finalize" tab, provide a name
+of your choosing, then hit "Next." We want to instantiate the nodes now, so do
+not provide a schedule, and hit "Finish." If there are sufficient resources
+available in CloudLab, then the nodes should launch successfully. Note that we
+require the use of the xl170 node type in CloudLab since they have the
+necessary InfiniBand hardware required to support the
+[Shenango](https://github.com/shenango/shenango) runtime. Note that you may
+want to request more than one day since several of the experiments can run for
+quite a long time (several hours). We have only tested on CloudLab, so we do not
+currently support other platforms (e.g., AWS). 
+
+Once the nodes have launched successfully, you should be able to select "List
+View" to see the nodes, and to view the public hostnames that you can SSH to.
+
+## Build Instructions
+
+The default storage allocation on CloudLab is insufficient for our experiments. 
+We will instead use a custom `/home` directory, created by the profile. You'll first need
+to set up permissive access to this directory:
 
 ```bash
 sudo chmod 777 /home
 ```
 
-TODO: describe the profile in case they want to do it manually. Namely, is it ubuntu? what version?
+### Build Prerequisites
 
-## Build Instructions
+***Dev Packages***
 
-### Toolchain Setup
-
-### Update package database and Linux kernel version.
+We first need to install relevant packages packages for TrackFM, AIFM, Shenango, and
+our example applications. We'll first need to upgrade the Linux kernel version, which
+will necessitate a reboot:
 
 ```bash
 sudo apt-get update
-echo Y | sudo apt-get install linux-headers-5.0.0-20 linux-headers-5.0.0-20-generic linux-hwe-edge-tools-5.0.0-20 linux-image-5.0.0-20-generic linux-modules-5.0.0-20-generic linux-tools-5.0.0-20-generic
+sudo apt-get install -y linux-headers-5.0.0-20 \
+                        linux-headers-5.0.0-20-generic \
+                        linux-hwe-edge-tools-5.0.0-20 \
+                        linux-image-5.0.0-20-generic \
+                        linux-modules-5.0.0-20-generic \
+                        linux-tools-5.0.0-20-generic
 sudo reboot
 ```
 
-TODO: why is this separate from [libraries and tools](#install-libraries-and-tools)?
+After reboot, verify that the instance is using the 5.0 kernel by running `uname -r`. 
+We can then install the necessary packages:
 
-### Set bash as the default shell.
+```bash
+sudo apt-get update
+sudo apt-get -y --fix-broken install
+sudo apt-get install -y libnuma-dev \
+                        libmnl-dev \
+                        libnl-3-dev \
+                        libnl-route-3-dev \
+                        libcrypto++-dev \
+                        libcrypto++-doc \
+                        libcrypto++-utils \
+                        software-properties-common \
+                        gcc-9 \
+                        g++-9 \
+                        python-pip \
+                        python3-pip \
+                        libjpeg-dev \
+                        zlib1g-dev \
+                        libevent-dev
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get -y purge cmake
+```
+
+***Mellanox OFED***
+
+Shenango and AIFM require support for the Mellanox InfiniBand cards. This needs to be set up manually:
+
+```bash
+wget "http://content.mellanox.com/ofed/MLNX_OFED-4.6-1.0.1.1/MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64.tgz"
+tar xvf MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64.tgz
+cd MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64
+sudo ./mlnxofedinstall --add-kernel-support --dpdk --upstream-libs 
+sudo /etc/init.d/openibd restart
+```
+
+Note that when you run `./mlnxofedinstall` above, you may see a message like `Failed to install libibverbs-dev DEB'. This is okay, and it should still work. 
+
 
 TODO: why do we need to do this?
 
 ```bash
 chsh -s /bin/bash
 ```
-### Install Mellanox OFED.
 
-TODO: why isn't this a script?
-
-```bash
-wget "http://content.mellanox.com/ofed/MLNX_OFED-4.6-1.0.1.1/MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64.tgz"
-tar xvf MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64.tgz
-cd MLNX_OFED_LINUX-4.6-1.0.1.1-ubuntu18.04-x86_64
-sudo ./mlnxofedinstall --add-kernel-support --dpdk --upstream-libs # it's fine to see 'Failed to install libibverbs-dev DEB'
-sudo /etc/init.d/openibd restart
-```
-
-### Install Libraries and Tools
-
-```bash
-sudo apt-get update
-sudo apt-get -y --fix-broken install
-sudo apt-get install -y libnuma-dev libmnl-dev libnl-3-dev libnl-route-3-dev libcrypto++-dev libcrypto++-doc libcrypto++-utils software-properties-common gcc-9 g++-9 python-pip python3-pip libjpeg-dev zlib1g-dev libevent-dev
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get -y purge cmake
-```
-
-TODO: why do these pip packages need to be sudo? why not `pip install -U ...`?
-TODO: why aren't the `pip` invocations in the [python toolchain](#python-toolchain) section below?
-
-### Building TrackFM
+### Building TrackFM, AIFM, and Shenango
 
 ```bash
 cd /home/TrackFM/runtime
