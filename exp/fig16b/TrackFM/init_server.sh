@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../../runtime/AIFM/aifm/shared.sh
+source ../../../runtime/AIFM/aifm/shared.sh
 
 cache_sizes=( 1 )
 
@@ -8,6 +8,8 @@ obj_size=128
 
 app_tmem=20480
 amem=$((app_tmem*1024*1024))
+
+sed "s/\/\/#define TRACKFM_TRACE.*/#define TRACKFM_TRACE 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i 
 
 sed "s/constexpr uint64_t kNumGCThreads.*/constexpr uint64_t kNumGCThreads = 4;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
 
@@ -19,13 +21,12 @@ sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/run
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 cd /home/TrackFM/runtime/compiler_passes/passes/ 
-
 make clean
 make -j
 
 cd /home/TrackFM/apps/memcached-1.2.7/
 ./compile.sh
-figpath="/home/TrackFM/exp/fig16a"
+figpath="/home/TrackFM/exp/fig16b/TrackFM"
 cd $figpath
 sudo pkill -9 main
 kill_local_iokerneld
@@ -35,7 +36,7 @@ do
     cp /home/TrackFM/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
     
-    cp ../../apps/memcached-1.2.7/memcached.bc main.bc
+    cp ../../../apps/memcached-1.2.7/memcached.bc main.bc
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
     make -j20
@@ -46,3 +47,4 @@ do
     run_program_noht ./main 1>log.$cache_size 2>&1 
 done
 kill_local_iokerneld
+sed "s/\/\/#define TRACKFM_TRACE.*/#define TRACKFM_TRACE 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i 

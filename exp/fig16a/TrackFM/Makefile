@@ -1,6 +1,6 @@
 CARM_LLVM:=/home/llvm-project/build/bin
-AIFM_PATH:=../../runtime/AIFM/aifm
-CARM_PATH:=../../runtime
+AIFM_PATH:=../../../runtime/AIFM/aifm
+CARM_PATH:=../../../runtime
 CARM_LDX_FLAGS=-filetype=obj -relocation-model=pic
 SHENANGO_PATH:=$(AIFM_PATH)/../shenango
 include $(SHENANGO_PATH)/shared.mk
