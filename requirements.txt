@@ -1,3 +1,4 @@
+scikit-build
 pymemcache
 scipy
 matplotlib
@@ -5,3 +6,5 @@ jinja2
 psutil
 grpcio 
 grpcio-tools 
+cmake
+wllvm
