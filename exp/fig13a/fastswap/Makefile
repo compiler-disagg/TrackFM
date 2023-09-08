@@ -1,10 +1,10 @@
-CARM_LLVM:=/home/llvm-project/build/bin
-override CARMCXXFLAGS += -O3 
+CARM_LLVM=/home/llvm-project/build/bin
+CARMCXXFLAGS=-O3
 
-all: main
+all: main_lib
 
 main_lib:
-	$(CARM_LLVM)/clang++ $(CARMCXXFLAGS) main.cpp
+	$(CARM_LLVM)/clang++ $(CARMCXXFLAGS) main.cpp -o main
 
 .PHONY: clean
 clean:

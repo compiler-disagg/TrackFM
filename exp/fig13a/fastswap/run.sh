@@ -17,7 +17,8 @@ make clean
 make -j
 cp main $CFM_PATH"/UMAP/umap"
 cp zipf.txt $CFM_PATH"/UMAP/"
+cd $CFM_PATH
 ./fig13.sh
 mv log.* ../../../plotgen/scripts/figgen/results/fig13a/fastswap/
-cd ../../../plotgen
+cd $TRACKFM_PATH/plotgen
 python3 scripts/figgen/fig13a.py $figpath fig13a
