@@ -1,6 +1,6 @@
 #!/bin/bash
-username=`echo $USERNAME`
-ip=`echo $IP`
+user=$USERNAME
+ip=$IP
 mem_array=( 2 )
 rm log.*
 scr="screen -dmS ft; screen -S ft-X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"

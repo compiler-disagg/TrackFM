@@ -1,7 +1,7 @@
 #!/bin/bash
 
-username=`echo $USERNAME`
-ip=`echo $IP`
+user=$USERNAME
+ip=$IP
 
 mem_array=( 3 )
 rm log.*

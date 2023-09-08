@@ -1,0 +1,76 @@
+CPU 12| <5> cpu: detected 20 cores, 1 nodes
+CPU 12| <5> time: detected 2394 ticks / us
+[  0.000722] CPU 12| <5> loading configuration from '/home/CARM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000774] CPU 12| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.018268] CPU 12| <5> net: started network stack
+[  0.018288] CPU 12| <5> net: using the following configuration:
+[  0.018293] CPU 12| <5>   addr:	18.18.1.2
+[  0.018298] CPU 12| <5>   netmask:	255.255.255.0
+[  0.018302] CPU 12| <5>   gateway:	18.8.1.1
+[  0.018306] CPU 12| <5>   mac:	AE:F5:A8:05:16:25
+[  0.249035] CPU 12| <5> thread: created thread 0
+[  0.249180] CPU 12| <5> spawning 9 kthreads
+[  0.249320] CPU 14| <5> thread: created thread 1
+[  0.249378] CPU 05| <5> thread: created thread 2
+[  0.249474] CPU 06| <5> thread: created thread 3
+[  0.249702] CPU 07| <5> thread: created thread 4
+[  0.249783] CPU 19| <5> thread: created thread 5
+[  0.250133] CPU 01| <5> thread: created thread 6
+[  0.250297] CPU 02| <5> thread: created thread 7
+[  0.250373] CPU 13| <5> thread: created thread 8
+raddr 18.18.1.3:8000
+size of 8
+carm_fopen 
+
+ NAS Parallel Benchmarks 4.1 Serial C++ version - IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   10
+
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+
+
+ IS Benchmark Completed
+ class_npb       =                        C
+ Size            =                134217728
+ Iterations      =                       10
+ Time in seconds =                    16.30
+ Mop/s total     =                    82.34
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                      4.1
+ Compiler ver    =                    9.0.0
+ Compile date    =              13 Aug 2023
+
+ Compile options:
+    CC           = wllvm++ 
+    CLINK        = $(CC)
+    C_LIB        = -lm 
+    C_INC        = -I../common 
+    CFLAGS       = -O1 -fPIC -fno-builtin -fno-builtin -fno-ve...
+    CLINKFLAGS   = -O1 -fPIC -mcmodel=medium -fno-builtin -fno...
+    RAND         = randdp
+
+
+----------------------------------------------------------------------
+    NPB-CPP is developed by: 
+        Dalvan Griebler
+        Gabriell Araujo (Sequential Porting)
+        Júnior Löff (Parallel Implementation)
+
+    In case of questions or problems, please send an e-mail to us:
+        dalvan.griebler; gabriell.araujo; junior.loff@edu.pucrs.br
+----------------------------------------------------------------------
+
+[ 36.199920] CPU 02| <5> init: shutting down -> SUCCESS

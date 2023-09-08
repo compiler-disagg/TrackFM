@@ -12,4 +12,4 @@ wllvm -O1 -fno-vectorize -fno-builtin -fPIC  -c nyc.c -I include/ -o nycc
 extract-bc libdataframe.so
 extract-bc nycc
 llvm-link nycc.bc libdataframe.so.bc -o nyc.bc
-clang -O3 nyc.bc  -o nyc -lm
+clang -O3 nyc.c -I include/ -o nyc -lm
