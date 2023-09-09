@@ -199,14 +199,17 @@ add compute node public key to memory server
 
 
 ### Datasets
-We use Kaggle to store our datasets. In order to download datasets we require you 
+We use Kaggle to store our datasets. We require either of the below options
+to be followed to download the datasets. 
+
+##First Option Create Kaggle Account
+In order to download datasets using command line in Kaggle, we require you 
 to have a Kaggle account. Once your account is created, you can click on the profile 
 button in the Kaggle homepage to generate an api token. This will download a JSON file. 
 Copy the JSON file to the compute server in ```/home/datasets```. Another option is 
 you can also download the datasets  
 in your local machine and then upload the datasets to ```/home/datasets``` 
-in the cloudlab computeserver node. In either case you need to manually create
-the ```datasets``` directory in ```/home```. 
+in the cloudlab compute server node. 
  
 ```bash
 cd /home
@@ -222,6 +225,16 @@ unzip nyc-dataframe.zip
 unzip kmeans.zip
 ```
 
+##Second Option Download them directly through public web interface without Kaggle account
+
+https://www.kaggle.com/datasets/btauro/kmeans
+
+https://www.kaggle.com/datasets/btauro/nyc-dataframe
+
+Download, unzip the above datasets and upload them to ```/home/datasets```
+
+**Both options require the ```datasets``` directory in ```/home``` to 
+already be created.** 
 
 ### Compile TrackFM Passes only on compute node
 
