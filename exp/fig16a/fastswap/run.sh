@@ -2,6 +2,9 @@
 CFM_PATH=/home/cfm
 rm log*
 figpath="/home/TrackFM/exp/fig16a/fastswap"
+cd /home/TrackFM/apps/memcached-1.2.7
+./compile_local.sh
+cp memcached $CFM_PATH/memcachedv2/
 cd  $CFM_PATH
 ./fig16a.sh
 cd $figpath
