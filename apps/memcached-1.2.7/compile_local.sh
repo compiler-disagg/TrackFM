@@ -1,5 +1,5 @@
 export LLVM_COMPILER=clang
-cp make_O1 Makefile
+cp make_O3 Makefile
 make clean
 make
 extract-bc memcached

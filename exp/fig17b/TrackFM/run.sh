@@ -1,6 +1,6 @@
-TrackFM_PATH=/home/TrackFM/exp/fig17b
+TrackFM_PATH=/home/TrackFM/exp/fig17b/TrackFM
 NAS_PATH=/home/TrackFM/apps/nas_benchmarks/NPB-SER
-figpath=/home/TrackFM/exp/fig17b
+figpath=/home/TrackFM/exp/fig17b/TrackFM
 
 app_tmem=34816
 amem=$((app_tmem*1024*1024)) 
@@ -33,7 +33,7 @@ cp $NAS_PATH/bin/sp.D .
 echo "SP profile"
 ./run.sh
 cd ..
-mv $TrackFM_PATH/nas_ft/log.2 ../../plotgen/scripts/figgen/results/fig17b/TrackFM/ft.log.2
-mv $TrackFM_PATH/nas_sp/log.3 ../../plotgen/scripts/figgen/results/fig17b/TrackFM/sp.log.3
-cd ../../plotgen
+mv $TrackFM_PATH/nas_ft/log.2 ../../../plotgen/scripts/figgen/results/fig17b/TrackFM/ft.log.2
+mv $TrackFM_PATH/nas_sp/log.3 ../../../plotgen/scripts/figgen/results/fig17b/TrackFM/sp.log.3
+cd ../../../plotgen
 python3 scripts/figgen/fig17b.py $figpath fig17b
