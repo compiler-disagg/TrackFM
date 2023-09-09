@@ -15,4 +15,5 @@ do
 	wco=$(eval "$wc")
 	echo $wco
 	kill -9 $wco
+	sleep 120
 done
