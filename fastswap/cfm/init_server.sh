@@ -4,7 +4,6 @@ user=$USERNAME
 ip=$IP
 
 mem_array=( 1 )
-rm log.*
 scr="screen -dmS fs ; screen -S fs -X stuff 'cd /home/fastswap/farmemserver; make clean; make; ./rmserver 3000 & \n'"
 ter="screen -S fs -X stuff './kill.sh; exit; \n'"
 ts="screen -XS fs quit \n'"
