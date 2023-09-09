@@ -5,7 +5,7 @@ source ../../../runtime/AIFM/aifm/shared.sh
 
 TRACKFM_PATH=/home/TrackFM
 cd /home/TrackFM/apps/C_dataframe/
-./run.sh
+./compile_local.sh
 figpath="/home/TrackFM/exp/fig14a/local"
 cd $figpath
 cp /home/TrackFM/apps/C_dataframe/nyc $figpath

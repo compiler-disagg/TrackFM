@@ -6,7 +6,7 @@ source ../../../runtime/AIFM/aifm/shared.sh
 CFM_PATH=/home/cfm
 TRACKFM_PATH=/home/TrackFM
 cd /home/TrackFM/apps/C_dataframe/
-./run.sh
+./compile_local.sh
 figpath="/home/TrackFM/exp/fig14a/fastswap"
 cd $figpath
 cp /home/datasets/all.csv $CFM_PATH/NYC/

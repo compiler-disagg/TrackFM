@@ -7,9 +7,11 @@ sudo ln -sf /proj/rmt-PG0/noelle_setup/llvm-project/build/bin/llvm-link /usr/bin
 
 log_folder=`pwd`
 export LLVM_COMPILER=clang
+cp make_O1 Makefile
+make clean
 CC=wllvm CXX=wllvm++ LLVM_COMPILER=clang make
 wllvm -O1 -fno-vectorize -fno-builtin -fPIC  -c nyc.c -I include/ -o nycc
 extract-bc libdataframe.so
 extract-bc nycc
 llvm-link nycc.bc libdataframe.so.bc -o nyc.bc
-clang -O3 nyc.c -I include/ -o nyc -lm
+clang -O3 nyc.c -I include/ -o nyc -lm libdataframe.so
