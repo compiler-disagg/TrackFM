@@ -198,7 +198,7 @@ update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh
 add compute node public key to memory server
 
 
-### Datasets
+## Datasets
 We use Kaggle to store our datasets. We require one of the below options
 to be followed to download the datasets. 
 
@@ -207,9 +207,8 @@ In order to download datasets using command line in Kaggle, we require you
 to have a Kaggle account. Once your account is created, you can click on the profile 
 button in the Kaggle homepage to generate an api token. This will download a JSON file. 
 Copy the JSON file to the compute server in ```/home/datasets```. Another option is 
-you can also download the datasets  
-in your local machine and then upload the datasets to ```/home/datasets``` 
-in the cloudlab compute server node. 
+you can also download the datasets  in your local machine and then upload the datasets 
+to ```/home/datasets```  in the cloudlab compute server node. 
  
 ```bash
 cd /home
