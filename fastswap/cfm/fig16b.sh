@@ -8,7 +8,7 @@ sudo pkill -9 main
 for a in "${d[@]}"
 do
 	./init_server.sh & 
-	sleep 1200
+	sleep 120
 	echo "memclient"
 	python3 test_memc_b.py $a &>>log.$a
 	wc="ps -C \"memcached\" -o pid="
