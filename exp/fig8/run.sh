@@ -27,6 +27,7 @@ make -j
 figpath="/home/TrackFM/exp/fig8"
 cd $figpath
 ./compile.sh
+cp /home/datasets/points_100.txt . 
 
 sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
