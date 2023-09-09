@@ -199,7 +199,7 @@ add compute node public key to memory server
 
 
 ### Datasets
-We use Kaggle to store our datasets. We require either of the below options
+We use Kaggle to store our datasets. We require one of the below options
 to be followed to download the datasets. 
 
 #### First Option Create Kaggle Account
