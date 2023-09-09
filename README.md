@@ -197,6 +197,24 @@ update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh
 ## Make sure compute node can ssh to memory server without password
 add compute node public key to memory server
 
+
+### Datasets
+We use kaggle to store our datasets. In order to download datasets we require you 
+to have a kaggle account. Once your account is created, you can click on the profile 
+button in the homepage to generate an api token. This will download a JSON file. Copy the JSON file 
+to the compute server. 
+ 
+```bash
+cd /home
+mkdir datasets
+cd  datasets
+pip3 install --user kaggle
+cp kaggle.json ~/.kaggle/                    //we assume you have uploaded your api token to the cloudlab server for example using scp
+kaggle datasets download -d btauro/kmeans
+kaggle datasets download -d btauro/nyc-dataframe
+```
+
+
 ### Compile TrackFM Passes only on compute node
 
 ```bash
