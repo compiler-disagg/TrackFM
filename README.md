@@ -199,19 +199,23 @@ add compute node public key to memory server
 
 
 ### Datasets
-We use kaggle to store our datasets. In order to download datasets we require you 
-to have a kaggle account. Once your account is created, you can click on the profile 
-button in the homepage to generate an api token. This will download a JSON file. Copy the JSON file 
-to the compute server. 
+We use Kaggle to store our datasets. In order to download datasets we require you 
+to have a Kaggle account. Once your account is created, you can click on the profile 
+button in the Kaggle homepage to generate an api token. This will download a JSON file. 
+Copy the JSON file to the compute server in /home/datasets. 
  
 ```bash
 cd /home
 mkdir datasets
+#copy JSON API TOKEN in this folder
 cd  datasets
 pip3 install --user kaggle
-cp kaggle.json ~/.kaggle/                    //we assume you have uploaded your api token to the cloudlab server for example using scp
+#upload your kaggle api token to the cloudlab server for example using scp
+cp kaggle.json ~/.kaggle/   
 kaggle datasets download -d btauro/kmeans
 kaggle datasets download -d btauro/nyc-dataframe
+unzip nyc-dataframe.zip
+unzip kmeans.zip
 ```
 
 

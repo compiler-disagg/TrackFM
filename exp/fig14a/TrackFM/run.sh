@@ -30,6 +30,7 @@ figpath="/home/TrackFM/exp/fig14a/TrackFM"
 cd $figpath
 
 cp /home/TrackFM/apps/C_dataframe/nyc.bc main.bc
+cp /home/datasets/all.csv .
 
 sed "s/#define  LOOP_PREFETCH  .*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
