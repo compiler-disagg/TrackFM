@@ -9,6 +9,7 @@ cd /home/TrackFM/apps/C_dataframe/
 figpath="/home/TrackFM/exp/fig14a/local"
 cd $figpath
 cp /home/TrackFM/apps/C_dataframe/nyc $figpath
+cp /home/TrackFM/apps/C_dataframe/libdataframe.so $figpath
 cp /home/datasets/all.csv .
 ./nyc
 mv log.* $TRACKFM_PATH/plotgen/scripts/figgen/results/fig14a/local/
