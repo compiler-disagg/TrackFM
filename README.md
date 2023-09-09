@@ -202,7 +202,7 @@ add compute node public key to memory server
 We use Kaggle to store our datasets. We require either of the below options
 to be followed to download the datasets. 
 
-##First Option Create Kaggle Account
+#### First Option Create Kaggle Account
 In order to download datasets using command line in Kaggle, we require you 
 to have a Kaggle account. Once your account is created, you can click on the profile 
 button in the Kaggle homepage to generate an api token. This will download a JSON file. 
@@ -225,7 +225,7 @@ unzip nyc-dataframe.zip
 unzip kmeans.zip
 ```
 
-##Second Option Download them directly through public web interface without Kaggle account
+#### Second Option Download them directly through public web interface without Kaggle account
 
 https://www.kaggle.com/datasets/btauro/kmeans
 
