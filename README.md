@@ -214,24 +214,22 @@ Each fig num in the paper has a fig directory in ``` exp/ ```. In order to repro
 reproduce fig 14a in the paper the following steps need 
 to be followed. 
 ```
-exp
-   fig14a
-         TrackFM
-                run.sh
-         Fastswap
-                run.sh
+fig14a
+├── fastswap
+│   ├── Makefile
+│   └── run.sh
+└── TrackFM
+    ├── Makefile
+    └── run.sh
 
 cd  exp/fig14a
-//reproduce TrackFM datapoints and generates plots
 cd TrackFM
+//reproduce TrackFM datapoints and generate plots
 ./run.sh
-//reproduce Fastswap datapoints and generates plots
 cd  fastswap
+//reproduce Fastswap datapoints and generate plots
 ./run.sh
 ```
-
-TODO: use `tree` command to make above prettier
-
 ## Using TrackFM
 TODO: how do they get a new app running with TrackFM? What are the caveats?
 
