@@ -202,7 +202,11 @@ add compute node public key to memory server
 We use Kaggle to store our datasets. In order to download datasets we require you 
 to have a Kaggle account. Once your account is created, you can click on the profile 
 button in the Kaggle homepage to generate an api token. This will download a JSON file. 
-Copy the JSON file to the compute server in /home/datasets. 
+Copy the JSON file to the compute server in ```/home/datasets```. Another option is 
+you can also download the datasets  
+in your local machine and then upload the datasets to ```/home/datasets``` 
+in the cloudlab computeserver node. In either case you need to manually create
+the ```datasets``` directory in ```/home```. 
  
 ```bash
 cd /home
