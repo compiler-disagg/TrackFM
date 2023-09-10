@@ -25,7 +25,7 @@ cd MLNX_OFED_LINUX-5.1-0.6.6.0-ubuntu18.04-x86_64
 sudo ./mlnxofedinstall --force
 ```
 
-**Note OFED version for TrackFM/AIFM, fastswap are different, each time you switch between TrackFM and fastswap you alse need to reinstall OFED**
+**Note OFED version for TrackFM/AIFM, fastswap are different, each time you switch between TrackFM and fastswap you also need to reinstall OFED**
 
 
 # set compiler
