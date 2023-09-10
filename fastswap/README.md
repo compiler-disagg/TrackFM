@@ -1,6 +1,9 @@
 # Install fastswap
 
+```
+#will setup fastswap, fastswap environment at /home
 source setup.sh <USERNAME> <MEMORY-SERVER-IP (eno49)>
+```
 
 
 Install fastswap OS on both compute and memory server
