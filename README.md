@@ -1,3 +1,4 @@
+![TrackFM Logo](https://github.com/compiler-disagg/trackfm/trackfm-log.png "TrackFM Logo")
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # TrackFM
