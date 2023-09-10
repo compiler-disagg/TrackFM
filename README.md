@@ -1,7 +1,5 @@
-![TrackFM Logo](https://github.com/compiler-disagg/TrackFM/blob/main/trackfm-logo.png "TrackFM Logo")
+![TrackFM Logo](https://github.com/compiler-disagg/TrackFM/blob/main/trackfm-logo.png "TrackFM Logo")<br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-# TrackFM
 
 TrackFM transparently compiles application code 
 to run on systems with disaggregated memory. TrackFM 
