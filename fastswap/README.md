@@ -16,10 +16,24 @@ cd linux
 git checkout v5.0
 git apply ../fastswap/kernel/kernel-v5.0.patch
 cp ../fastswap/kernel/config-5.0.0-fastswap .config
-make -j10
+make -j 10 deb-pkg LOCALVERSION=-fastswap
+cd ..
+sudo dpkg -i *.deb
 ```
 
-# Reinstall OFSED for fastswap
+# setting up cgroups
+
+```
+    Open /boot/grub/grub.cfg in your editor of choice
+    Find the menuentry for the fastswap kernel
+    Add cgroup_no_v1=memory to the end of the line beginning in linux ```boot/vmlinuz-5.0.0-fastswap```
+    Save and exit the file
+    Run: sudo update-grub
+    Reboot
+
+```
+
+# Reinstall OFED for fastswap
 
 ```
 wget "http://content.mellanox.com/ofed/MLNX_OFED-5.1-0.6.6.0/MLNX_OFED_LINUX-5.1-0.6.6.0-ubuntu18.04-x86_64.tgz"
