@@ -11,6 +11,8 @@ Install fastswap OS on both compute and memory server
 ```
 sudo chmod 777 /home
 cd /home
+sudo apt-get update
+sudo apt-get install git build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex
 git clone https://github.com/torvalds/linux.git
 cd linux
 git checkout v5.0
