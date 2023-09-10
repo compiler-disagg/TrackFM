@@ -1,0 +1,4 @@
+To reproduce AIFM results we require AIFM to be installed both in compute server and
+memory server in ```/home```
+
+If you have set up TrackFM environment, you do not need to install any packages, OFED. you can directly follow instructions starting from AIFM/Shenango build instructions from https://github.com/AIFM-sys/AIFM.
