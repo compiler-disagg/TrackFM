@@ -1,0 +1,16 @@
+--2022-11-21 17:58:20--  http://www.mellanox.com/page/mlnx_ofed_eula?mtag=linux_sw_drivers
+Resolving www.mellanox.com (www.mellanox.com)... 23.67.33.4, 23.67.33.28
+Connecting to www.mellanox.com (www.mellanox.com)|23.67.33.4|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://developer.nvidia.com/networking/mlnx-ofed-eula?mtag=linux_sw_drivers [following]
+--2022-11-21 17:58:20--  https://developer.nvidia.com/networking/mlnx-ofed-eula?mtag=linux_sw_drivers
+Resolving developer.nvidia.com (developer.nvidia.com)... 152.195.19.142
+Connecting to developer.nvidia.com (developer.nvidia.com)|152.195.19.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58428 (57K) [text/html]
+Saving to: ‘mlnx_ofed_eula?mtag=linux_sw_drivers’
+
+mlnx_ofed_eula?mtag=linux_sw_drivers                 0%[                                                                                                                ]       0  --.-KB/s               mlnx_ofed_eula?mtag=linux_sw_drivers               100%[===============================================================================================================>]  57.06K  --.-KB/s    in 0.1s    
+
+2022-11-21 17:58:21 (449 KB/s) - ‘mlnx_ofed_eula?mtag=linux_sw_drivers’ saved [58428/58428]
+
