@@ -280,12 +280,14 @@ cp make_chunk Makefile
 make
 ```
 TrackFM requires symbol rename of TrackFM binaries to distinguish between
-TrackFM std lib calls and the runtime std lib calls. If new symbols are used wich TrackFM does not recognize these symbols have to be added to ```/home/TrackFM/app_symbols```.
+TrackFM std lib calls and the runtime std lib calls. TrackFM can ignore
+symbols that do not use remote memory, by specifying the symbol name in 
+ ```/home/TrackFM/app_symbols```.
 
 For large code bases, the code can be compiled using [wllvm](https://github.com/travitch/whole-program-llvm) and passing a single bitcode file to TrackFM 
 is a possible workflow.
 
-###Limitation
+### Limitation
 TrackFM does not support external libraries that change memory pointers.
 However TrackFM can ignore memory allocations passed to external libraries,
 by annotating allocation sites (eg malloc) with ```__attribute__((annotate("local_malloc")))```. 
@@ -296,7 +298,18 @@ TrackFM does not support multi-threading apps yet,
 since AIFM runtime itself has support for multi threading.
 
 ## Code Structure
-TODO: give them a map of the codebase so they can grok it quickly
+Compiler passes of TrackFM are located in ```/home/TrackFM/runtime/compiler_passes/passes/```
+
+```
+carm_checks     -> analyzes load/store candidates for slow paths guards
+carm_transorms  -> transform analyzed load/store candidates to slow path guards
+carm_loop_checks -> analyze loop pointer induction variales
+carm_loop_transform -> transform loop pointer induction variables
+carm_libc_transform -> minimal support for libc calls that modify memory
+```
+
+TrackFM runtime code is located in  ```/home/TrackFM/runtime/src```
+
 
 ## Acknowledgements
 <img align="left" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" height=100/>
