@@ -243,8 +243,8 @@ make -j
 ```
 
 ## Testing
-TODO: how do they know they did the above correct? Add/use a simple benchmark or test, with a `Makefile` target that
-they can run to test that their TrackFM installation is working
+To confirm that TrackFM is installed correctly, run ```make test```.This
+will run the stream benchmark.
 
 ## Reproducing Paper Results
 Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one has to invoke the ```run.sh``` located in the respective fig directory. For example to 
