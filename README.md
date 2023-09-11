@@ -269,7 +269,31 @@ cd  fastswap
 **Note to reproduce fastswap, AIFM results,  both the systems have to be first installed seperately in ```/home``` on both compute and memory server nodes.**. We provide installation scripts, instructions for both AIFM and fastswap in the root directory of TrackFM.
 
 ## Using TrackFM
-TODO: how do they get a new app running with TrackFM? What are the caveats?
+
+TrackFM requires O1 opimized bitcode without vectorization. 
+We provide sample make files in ```/home/TrackFM/sample_configs/TrackFM```. 
+Example workflow
+```
+cd /home/TrackFM/sample_configs/TrackFM
+clang -c -O1 main.c -emit-llvm
+cp make_chunk Makefile
+make
+```
+TrackFM requires symbol rename of TrackFM binaries to distinguish between
+TrackFM std lib calls and the runtime std lib calls. If new symbols are used wich TrackFM does not recognize these symbols have to be added to ```/home/TrackFM/app_symbols```.
+
+For large code bases, the code can be compiled using [wllvm](https://github.com/travitch/whole-program-llvm) and passing a single bitcode file to TrackFM 
+is a possible workflow.
+
+###Limitation
+TrackFM does not support external libraries that change memory pointers.
+However TrackFM can ignore memory allocations passed to external libraries,
+by annotating allocation sites (eg malloc) with ```__attribute__((annotate("local_malloc")))```. 
+
+TrackFM does not support mmap.
+TrackFM does not support multi-threading apps yet,
+ adding support for multi threading in TrackFM is easy
+since AIFM runtime itself has support for multi threading.
 
 ## Code Structure
 TODO: give them a map of the codebase so they can grok it quickly
