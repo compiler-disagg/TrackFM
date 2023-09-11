@@ -290,12 +290,12 @@ For large code bases, the code can be compiled using [wllvm](https://github.com/
 is a possible workflow.
 
 ### Limitation
-* Item TrackFM does not support external libraries that change memory pointers.
+* TrackFM does not support external libraries that change memory pointers.
 However TrackFM can ignore memory allocations passed to external libraries,
 by annotating allocation sites (eg malloc) with ```__attribute__((annotate("local_malloc")))```. 
 
-* Item TrackFM does not support mmap.
-* Item TrackFM does not support multi-threading apps yet,
+* TrackFM does not support mmap.
+* TrackFM does not support multi-threading apps yet,
  adding support for multi threading in TrackFM is easy
 since AIFM runtime itself has support for multi threading.
 
