@@ -266,20 +266,22 @@ cd  fastswap
 //reproduce Fastswap datapoints and generate plots
 ./run.sh
 ```
-**Note to reproduce fastswap, AIFM results,  both the systems have to be first installed seperately in ```/home``` on both compute and memory server nodes.**. We provide installation scripts, instructions for both AIFM and fastswap in the root directory of TrackFM.
+
+## Reproduce Fastswap, AIFM results
+To reproduce fastswap, AIFM results,  both the systems have to be first installed seperately in ```/home``` on both compute and memory server nodes. We provide installation scripts, instructions for both AIFM and fastswap in the root directory of TrackFM.
 
 ## Using TrackFM
 
 TrackFM requires O1 opimized bitcode without vectorization. 
 We provide sample make files in ```/home/TrackFM/sample_configs/TrackFM```. 
-Example workflow
 ```
+#Example workflow
 cd /home/TrackFM/sample_configs/TrackFM
 clang -c -O1 main.c -emit-llvm
 cp make_chunk Makefile
 make
 ```
-TrackFM requires symbol rename of TrackFM binaries to distinguish between
+TrackFM renames binary symobls to distinguish between
 TrackFM std lib calls and the runtime std lib calls. TrackFM can ignore
 symbols that do not use remote memory, by specifying the symbol name in 
  ```/home/TrackFM/app_symbols```.
@@ -288,12 +290,12 @@ For large code bases, the code can be compiled using [wllvm](https://github.com/
 is a possible workflow.
 
 ### Limitation
-TrackFM does not support external libraries that change memory pointers.
+* Item TrackFM does not support external libraries that change memory pointers.
 However TrackFM can ignore memory allocations passed to external libraries,
 by annotating allocation sites (eg malloc) with ```__attribute__((annotate("local_malloc")))```. 
 
-TrackFM does not support mmap.
-TrackFM does not support multi-threading apps yet,
+* Item TrackFM does not support mmap.
+* Item TrackFM does not support multi-threading apps yet,
  adding support for multi threading in TrackFM is easy
 since AIFM runtime itself has support for multi threading.
 
