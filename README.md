@@ -303,9 +303,10 @@ Compiler passes of TrackFM are located in ```/home/TrackFM/runtime/compiler_pass
 ```
 carm_checks     -> analyzes load/store candidates for slow paths guards
 carm_transorms  -> transform analyzed load/store candidates to slow path guards
-carm_loop_checks -> analyze loop pointer induction variales
+carm_loop_checks -> analyze loop pointer induction variables
 carm_loop_transform -> transform loop pointer induction variables
 carm_libc_transform -> minimal support for libc calls that modify memory
+carm_profile_checks -> only analyze loop pointer induction variables that satisfy loop cost model.
 ```
 
 TrackFM runtime code is located in  ```/home/TrackFM/runtime/src```
