@@ -267,6 +267,8 @@ cd  fastswap
 //reproduce Fastswap datapoints and generate plots
 ./run.sh
 ```
+** Note to reproduce fastswap, AIFM plots they have to be installed seperately in /home **. We provide instruction for both AIFM and fastswap installation in the root directory of TrackFM. 
+
 ## Using TrackFM
 TODO: how do they get a new app running with TrackFM? What are the caveats?
 
