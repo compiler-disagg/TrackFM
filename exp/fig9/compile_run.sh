@@ -3,7 +3,7 @@
 source ../../runtime/AIFM/aifm/shared.sh
 
 
-python3 test_memc.py
+python3 gen_zipf.py
 app_tmem=16384
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
