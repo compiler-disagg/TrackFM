@@ -1,9 +1,8 @@
 #!/bin/bash
 
-source ../../runtime/AIFM/aifm/shared.sh
+source ../../../runtime/AIFM/aifm/shared.sh
 
-
-python3 test_memc.py
+python3 gen_zipf.py
 app_tmem=16384
 amem=$((app_tmem*1024*1024))
 sed "s/constexpr uint64_t kFarMemSize.*/constexpr uint64_t kFarMemSize = $amem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
@@ -25,7 +24,7 @@ cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
 
-figpath="/home/TrackFM/exp/fig13a"
+figpath="/home/TrackFM/exp/fig13a/TrackFM"
 cd $figpath
 
 cache_sizes=( 128 256 384 512 768 1024 1536 2048)
@@ -39,14 +38,14 @@ do
     mem=$((cache_size*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
     make clean
-    cp  ../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
+    cp  ../../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
     make -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
 done
-		mv log.* ../../plotgen/scripts/figgen/results/fig13a/TrackFM/
-		cd ../../plotgen
+		mv log.* ../../../plotgen/scripts/figgen/results/fig13a/TrackFM/
+		cd ../../../plotgen
 		python3 scripts/figgen/fig13a.py $figpath fig13a
 done
