@@ -986,23 +986,53 @@ int carm_vsnprintf(void *str, uint64_t size, void * format, va_list cva_list)
   return ret;
 }
 
-static inline int get_size_of_carm_str_ptrs(va_list args1, char * format) {
+static inline int get_size_of_valist(va_list cva_list, char * format) {
 
-	int size = 0;
+  bool vargs_is_cptr = false; 
+  int nargs = 0;
+  int size = 0;
+  int size_varg;
+  char numchar[100];
+  int i = 0;
+  int vargs_type[MAX_VA_ARGS];
+  Numeric * vargs_values[MAX_VA_ARGS];
+  va_list args1;
+  char * fmt = (char * ) format;
+
+  va_copy(args1, cva_list);
+  PARSE_VA_LIST(args1)
+  va_end (args1);
 
 	while (*format != '\0') {
 		if (*format == '%') {
 			format++;
-			uint64_t ptr;
 			switch (*format) {
 				case 's': 
-					ptr = (uint64_t) va_arg (args1, char*); 
-					if (check_carm_object(ptr)) 
-						size += carm_strlen((void *) ptr);
+					size_varg = carm_strlen((void *)vargs_values[i]->p) + 1;
+					size += size_varg;
+					break;
+				case 'd': 
+					sprintf(numchar, "%d", vargs_values[i]->i);
+					size += strlen(numchar);
+					break;
+				case 'u': 
+					sprintf(numchar, "%u", vargs_values[i]->ui);
+					size += strlen(numchar);
+					break;
+				case 'f': 
+					sprintf(numchar, "%f", vargs_values[i]->f);
+					size += strlen(numchar);
 					break;
 				default:
+					size++;
+					DEBUG_PRINT("not supported %c in %s\n", format, *format);
+					exit(0);
 					break;
 			};
+			i++;
+		}
+		else {
+			size++;
 		}
 		format++;
 	}
@@ -1011,13 +1041,10 @@ static inline int get_size_of_carm_str_ptrs(va_list args1, char * format) {
 
 
 int get_size_va_list (va_list vlen, void * format) {
-  // +1 includes null character
-  //
   va_list args;
+  int size = 0;
   va_copy(args, vlen);
-  //int size = snprintf(nullptr, 0, (const char *)format, vlen) + 1;
-  int size = vsnprintf(nullptr, 0, (const char *)format, vlen) + 1;
-  size += get_size_of_carm_str_ptrs(args, (char *)format);
+  size += get_size_of_valist(args, (char *)format);
   va_end(args);
   return size;
 }
@@ -1239,6 +1266,7 @@ char * carm_strdup(char * v) {
 //use vsnprintf using snprint with va_list leads to bugs redirect sprintf to vsprintf noth functions are same vsprintf just use va arg
 int carm_fprintf(void * fptr,  void * format,...)
 {
+
 	DEBUG_PRINT("carm_fprintf ");
 	va_list vlen, vargs;
 
@@ -1248,8 +1276,7 @@ int carm_fprintf(void * fptr,  void * format,...)
 	uint64_t size = get_size_va_list(vlen, format);
 	va_end(vlen);
 
-	char * tmp = (char *)alloca(size );
-
+	char * tmp = (char *)malloc(size );
 	va_start(vargs, format);
 	ret = carm_vsnprintf(tmp, size, format, vargs);
 	va_end(vargs);
@@ -1257,6 +1284,7 @@ int carm_fprintf(void * fptr,  void * format,...)
 	carm_fwrite(tmp, 1, size, fptr);
 
 	DEBUG_PRINT("carm_fprintf complete");
+	free(tmp);
 	return ret;
 
 }
