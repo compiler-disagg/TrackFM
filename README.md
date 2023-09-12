@@ -273,7 +273,7 @@ To reproduce fastswap, AIFM results,  both the systems have to be first installe
 ## Using TrackFM
 
 TrackFM requires O1 opimized bitcode without vectorization. 
-We provide sample make files in ```/home/TrackFM/sample_configs/TrackFM```. 
+We provide sample make files in ```TrackFM/sample_configs/TrackFM```. 
 ```
 #Example workflow
 cd /home/TrackFM/sample_configs/TrackFM
@@ -284,7 +284,7 @@ make
 TrackFM renames binary symobls to distinguish between
 TrackFM std lib calls and the runtime std lib calls. TrackFM can ignore
 symbols that do not use remote memory, by specifying the symbol name in 
- ```/home/TrackFM/app_symbols```.
+ ```TrackFM/app_symbols```.
 
 For large code bases, the code can be compiled using [wllvm](https://github.com/travitch/whole-program-llvm) and passing a single bitcode file to TrackFM 
 is a possible workflow.
@@ -300,18 +300,18 @@ by annotating allocation sites (eg malloc) with ```__attribute__((annotate("loca
 since AIFM runtime itself has support for multi threading.
 
 ## Code Structure
-Compiler passes of TrackFM are located in ```/home/TrackFM/runtime/compiler_passes/passes/```
+Compiler passes of TrackFM are located in ```TrackFM/runtime/compiler_passes/passes/```
 
 ```
 carm_checks     -> analyzes load/store candidates for slow paths guards
-carm_transorms  -> transform analyzed load/store candidates to slow path guards
+carm_transforms  -> transform analyzed load/store candidates to slow path guards
 carm_loop_checks -> analyze loop pointer induction variables
 carm_loop_transform -> transform loop pointer induction variables
 carm_libc_transform -> minimal support for libc calls that modify memory
 carm_profile_checks -> only analyze loop pointer induction variables that satisfy loop cost model.
 ```
 
-TrackFM runtime code is located in  ```/home/TrackFM/runtime/src```
+TrackFM runtime code is located in  ```TrackFM/runtime/src```
 
 
 ## Acknowledgements
