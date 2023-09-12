@@ -1,6 +1,6 @@
 # Install fastswap
 
-** Each time the server restarts this script has to be rerun. **
+**Each time the server restarts this script has to be rerun. **
 
 ```
 #fastswap environment will be set at /home
