@@ -13,7 +13,6 @@
 #include <string>
 #include <cstdlib>
 
-
 using namespace std;
 
 #define SIZE 50000000
@@ -24,30 +23,30 @@ void set_values(unordered_map<int, int> & umap) {
 	}
 }
 
-void load_keys(int * zipf ) {
-        int i = 0;
-        fstream myfile("zipf.txt", std::ios_base::in);
+void load_trace(int * zipf) {
+    int i = 0;
+    int a;
+    fstream myfile("zipf.txt", std::ios_base::in);
 
-				int a;
-				while (myfile >> a)
-				{
-								zipf[i++] = a;
-				}
+    while (myfile >> a)
+    {
+        zipf[i++] = a;
+    }
 }
 
 int main(int argc, char ** argv) {
 
   unordered_map<int, int> umap;
-  int * zipf_keys = (int *)malloc((SIZE + 1) * sizeof(int));
+  int * access_trace = (int *)malloc((SIZE + 1) * sizeof(int));
  
   set_values(umap);
 
-  load_keys(zipf_keys);
-  cout<< "zipf key distribution loaded \n";
+  load_trace(access_trace);
+  cout<< "Zipfian access trace loaded\n";
 
   auto start_ts = chrono::steady_clock::now();
   for (int i = 0; i < SIZE; i++) {
-	  int key = zipf_keys[i];
+	  int key   = access_trace[i];
 	  int value = umap[key];
 	  if (value != key) {
 		  printf("Expected %d,  Found %d\n", key, value);
