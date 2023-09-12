@@ -1,10 +1,3 @@
-from pymemcache.client.base import Client
-from pymemcache.client.retrying import RetryingClient
-from pymemcache.exceptions import MemcacheUnexpectedCloseError
-from timeit import default_timer as timer
-import time
-from random import randrange
-from scipy.special import zeta
 import numpy as np
 import sys
 
