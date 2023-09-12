@@ -177,7 +177,7 @@ chsh -s /bin/bash
 ```
 
 ```bash
-cd /home/TrackFM/runtime
+cd /home/trackfm/runtime
 ./build.sh
 ```
 
@@ -187,11 +187,11 @@ Each time node reboots, this script  has to run
 before you use TrackFM.
 TODO: why?
 ```bash
-sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
+sudo /home/trackfm/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
 
 ## Update ssh config on compute node 
-update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh``` with memory server IP.
+update ```MEM_SERVER_SSH_IP``` in ```/home/trackfm/runtime/AIFM/aifm/configs/ssh``` with memory server IP.
 
 ## Make sure compute node can ssh to memory server without password
 add compute node public key to memory server
@@ -237,7 +237,7 @@ already be created.**
 ## Compile TrackFM Passes only on compute node
 
 ```bash
-cd /home/TrackFM/runtime/compiler_passes/passes
+cd /home/trackfm/runtime/compiler_passes/passes
 source set_paths (if LLVM, noelle not installed in /home update this file with the correct paths)
 make -j
 ```
@@ -276,7 +276,7 @@ TrackFM requires O1 opimized bitcode without vectorization.
 We provide sample make files in ```TrackFM/sample_configs/TrackFM```. 
 ```
 #Example workflow
-cd /home/TrackFM/sample_configs/TrackFM
+cd /home/trackfm/sample_configs/TrackFM
 clang -c -O1 main.c -emit-llvm
 cp make_chunk Makefile
 make
