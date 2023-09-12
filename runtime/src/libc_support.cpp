@@ -920,6 +920,7 @@ static inline int __vsn_printf(void * str, char * format, Numeric ** vargs_value
 					temp += strlen(numchar);
 					size += strlen(numchar);
 					break;
+				case 'g': 
 				case 'f': 
 					sprintf(numchar, "%f", vargs_values[i]->f);
 					carm_memcpy((int8_t *)temp, (int8_t *)numchar, strlen(numchar));
@@ -1019,6 +1020,7 @@ static inline int get_size_of_valist(va_list cva_list, char * format) {
 					sprintf(numchar, "%u", vargs_values[i]->ui);
 					size += strlen(numchar);
 					break;
+				case 'g': 
 				case 'f': 
 					sprintf(numchar, "%f", vargs_values[i]->f);
 					size += strlen(numchar);
