@@ -303,16 +303,16 @@ since AIFM runtime itself has support for multi threading.
 ```
 Github Repo root
 |---- runtime                # TrackFM code base
-        |--- build.sh        #builds TrackFM, AIFM runtimes
-        |--- compiler_passes #TrackFM compiler passes
+        |--- build.sh        # Build TrackFM, AIFM runtimes
+        |--- compiler_passes # TrackFM compiler passes
         |--- src             # TrackFM runtime code 
         |--- inc             # TrackFM runtime header files 
-        |--- AIFM            #submod for TRACKFM runtime
+        |--- AIFM            # Submod for TRACKFM runtime
 |---- exp                    # TrackFM experiments	 
-	|--- TrackFM         #generate TrackFM results
-	|--- AIFM            #generate AIFM results
-	|--- Fastswao        #generate Fastswap results
-	|--- local    	     #generate local only results
+	|--- TrackFM         # Generate TrackFM results
+	|--- AIFM            # Generate AIFM results
+	|--- Fastswao        # Generate Fastswap results
+	|--- local    	     # Generate local only results
 |---- apps                   # TrackFM applications
 |---- AIFM                   # AIFM install instructions
 |---- fastswap               # Fastswap install instructions
