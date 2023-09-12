@@ -302,23 +302,23 @@ since AIFM runtime itself has support for multi threading.
 ## Code Structure
 ```
 Github Repo root
-|---- runtime # TrackFM code base
-        |--- build.sh #builds TrackFM, AIFM runtimes
+|---- runtime                # TrackFM code base
+        |--- build.sh        #builds TrackFM, AIFM runtimes
         |--- compiler_passes #TrackFM compiler passes
-        |--- src # TrackFM runtime code 
-        |--- inc # TrackFM runtime header files 
-        |--- AIFM #submod for TRACKFM runtime
-|---- exp # TrackFM experiments	 
-	|--- generate TrackFM results
-	|--- generate AIFM results
-	|--- generate Fastswap results
-	|--- generate local only results
-|---- apps # TrackFM applications
-|---- AIFM # AIFM install instructions
-|---- fastswap # Fastswap install instructions
-|---- plotgen # TrackFM scripts to generate plots for figs 
-|---- kickstart # TrackFM smoke test 
-|---- sample_configs # TrackFM sample makefiles 
+        |--- src             # TrackFM runtime code 
+        |--- inc             # TrackFM runtime header files 
+        |--- AIFM            #submod for TRACKFM runtime
+|---- exp                    # TrackFM experiments	 
+	|--- TrackFM         #generate TrackFM results
+	|--- AIFM            #generate AIFM results
+	|--- Fastswao        #generate Fastswap results
+	|--- local    	     #generate local only results
+|---- apps                   # TrackFM applications
+|---- AIFM                   # AIFM install instructions
+|---- fastswap               # Fastswap install instructions
+|---- plotgen                # TrackFM scripts to generate plots for figs 
+|---- kickstart              # TrackFM smoke test 
+|---- sample_configs         # TrackFM sample makefiles 
 
 ```
 
