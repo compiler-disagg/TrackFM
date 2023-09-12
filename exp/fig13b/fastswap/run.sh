@@ -2,7 +2,7 @@
 
 source ../../../runtime/AIFM/aifm/shared.sh
 
-python3 test_memc.py
+python3 gen_zipf.py
 
 CFM_PATH=/home/cfm/
 TRACKFM_PATH=/home/TrackFM
