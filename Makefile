@@ -79,3 +79,18 @@ fastswap_fig17a:
 
 fastswap_fig17b:
 	make -C exp/fig17b/fastswap
+
+AIFM_fig14a:
+	make -C exp/fig14a/AIFM
+
+local_fig14a:
+	make -C exp/fig14a/local
+
+local_fig16a:
+	make -C exp/fig16a/local
+
+local_fig17a:
+	make -C exp/fig17a/local
+
+local_fig17b:
+	make -C exp/fig17b/local
