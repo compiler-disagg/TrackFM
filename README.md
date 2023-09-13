@@ -155,9 +155,8 @@ We require several Python modules for AIFM, for plot generation, and for our ben
 cd /home/trackfm
 sudo pip3 install -r requirements.txt
 sudo pip install --upgrade pip
-sudo pip install cmake
+sudo pip install cmake==3.22.0
 ```
-TODO: I'd use specific version numbers in `requirements.txt`
 
 **Compiler Toolchain**
 

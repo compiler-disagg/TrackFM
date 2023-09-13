@@ -1,10 +1,8 @@
-scikit-build
-pymemcache
-scipy
-matplotlib
+pymemcache==3.5.2
+scipy==1.5.4
+matplotlib==3.3.4
 jinja2
-psutil
-grpcio 
-grpcio-tools 
-cmake
-wllvm
+psutil==5.9.5
+grpcio==1.48.2 
+grpcio-tools==1.48.2 
+wllvm==1.3.1
