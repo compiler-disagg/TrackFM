@@ -204,7 +204,7 @@ uint64_t carm_deref_read_sp(uint64_t obj_index,  uint64_t loop_id) {
 //called by evacuation threads when object is evacuated
 void update_cache_object(GenericFarMemPtr * metaptr) {
 	uint64_t old_index = metaptr->get_carm_obj_index();
-  if (old_index != INDEX_INVALID)
+  if (old_index < TOTAL_OBJECTS)
 		carm_obj_state[old_index].obj_state = (uint64_t)metaptr->meta().to_uint64_t();
 }
 
