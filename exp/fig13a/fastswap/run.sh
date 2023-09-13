@@ -13,8 +13,8 @@ cd $figpath
 
 rm log.*
 python3 test_memc.py
-make clean
-make -j
+make -f make_fig13a clean
+make -f make_fig13a -j
 cp main $CFM_PATH"/UMAP/umap"
 cp zipf.txt $CFM_PATH"/UMAP/"
 cd $CFM_PATH

@@ -33,7 +33,7 @@ trackfm_fig14b:
 	make -C exp/fig14b/TrackFM
 
 trackfm_fig15:
-	make -C exp/fig15/TrackFM
+	make -C exp/fig15/
 
 trackfm_fig16a:
 	make -C exp/fig16a/TrackFM
@@ -49,3 +49,33 @@ trackfm_fig17a:
 
 trackfm_fig17b:
 	make -C exp/fig17b/TrackFM
+
+fastswap_fig12:
+	make -C exp/fig12/fastswap
+
+fastswap_fig13a:
+	make -C exp/fig13a/fastswap
+
+fastswap_fig13b:
+	make -C exp/fig13b/fastswap
+
+fastswap_fig14a:
+	make -C exp/fig14a/fastswap
+
+fastswap_fig14b:
+	make -C exp/fig14b/fastswap
+
+fastswap_fig16a:
+	make -C exp/fig16a/fastswap
+
+fastswap_fig16b:
+	make -C exp/fig16b/fastswap
+
+fastswap_fig16c:
+	make -C exp/fig16c/fastswap
+
+fastswap_fig17a:
+	make -C exp/fig17a/fastswap
+
+fastswap_fig17b:
+	make -C exp/fig17b/fastswap

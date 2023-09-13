@@ -12,8 +12,8 @@ cd $figpath
 rm log.*
 
 cp main_sum.cpp main.cpp
-make clean
-make -j
+make -f make_fig12 clean
+make -f make_fig12 -j
 cp main $CFM_PATH"/SUM/sum"
 cd $CFM_PATH
 ./fig12a.sh
@@ -21,8 +21,8 @@ mv log.* $TRACKFM_PATH"/plotgen/scripts/figgen/results/fig11/fastswap/sum/"
 cd $figpath
 ##copy
 cp main_copy.cpp main.cpp
-make clean
-make -j
+make -f make_fig12 clean
+make -f make_fig12 -j
 cp main $CFM_PATH"/COPY/copy" 
 cd $CFM_PATH
 ./fig12b.sh
