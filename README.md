@@ -245,15 +245,16 @@ make -j
 To confirm that TrackFM is installed correctly, run ``` ./kickstart.sh``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
 
 ## Reproducing Paper Results
-Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>```
-(Supported runtimes are local, fastswap, trackfm, AIFM)
+Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>``` from
+the root directory of TrackFM.
+(Supported runtimes for ```make``` are local, fastswap, trackfm, AIFM)
 For example to 
 reproduce fig 14a in the paper using ```make``` 
 
 ```
-generate TrackFM results
+#generate TrackFM results
 	make trackfm_fig14a
-generate fastswap results
+#generate fastswap results
 	make fastswap_fig14a
 ```
 
