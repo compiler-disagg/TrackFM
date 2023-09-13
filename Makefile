@@ -94,3 +94,6 @@ local_fig17a:
 
 local_fig17b:
 	make -C exp/fig17b/local
+
+kickstart:
+	make -C kickstart/cstream/TrackFM

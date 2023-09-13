@@ -242,7 +242,7 @@ make -j
 ```
 
 ## Testing
-To confirm that TrackFM is installed correctly, run ``` ./kickstart.sh``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
+To confirm that TrackFM is installed correctly, run ``` make kickstart``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
 
 ## Reproducing Paper Results
 Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>``` from
@@ -290,8 +290,7 @@ We provide sample make files in ```TrackFM/sample_configs/TrackFM```.
 #Example workflow
 cd /home/trackfm/sample_configs/TrackFM
 clang -c -O1 main.c -emit-llvm
-cp make_chunk Makefile
-make
+make -f make_chunk
 ```
 TrackFM renames binary symobls to distinguish between
 TrackFM std lib calls and the runtime std lib calls. TrackFM can ignore
