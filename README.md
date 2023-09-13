@@ -242,7 +242,7 @@ make -j
 ```
 
 ## Testing
-To confirm that TrackFM is installed correctly, run ``` make kickstart``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
+To confirm that TrackFM is installed correctly, run ``` make smoke_test``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
 
 ## Reproducing Paper Results
 Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>``` from
