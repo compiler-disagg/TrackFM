@@ -32,14 +32,14 @@ sudo pkill -9 main
 kill_local_iokerneld
 for cache_size in "${cache_sizes[@]}"
 do
-    make clean
+    make -f make_fig16c clean
     cp /home/TrackFM/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
     
     cp ../../../apps/memcached-1.2.7/memcached.bc main.bc
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make -j20
+    make -f make_fig16c -j20
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     rerun_local_iokerneld_noht
