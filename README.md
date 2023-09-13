@@ -245,7 +245,22 @@ make -j
 To confirm that TrackFM is installed correctly, run ``` ./kickstart.sh``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
 
 ## Reproducing Paper Results
-Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one has to invoke the ```run.sh``` located in the respective fig directory. For example to 
+Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>```
+(Supported runtimes are local, fastswap, trackfm, AIFM)
+For example to 
+reproduce fig 14a in the paper using ```make``` 
+
+```
+generate TrackFM results
+	make trackfm_fig14a
+generate fastswap results
+	make fastswap_fig14a
+```
+
+One can also invoke the ```run.sh``` located in the respective fig directory
+to generate the results. 
+
+For example to 
 reproduce fig 14a in the paper the following steps need 
 to be followed. 
 ```
@@ -260,9 +275,6 @@ fig14a
 cd  exp/fig14a
 cd TrackFM
 //reproduce TrackFM datapoints and generate plots
-./run.sh
-cd  fastswap
-//reproduce Fastswap datapoints and generate plots
 ./run.sh
 ```
 
