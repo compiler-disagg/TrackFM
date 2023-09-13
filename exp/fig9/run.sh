@@ -39,10 +39,10 @@ do
     rerun_mem_server
     mem=$((cache_size*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_fig9 clean
     cp  ../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_fig9 -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    

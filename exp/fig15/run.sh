@@ -46,7 +46,6 @@ noelle-meta-pdg-embed test_with_metadata.bc -o nyc
 
 cache_sizes=( 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31)
 rm log.*
-cp make_chunk_prof Makefile
 for cache_size in "${cache_sizes[@]}"
 do
     sudo pkill -9 main
@@ -56,10 +55,10 @@ do
     sleep 5
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_chunk_prof clean
     cp nyc main.bc
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_chunk_prof -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
@@ -76,7 +75,6 @@ do
 done
     mv log.* ../../plotgen/scripts/figgen/results/fig15/TrackFM/chunk_prof/
 
-cp make_no_chunk Makefile
 for cache_size in "${cache_sizes[@]}"
 do
     sudo pkill -9 main
@@ -86,10 +84,10 @@ do
     sleep 5
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_no_chunk clean
     cp /home/TrackFM/apps/C_dataframe/nyc.bc main.bc
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_no_chunk -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
@@ -105,7 +103,7 @@ do
     fi
 done
     mv log.* ../../plotgen/scripts/figgen/results/fig15/TrackFM/no_chunk/
-cp make_chunk Makefile
+
 for cache_size in "${cache_sizes[@]}"
 do
     sudo pkill -9 main
@@ -115,10 +113,10 @@ do
     sleep 5
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_chunk clean
     cp /home/TrackFM/apps/C_dataframe/nyc.bc main.bc
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_chunk -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    

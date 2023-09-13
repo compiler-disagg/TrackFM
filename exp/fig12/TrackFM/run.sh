@@ -38,20 +38,20 @@ do
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_fig12 clean
     cp /home/TrackFM/symbol_redefine.sh .
     cp  ../../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
-    make -j
+    make -f make_fig12 -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
-    make clean
+    make -f make_fig12 clean
     cp  ../../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_fig12 -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log_no_prefetch.$cache_size 2>&1    
@@ -67,20 +67,20 @@ do
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
     mem=$((cache_size*1024*1024*1024))
     sed "s/constexpr uint64_t local_mem_cache_size.*/constexpr uint64_t local_mem_cache_size = $mem;/g" /home/TrackFM/runtime/inc/carm_runtime.hpp -i
-    make clean
+    make -f make_fig12 clean
     cp  ../../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_fig12 -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
     rerun_local_iokerneld_noht
     rerun_mem_server
     sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 0/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
-    make clean
+    make -f make_fig12 clean
     cp  ../../compile_bitcodes/libc++_$obj_size"_obj_size"/*.o .
     cp /home/TrackFM/symbol_redefine.sh .
-    make -j
+    make -f make_fig12 -j
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log_no_prefetch.$cache_size 2>&1    
