@@ -16,7 +16,7 @@ obj_sizes=( 64 128 256 512 1024 2048 4096)
 for obj_size in "${obj_sizes[@]}"
 do
 
-tobj=$((($amem/$obj_size) * 5))
+tobj=$((($amem/$obj_size) * 10))
 sed "s/#define TOTAL_OBJECTS .*/#define TOTAL_OBJECTS $tobj/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 
 sed "s/#define  OBJ_SIZE  .*/#define  OBJ_SIZE  $obj_size/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
