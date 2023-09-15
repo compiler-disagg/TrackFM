@@ -143,7 +143,7 @@ static inline uint64_t carmDeref_read_not_temporal(uint64_t obj_index) {
  */
 static inline void carm_deref(uint64_t index) {
 
-#ifdef TRACKFM_TRACE
+#if TRACKFM_TRACE
         auto metadata = carm_obj_state[index].obj_state; 	
 	auto exceptions = kPresentClear;
 	if (exceptions & metadata)

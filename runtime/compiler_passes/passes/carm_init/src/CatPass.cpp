@@ -263,7 +263,7 @@ namespace {
 
 
 
-#ifdef TRACKFM_TRACE
+#if TRACKFM_TRACE
       errs()<<"TrackFM trace enabled \n";
 
 
