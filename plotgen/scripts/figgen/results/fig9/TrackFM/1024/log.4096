@@ -1,0 +1,27 @@
+CPU 06| <5> cpu: detected 20 cores, 1 nodes
+CPU 06| <5> time: detected 2394 ticks / us
+[  0.000707] CPU 06| <5> loading configuration from '/home/TrackFM/runtime/AIFM/aifm/configs/client_noht.config'
+[  0.000759] CPU 06| <3> < 1 guaranteed kthreads is not recommended for networked apps
+[  0.018311] CPU 06| <5> net: started network stack
+[  0.018329] CPU 06| <5> net: using the following configuration:
+[  0.018334] CPU 06| <5>   addr:	18.18.1.2
+[  0.018339] CPU 06| <5>   netmask:	255.255.255.0
+[  0.018343] CPU 06| <5>   gateway:	18.8.1.1
+[  0.018347] CPU 06| <5>   mac:	9A:7D:D5:5D:91:B4
+[  0.250431] CPU 06| <5> thread: created thread 0
+[  0.250568] CPU 06| <5> spawning 9 kthreads
+[  0.250729] CPU 07| <5> thread: created thread 1
+[  0.250835] CPU 08| <5> thread: created thread 2
+[  0.250870] CPU 09| <5> thread: created thread 3
+[  0.250990] CPU 01| <5> thread: created thread 4
+[  0.251229] CPU 02| <5> thread: created thread 5
+[  0.251412] CPU 11| <5> thread: created thread 6
+[  0.251801] CPU 04| <5> thread: created thread 7
+[  0.251960] CPU 07| <5> thread: created thread 8
+rp addr 18.18.1.3:8000
+raddr 18.18.1.3:8000
+init_objects OBJ SIZE 1024
+size of 8
+Zipfian access trace loaded
+Time :10035180
+[158.014962] CPU 05| <5> init: shutting down -> SUCCESS
