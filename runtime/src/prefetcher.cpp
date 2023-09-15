@@ -27,7 +27,7 @@ FORCE_INLINE uint64_t CARM_AIFM_DS::infer_fn(uint64_t idx, int64_t stride) {
 FORCE_INLINE GenericUniquePtr *CARM_AIFM_DS::mapping_fn(uint8_t *&state,
                                                         uint64_t idx) {
 
-  auto & ptrs = *reinterpret_cast<std::unique_ptr<GenericUniquePtr *[]> *>(state);
+  auto & ptrs = *reinterpret_cast<GenericUniquePtr ***>(state);
   auto num_items =
 	  *reinterpret_cast<uint64_t *>(state + offsetof(CARM_AIFM_DS, total_obj_cnt) -
 			  offsetof(CARM_AIFM_DS, ptrs_));
