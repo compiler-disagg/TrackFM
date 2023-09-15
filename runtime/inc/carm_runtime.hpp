@@ -63,5 +63,5 @@ constexpr uint64_t kNumConnections = 400;
 constexpr uint64_t kFarMemSize = 17179869184;
 //Working set size is the amount  memory required by application should be lesser than far memory size
 constexpr uint64_t kWorkingSetSize = kFarMemSize - (1ULL<<30);
-constexpr uint64_t local_mem_cache_size = 9663676416;
-constexpr uint64_t kNumGCThreads = 8;
+constexpr uint64_t local_mem_cache_size = 2147483648;
+constexpr uint64_t kNumGCThreads = 3;
