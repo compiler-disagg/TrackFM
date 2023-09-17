@@ -16,7 +16,7 @@ sed "s/#define PREFETCH.*/#define PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_o
 cd /home/TrackFM/runtime/compiler_passes/passes/
 make clean
 make -j
-fpath="kickstart/cstream/TrackFM"
+fpath="/home/TrackFM/kickstart/cstream/TrackFM"
 cd $fpath 
 sudo pkill -9 main
 for cache_size in "${cache_sizes[@]}"
