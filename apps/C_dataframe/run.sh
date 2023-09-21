@@ -2,8 +2,8 @@
 
 source /home/TrackFM/runtime/compiler_passes/passes/set_paths 
 sudo pkill -9 main
-sudo ln -sf /proj/rmt-PG0/noelle_setup/llvm-project/build/bin/llvm-objcopy /usr/bin/objcopy
-sudo ln -sf /proj/rmt-PG0/noelle_setup/llvm-project/build/bin/llvm-link /usr/bin/llvm-link
+sudo ln -sf /home/llvm-project/build/bin/llvm-objcopy /usr/bin/objcopy
+sudo ln -sf /home/llvm-project/build/bin/llvm-link /usr/bin/llvm-link
 
 log_folder=`pwd`
 export LLVM_COMPILER=clang
