@@ -34,6 +34,16 @@ do
     rerun_local_iokerneld_noht
     rerun_mem_server
     run_program_noht ./main 1>log.$obj_size 2>&1    
+    wc="cat log.$obj_size |grep \"e : 32768\"|wc -l"
+    wco=$(eval "$wc")
+    if [[ "$wco" == *"0"* ]];
+    then
+    	    sudo pkill -9 main
+	    kill_local_iokerneld
+	    rerun_local_iokerneld_noht
+	    rerun_mem_server
+	    run_program_noht ./main 1>log.$obj_size  2>&1    
+    fi
     mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/chunk/
     make -f make_no_chunk clean
     make -f make_no_chunk -j
@@ -42,6 +52,16 @@ do
     rerun_local_iokerneld_noht
     rerun_mem_server
     run_program_noht ./main 1>log.$obj_size 2>&1    
+    wc="cat log.$obj_size |grep \"e : 32768\"|wc -l"
+    wco=$(eval "$wc")
+    if [[ "$wco" == *"0"* ]];
+    then
+    	    sudo pkill -9 main
+	    kill_local_iokerneld
+	    rerun_local_iokerneld_noht
+	    rerun_mem_server
+	    run_program_noht ./main 1>log.$obj_size  2>&1    
+    fi
     mv log.$obj_size ../../plotgen/scripts/figgen/results/fig6/no_chunk/
 done
 kill_local_iokerneld

@@ -63,9 +63,9 @@ do
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
-    wc="cat log.$cache_size |grep FATAL|wc -l"
+    wc="cat log.$cache_size |grep \"Total:\"|wc -l"
     wco=$(eval "$wc")
-    if [[ "$wco" == *"1"* ]];
+    if [[ "$wco" == *"0"* ]];
     then
     	    sudo pkill -9 main
 	    kill_local_iokerneld

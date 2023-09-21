@@ -41,6 +41,16 @@ do
     sudo cp libcarmapp.so /usr/local/lib/
     sudo ldconfig
     run_program_noht ./main 1>log.$cache_size 2>&1    
+    wc="cat log.$cache_size |grep \"Solution Validates\"|wc -l"
+    wco=$(eval "$wc")
+    if [[ "$wco" == *"0"* ]];
+    then
+    	    sudo pkill -9 main
+	    kill_local_iokerneld
+	    rerun_local_iokerneld_noht
+	    rerun_mem_server
+	    run_program_noht ./main 1>log.$cache_size 2>&1    
+    fi
 done
     mv log.* ../../plotgen/scripts/figgen/results/fig10/TrackFM/$obj_size/
 done
