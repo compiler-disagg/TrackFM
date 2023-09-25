@@ -88,7 +88,7 @@ We can first set up the TrackFM repo:
 
 ```bash
 cd /home
-git clone https://github.com/compiler-disagg/trackfm
+git clone https://github.com/compiler-disagg/TrackFM
 ```
 
 **Dev Packages**
@@ -152,7 +152,7 @@ Note that when you run `./mlnxofedinstall` above, you may see a message like `Fa
 We require several Python modules for AIFM, for plot generation, and for our benchmarks:
 
 ```bash
-cd /home/trackfm
+cd /home/TrackFM
 sudo pip3 install -r requirements.txt
 sudo pip install --upgrade pip
 sudo pip install cmake==3.22.0
@@ -176,7 +176,7 @@ chsh -s /bin/bash
 ```
 
 ```bash
-cd /home/trackfm/runtime
+cd /home/TrackFM/runtime
 ./build.sh
 ```
 
@@ -186,11 +186,11 @@ Each time node reboots, this script  has to run
 before you use TrackFM.
 TODO: why?
 ```bash
-sudo /home/trackfm/runtime/AIFM/shenango/scripts/setup_machine.sh
+sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
 
 ## Update ssh config on compute node 
-update ```MEM_SERVER_SSH_IP``` in ```/home/trackfm/runtime/AIFM/aifm/configs/ssh``` with memory server IP.
+update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh``` with memory server IP.
 
 ## Make sure compute node can ssh to memory server without password
 add compute node public key to memory server
@@ -236,7 +236,7 @@ already be created.**
 ## Compile TrackFM Passes only on compute node
 
 ```bash
-cd /home/trackfm/runtime/compiler_passes/passes
+cd /home/TrackFM/runtime/compiler_passes/passes
 source set_paths (if LLVM, noelle not installed in /home update this file with the correct paths)
 make -j
 ```
@@ -288,7 +288,7 @@ TrackFM requires O1 opimized bitcode without vectorization.
 We provide sample make files in ```TrackFM/sample_configs/TrackFM```. 
 ```
 #Example workflow
-cd /home/trackfm/sample_configs/TrackFM
+cd /home/TrackFM/sample_configs/TrackFM
 clang -c -O1 main.c -emit-llvm
 make -f make_chunk
 ```
