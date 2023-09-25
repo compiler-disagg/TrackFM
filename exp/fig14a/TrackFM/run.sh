@@ -80,3 +80,4 @@ cd ../../../plotgen
 python3 scripts/figgen/fig14a.py $figpath fig14a
 sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 sed "s/#define PREFETCH.*/#define PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+cp *.png /home/TrackFM/figs/

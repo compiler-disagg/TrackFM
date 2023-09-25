@@ -135,3 +135,4 @@ done
 done
 cd ../../plotgen
 python3 scripts/figgen/fig15.py $figpath fig15
+cp *.png /home/TrackFM/figs/

@@ -20,3 +20,4 @@ done
 mv log.* ../../../plotgen/scripts/figgen/results/fig16b/TrackFM/
 cd ../../../plotgen
 python3 scripts/figgen/fig16c.py $figpath fig16c
+cp *.png /home/TrackFM/figs/

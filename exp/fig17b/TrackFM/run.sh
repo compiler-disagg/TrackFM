@@ -37,3 +37,4 @@ mv $TrackFM_PATH/nas_ft/log.2 ../../../plotgen/scripts/figgen/results/fig17b/Tra
 mv $TrackFM_PATH/nas_sp/log.3 ../../../plotgen/scripts/figgen/results/fig17b/TrackFM/sp.log.3
 cd ../../../plotgen
 python3 scripts/figgen/fig17b.py $figpath fig17b
+cp *.png /home/TrackFM/figs/

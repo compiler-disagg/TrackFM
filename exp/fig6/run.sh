@@ -69,3 +69,4 @@ sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/
 sed "s/#define PREFETCH.*/#define PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
 cd ../../plotgen
 python3 scripts/figgen/fig6.py $figpath fig6
+cp *.png /home/TrackFM/figs/
