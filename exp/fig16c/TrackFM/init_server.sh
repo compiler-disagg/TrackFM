@@ -26,7 +26,7 @@ make -j
 
 cd /home/TrackFM/apps/memcached-1.2.7/
 ./compile.sh
-figpath="/home/TrackFM/exp/fig16c"
+figpath="/home/TrackFM/exp/fig16c/TrackFM"
 cd $figpath
 sudo pkill -9 main
 kill_local_iokerneld
