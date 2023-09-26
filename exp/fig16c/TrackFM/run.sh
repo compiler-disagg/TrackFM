@@ -16,6 +16,19 @@ do
 	wco=$(eval "$wc")
 	echo $wco
 	sudo gdb --batch --command=debug.gdb -p $wco &>>log.$a
+	wc="cat log.$a |grep \"a :\"|wc -l"
+	wco=$(eval "$wc")
+	if [[ "$wco" == *"0"* ]];
+	then
+		./init_server.sh & 
+		sleep 1200
+		echo "memclient"
+		python3 test_memc.py $a &>>log.$a
+		wc="ps -C \"main\" -o pid="
+		wco=$(eval "$wc")
+		echo $wco
+		sudo gdb --batch --command=debug.gdb -p $wco &>>log.$a
+	fi
 done
 mv log.* ../../../plotgen/scripts/figgen/results/fig16b/TrackFM/
 cd ../../../plotgen
