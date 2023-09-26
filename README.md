@@ -259,7 +259,7 @@ already be created.**
 ## Testing
 To confirm that TrackFM is set up correctly, run `make smoke_test`
 in the TrackFM root directory. This will run the transformed STREAM benchmark, and if
-TrackFM is set up correctly you will see TrackFM an installation success
+TrackFM is set up correctly you will see a success
 message.
 
 ## Reproducing Paper Results
