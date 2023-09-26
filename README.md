@@ -265,6 +265,8 @@ message.
 ## Reproducing Paper Results
 Each experiment with an associated figure in the paper has a `fig` directory in `exp/`. To reproduce the results, you can just run `make <runtime>_<fig-num>` from
 the top-level TrackFM directory, where `runtime` is the backend to use, and `fig-num` is the figure number from the paper. 
+Note: `make <runtime>_<fig-num>` will automatically generate figures, 
+and are placed in `figs` folder in the root directory.
 The backends currently supported are `local` (a setup with only local memory), `fastswap`, `AIFM`, and `trackfm`. 
 For example, to reproduce Figure 14a from the paper, you could do the following:
 
@@ -294,7 +296,6 @@ cd TrackFM
 # reproduce TrackFM datapoints and generate plots
 ./run.sh
 ```
-Note The generated figures are placed in `figs` folder in the root directory.
 
 ### Reproducing Fastswap and AIFM results
 To reproduce Fastswap and AIFM results,  both systems have to first be
