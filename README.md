@@ -12,6 +12,7 @@ state-of-the-art disaggregated solutions that require manual programmer effort.
   * [Paper](#paper)
   * [Experimental Environment](#experimental-environment)
   * [Build Instructions](#build-instructions)
+  * [Datasets](#data-sets)
   * [Testing](#testing)
   * [Reproducing Paper Results](#reproducing-paper-results)
   * [Using TrackFM](#using-trackfm)
@@ -68,6 +69,19 @@ currently support other platforms (e.g., AWS).
 
 Once the nodes have launched successfully, you should be able to select "List
 View" to see the nodes, and to view the public hostnames that you can SSH to.
+
+**Node Connectivity**
+
+The compute node needs to be able to access the memory server. To set up this
+connectivity, update ```MEM_SERVER_SSH_IP``` in
+```/home/TrackFM/runtime/AIFM/aifm/configs/ssh``` with the memory server's IP
+address. 
+
+You should also be able to ssh to the memory server from the compute node.
+You'll need to generate a key pair on the compute node (e.g., using
+`ssh-keygen`), then add the public key to the memory server, either by using
+`ssh-copy-id` or by adding the key to the `.ssh/authorized_keys` file on the
+memory server. 
 
 ## Build Instructions
 
@@ -145,7 +159,7 @@ sudo ./mlnxofedinstall --add-kernel-support --dpdk --upstream-libs
 sudo /etc/init.d/openibd restart
 ```
 
-Note that when you run `./mlnxofedinstall` above, you may see a message like `Failed to install libibverbs-dev DEB'. This is okay, and it should still work. 
+Note that when you run `./mlnxofedinstall` above, you may see a message like `Failed to install libibverbs-dev DEB`. This is okay, and it should still work. 
 
 **Python Toolchain**
 
@@ -171,36 +185,33 @@ so sit back and enjoy a coffee.
 
 ### Building TrackFM, AIFM, and Shenango
 
+The tooling for AIFM and Shenango (and thus our build system) uses `bash`. On CloudLab, `bash` is
+not the default shell, so you might want to make it so:
+
 ```bash
 chsh -s /bin/bash
 ```
 
+You can then build the TrackFM runtime, which relies on AIFM and Shenango:
 ```bash
 cd /home/TrackFM/runtime
 ./build.sh
 ```
 
-### Setup Shenango
+**Note on Shenango Setup after Reboot**
+Note that each time a node reboots, Shenango will have to be set up again. This is because
+it relies on certain kernel modules to be loaded and `sysctl` parameters to be set properly. While this
+is invoked by the `build.sh` script used above when first set up, if you reboot, you'll need to run it again:
 
-Each time node reboots, this script  has to run 
-before you use TrackFM.
-TODO: why?
 ```bash
 sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
-
-## Update ssh config on compute node 
-update ```MEM_SERVER_SSH_IP``` in ```/home/TrackFM/runtime/AIFM/aifm/configs/ssh``` with memory server IP.
-
-## Make sure compute node can ssh to memory server without password
-add compute node public key to memory server
-
 
 ## Datasets
 We use Kaggle to store our datasets. We require one of the below options
 to be followed to download the datasets. 
 
-### First Option Create Kaggle Account
+### First Option: Create Kaggle Account
 In order to download datasets using command line in Kaggle, we require you 
 to have a Kaggle account. Once your account is created, you can click on the profile 
 button in the Kaggle homepage to generate an api token. This will download a JSON file. 
@@ -222,7 +233,9 @@ unzip nyc-dataframe.zip
 unzip kmeans.zip
 ```
 
-### Second Option Download them directly through public web interface without Kaggle account
+### Second Option: Direct download
+
+Download them directly through public web interface without Kaggle account
 
 https://www.kaggle.com/datasets/btauro/kmeans
 
