@@ -12,7 +12,7 @@ state-of-the-art disaggregated solutions that require manual programmer effort.
   * [Paper](#paper)
   * [Experimental Environment](#experimental-environment)
   * [Build Instructions](#build-instructions)
-  * [Datasets](#data-sets)
+  * [Datasets](#datasets)
   * [Testing](#testing)
   * [Reproducing Paper Results](#reproducing-paper-results)
   * [Using TrackFM](#using-trackfm)
@@ -212,20 +212,20 @@ We use Kaggle to store our datasets. We require one of the below options
 to be followed to download the datasets. 
 
 ### First Option: Create Kaggle Account
-In order to download datasets using command line in Kaggle, we require you 
-to have a Kaggle account. Once your account is created, you can click on the profile 
-button in the Kaggle homepage to generate an api token. This will download a JSON file. 
+In order to download datasets using command line in Kaggle, you'll have to set up a
+Kaggle account. Once your account is created, you can click on the profile 
+button in the Kaggle homepage to generate an API token. This will download a JSON file. 
 Copy the JSON file to the compute server in ```/home/datasets```. Another option is 
 you can also download the datasets  in your local machine and then upload the datasets 
-to ```/home/datasets```  in the cloudlab compute server node. 
+to `/home/datasets` in the compute node. 
  
 ```bash
 cd /home
 mkdir datasets
-#copy JSON API TOKEN in this folder
+# copy JSON API TOKEN in this folder
 cd  datasets
 pip3 install --user kaggle
-#upload your kaggle api token to the cloudlab server for example using scp
+# upload your kaggle api token to the cloudlab server for example using scp
 cp kaggle.json ~/.kaggle/   
 kaggle datasets download -d btauro/kmeans
 kaggle datasets download -d btauro/nyc-dataframe
@@ -235,15 +235,14 @@ unzip kmeans.zip
 
 ### Second Option: Direct download
 
-Download them directly through public web interface without Kaggle account
+Alternatively, you can directly download the datasets directly through the public web interface without Kaggle account:
 
-https://www.kaggle.com/datasets/btauro/kmeans
+- [kmeans benchmark](https://www.kaggle.com/datasets/btauro/kmeans)
+- [Taxi analytics benchmark](https://www.kaggle.com/datasets/btauro/nyc-dataframe)
 
-https://www.kaggle.com/datasets/btauro/nyc-dataframe
+Download and unzip the above datasets and upload them to `/home/datasets` on your CloudLab machine. 
 
-Download, unzip the above datasets and upload them to ```/home/datasets```
-
-**Both options require the ```datasets``` directory in ```/home``` to 
+**Note: Both options require the `datasets` directory in `/home` to 
 already be created.** 
 
 ## Compile TrackFM Passes only on compute node
@@ -255,28 +254,29 @@ make -j
 ```
 
 ## Testing
-To confirm that TrackFM is installed correctly, run ``` make smoke_test``` located in TrackFM root directory.This will run the stream benchmark and if TrackFM is installed correctly you will see TrackFM installation success message.
+To confirm that TrackFM is set up correctly, run `make smoke_test`
+in the TrackFM root directory. This will run the transformed STREAM benchmark, and if
+TrackFM is set up correctly you will see TrackFM an installation success
+message.
 
 ## Reproducing Paper Results
-Each fig num in the paper has a fig directory in ``` exp/ ```. In order to reproduce the results one can just run ```make <runtime>_<fig-num>``` from
-the root directory of TrackFM.
-(Supported runtimes for ```make``` are local, fastswap, trackfm, AIFM)
-For example to 
-reproduce fig 14a in the paper using ```make``` 
+Each experiment with an associated figure in the paper has a `fig` directory in `exp/`. To reproduce the results, you can just run `make <runtime>_<fig-num>` from
+the top-level TrackFM directory, where `runtime` is the backend to use, and `fig-num` is the figure number from the paper. 
+The backends currently supported are `local` (a setup with only local memory), `fastswap`, `AIFM`, and `trackfm`. 
+For example, to reproduce Figure 14a from the paper, you could do the following:
 
 ```
-#generate TrackFM results
+# generate TrackFM results
 	make trackfm_fig14a
-#generate fastswap results
+# generate fastswap results
 	make fastswap_fig14a
 ```
 
-One can also invoke the ```run.sh``` located in the respective fig directory
+One can also invoke the `run.sh` script located in the respective `fig` directory
 to generate the results. 
-
-For example to 
-reproduce fig 14a in the paper the following steps need 
+For example, for the same figure as above, one could use the following method:
 to be followed. 
+
 ```
 fig14a
 ├── fastswap
@@ -286,42 +286,45 @@ fig14a
     ├── Makefile
     └── run.sh
 
-cd  exp/fig14a
+cd exp/fig14a
 cd TrackFM
-//reproduce TrackFM datapoints and generate plots
+# reproduce TrackFM datapoints and generate plots
 ./run.sh
 ```
 
-## Reproduce Fastswap, AIFM results
-To reproduce fastswap, AIFM results,  both the systems have to be first installed seperately in ```/home``` on both compute and memory server nodes. We provide installation scripts, instructions for both AIFM and fastswap in the root directory of TrackFM.
+### Reproducing Fastswap and AIFM results
+To reproduce Fastswap and AIFM results,  both systems have to first be
+installed seperately in `/home` on both the compute and memory nodes. We
+provide installation scripts and instructions for both AIFM and Fastswap in the
+top-level TrackFM directory.
 
 ## Using TrackFM
 
 TrackFM requires O1 opimized bitcode without vectorization. 
-We provide sample make files in ```TrackFM/sample_configs/TrackFM```. 
+We provide sample Makefiles in ```TrackFM/sample_configs/TrackFM```. 
+
 ```
-#Example workflow
+# Example workflow
 cd /home/TrackFM/sample_configs/TrackFM
 clang -c -O1 main.c -emit-llvm
 make -f make_chunk
 ```
+
 TrackFM renames binary symobls to distinguish between
 TrackFM std lib calls and the runtime std lib calls. TrackFM can ignore
 symbols that do not use remote memory, by specifying the symbol name in 
  ```TrackFM/app_symbols```.
 
-For large code bases, the code can be compiled using [wllvm](https://github.com/travitch/whole-program-llvm) and passing a single bitcode file to TrackFM 
-is a possible workflow.
+For large code bases, the code can be compiled using
+[wllvm](https://github.com/travitch/whole-program-llvm) and passing a single
+bitcode file to TrackFM is a possible workflow.
 
-### Limitation
+### Limitations
 * TrackFM does not support external libraries that change memory pointers.
-However TrackFM can ignore memory allocations passed to external libraries,
-by annotating allocation sites (eg malloc) with ```__attribute__((annotate("local_malloc")))```. 
-
-* TrackFM does not support mmap.
-* TrackFM does not support multi-threading apps yet,
- adding support for multi threading in TrackFM is easy
-since AIFM runtime itself has support for multi threading.
+However TrackFM can ignore memory allocations passed to external libraries
+by annotating allocation sites (e.g., `malloc`) with ```__attribute__((annotate("local_malloc")))```. 
+* No support for `mmap`.
+* Multi-threaded applications are currently untested.
 
 ## Code Structure
 ```
@@ -347,7 +350,7 @@ Github Repo root
 ```
 
 ## Acknowledgements
-<img align="left" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" height=100/>
+<img align="left" src="https://new.nsf.gov/themes/custom/nsf_theme/components/images/logo/logo-desktop.svg" height=100/>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Seal_of_the_United_States_Department_of_Energy.svg/768px-Seal_of_the_United_States_Department_of_Energy.svg.png" height=100/>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" height=75/>
 <br><br><br><br><br>
