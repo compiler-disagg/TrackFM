@@ -207,6 +207,16 @@ is invoked by the `build.sh` script used above when first set up, if you reboot,
 sudo /home/TrackFM/runtime/AIFM/shenango/scripts/setup_machine.sh
 ```
 
+### Compiling the TrackFM compiler passes 
+
+Note this only needs to be done on the compute node. 
+
+```bash
+cd /home/TrackFM/runtime/compiler_passes/passes
+source set_paths (if LLVM, noelle not installed in /home update this file with the correct paths)
+make -j
+```
+
 ## Datasets
 We use Kaggle to store our datasets. We require one of the below options
 to be followed to download the datasets. 
@@ -245,13 +255,6 @@ Download and unzip the above datasets and upload them to `/home/datasets` on you
 **Note: Both options require the `datasets` directory in `/home` to 
 already be created.** 
 
-## Compile TrackFM Passes only on compute node
-
-```bash
-cd /home/TrackFM/runtime/compiler_passes/passes
-source set_paths (if LLVM, noelle not installed in /home update this file with the correct paths)
-make -j
-```
 
 ## Testing
 To confirm that TrackFM is set up correctly, run `make smoke_test`
