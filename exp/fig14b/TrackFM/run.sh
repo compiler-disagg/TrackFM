@@ -79,4 +79,5 @@ done
 cd ../../../plotgen
 python3 scripts/figgen/fig14b.py $figpath fig14b
 sed "s/#define LOOP_PREFETCH.*/#define LOOP_PREFETCH 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+cd $figpath
 cp *.png /home/TrackFM/figs/

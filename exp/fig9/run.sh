@@ -63,4 +63,5 @@ done
 cd ../../plotgen
 python3 scripts/figgen/fig9a.py $figpath fig9a
 python3 scripts/figgen/fig9b.py $figpath fig9b
+cd $figpath
 cp *.png /home/TrackFM/figs/

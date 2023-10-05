@@ -33,4 +33,5 @@ done
 mv log.* ../../../plotgen/scripts/figgen/results/fig16b/TrackFM/
 cd ../../../plotgen
 python3 scripts/figgen/fig16b.py $figpath fig16b
+cd $figpath
 cp *.png /home/TrackFM/figs/

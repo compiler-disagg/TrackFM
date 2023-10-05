@@ -131,4 +131,5 @@ done
 kill_local_iokerneld
 cd ../../plotgen
 python3 scripts/figgen/fig11.py $figpath fig11
+cd $figpath
 cp *.png /home/TrackFM/figs/

@@ -63,4 +63,5 @@ done
 	python3 scripts/figgen/fig13b.py $figpath fig13b
 done
 sed "s/#define TRACKFM_TRACE.*/\/\/#define TRACKFM_TRACE 1/g" /home/TrackFM/runtime/inc/carm_object_config.hpp -i
+cd $figpath
 cp *.png /home/TrackFM/figs/

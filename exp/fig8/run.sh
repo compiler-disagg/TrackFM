@@ -127,4 +127,5 @@ done
 done
 cd ../../plotgen
 python3 scripts/figgen/fig8.py $figpath fig8
+cd $figpath
 cp *.png /home/TrackFM/figs/
